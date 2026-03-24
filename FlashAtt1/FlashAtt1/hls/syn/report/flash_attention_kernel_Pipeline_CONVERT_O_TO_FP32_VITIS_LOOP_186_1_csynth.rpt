@@ -1,0 +1,283 @@
+
+
+================================================================
+== Vitis HLS Report for 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1'
+================================================================
+* Date:           Sun Mar 22 18:06:48 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.922 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |               Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- CONVERT_O_TO_FP32_VITIS_LOOP_186_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|      124|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|     -|        -|        -|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|      106|     -|
+|Register             |        -|     -|       86|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|     0|       86|      230|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+---------------------------+---------+----+---+----+-----+
+    |            Instance            |           Module          | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------------+---------------------------+---------+----+---+----+-----+
+    |hptosp_16ns_32_1_no_dsp_1_U316  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U317  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U318  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U319  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U320  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U321  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U322  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U323  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U324  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U325  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U326  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U327  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U328  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U329  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U330  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    |hptosp_16ns_32_1_no_dsp_1_U331  |hptosp_16ns_32_1_no_dsp_1  |        0|   0|  0|   0|    0|
+    +--------------------------------+---------------------------+---------+----+---+----+-----+
+    |Total                           |                           |        0|   0|  0|   0|    0|
+    +--------------------------------+---------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln185_1_fu_712_p2     |         +|   0|  0|  34|          34|           1|
+    |add_ln185_fu_733_p2       |         +|   0|  0|  31|          31|           1|
+    |add_ln186_fu_873_p2       |         +|   0|  0|   8|           8|           5|
+    |icmp_ln185_fu_718_p2      |      icmp|   0|  0|  14|          34|          34|
+    |select_ln185_1_fu_759_p3  |    select|   0|  0|  28|           1|          31|
+    |select_ln185_fu_747_p3    |    select|   0|  0|   7|           1|           1|
+    |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 124|         110|          75|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   1|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   1|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   1|          2|    1|          2|
+    |c_fu_116                 |   8|          2|    8|         16|
+    |indvar_flatten_fu_124    |  63|          2|   34|         68|
+    |r_fu_120                 |  32|          2|   31|         62|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 106|         12|   76|        152|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |c_fu_116                 |   8|   0|    8|          0|
+    |indvar_flatten_fu_124    |  34|   0|   34|          0|
+    |r_fu_120                 |  31|   0|   31|          0|
+    |zext_ln189_reg_1115      |   9|   0|   64|         55|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  86|   0|  141|         55|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+--------------------------------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |                            Source Object                           |    C Type    |
++-------------------------+-----+-----+------------+--------------------------------------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1|  return value|
+|tmp_211                  |   in|   34|     ap_none|                                                             tmp_211|        scalar|
+|O_tile_fp16_address0     |  out|    9|   ap_memory|                                                         O_tile_fp16|         array|
+|O_tile_fp16_ce0          |  out|    1|   ap_memory|                                                         O_tile_fp16|         array|
+|O_tile_fp16_q0           |   in|   16|   ap_memory|                                                         O_tile_fp16|         array|
+|O_tile_fp16_1_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_1|         array|
+|O_tile_fp16_1_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_1|         array|
+|O_tile_fp16_1_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_1|         array|
+|O_tile_fp16_2_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_2|         array|
+|O_tile_fp16_2_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_2|         array|
+|O_tile_fp16_2_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_2|         array|
+|O_tile_fp16_3_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_3|         array|
+|O_tile_fp16_3_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_3|         array|
+|O_tile_fp16_3_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_3|         array|
+|O_tile_fp16_4_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_4|         array|
+|O_tile_fp16_4_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_4|         array|
+|O_tile_fp16_4_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_4|         array|
+|O_tile_fp16_5_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_5|         array|
+|O_tile_fp16_5_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_5|         array|
+|O_tile_fp16_5_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_5|         array|
+|O_tile_fp16_6_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_6|         array|
+|O_tile_fp16_6_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_6|         array|
+|O_tile_fp16_6_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_6|         array|
+|O_tile_fp16_7_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_7|         array|
+|O_tile_fp16_7_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_7|         array|
+|O_tile_fp16_7_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_7|         array|
+|O_tile_fp16_8_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_8|         array|
+|O_tile_fp16_8_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_8|         array|
+|O_tile_fp16_8_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_8|         array|
+|O_tile_fp16_9_address0   |  out|    9|   ap_memory|                                                       O_tile_fp16_9|         array|
+|O_tile_fp16_9_ce0        |  out|    1|   ap_memory|                                                       O_tile_fp16_9|         array|
+|O_tile_fp16_9_q0         |   in|   16|   ap_memory|                                                       O_tile_fp16_9|         array|
+|O_tile_fp16_10_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_10|         array|
+|O_tile_fp16_10_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_10|         array|
+|O_tile_fp16_10_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_10|         array|
+|O_tile_fp16_11_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_11|         array|
+|O_tile_fp16_11_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_11|         array|
+|O_tile_fp16_11_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_11|         array|
+|O_tile_fp16_12_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_12|         array|
+|O_tile_fp16_12_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_12|         array|
+|O_tile_fp16_12_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_12|         array|
+|O_tile_fp16_13_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_13|         array|
+|O_tile_fp16_13_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_13|         array|
+|O_tile_fp16_13_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_13|         array|
+|O_tile_fp16_14_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_14|         array|
+|O_tile_fp16_14_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_14|         array|
+|O_tile_fp16_14_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_14|         array|
+|O_tile_fp16_15_address0  |  out|    9|   ap_memory|                                                      O_tile_fp16_15|         array|
+|O_tile_fp16_15_ce0       |  out|    1|   ap_memory|                                                      O_tile_fp16_15|         array|
+|O_tile_fp16_15_q0        |   in|   16|   ap_memory|                                                      O_tile_fp16_15|         array|
+|O_acc_address1           |  out|    9|   ap_memory|                                                               O_acc|         array|
+|O_acc_ce1                |  out|    1|   ap_memory|                                                               O_acc|         array|
+|O_acc_we1                |  out|    1|   ap_memory|                                                               O_acc|         array|
+|O_acc_d1                 |  out|   32|   ap_memory|                                                               O_acc|         array|
+|O_acc_1_address1         |  out|    9|   ap_memory|                                                             O_acc_1|         array|
+|O_acc_1_ce1              |  out|    1|   ap_memory|                                                             O_acc_1|         array|
+|O_acc_1_we1              |  out|    1|   ap_memory|                                                             O_acc_1|         array|
+|O_acc_1_d1               |  out|   32|   ap_memory|                                                             O_acc_1|         array|
+|O_acc_2_address1         |  out|    9|   ap_memory|                                                             O_acc_2|         array|
+|O_acc_2_ce1              |  out|    1|   ap_memory|                                                             O_acc_2|         array|
+|O_acc_2_we1              |  out|    1|   ap_memory|                                                             O_acc_2|         array|
+|O_acc_2_d1               |  out|   32|   ap_memory|                                                             O_acc_2|         array|
+|O_acc_3_address1         |  out|    9|   ap_memory|                                                             O_acc_3|         array|
+|O_acc_3_ce1              |  out|    1|   ap_memory|                                                             O_acc_3|         array|
+|O_acc_3_we1              |  out|    1|   ap_memory|                                                             O_acc_3|         array|
+|O_acc_3_d1               |  out|   32|   ap_memory|                                                             O_acc_3|         array|
+|O_acc_4_address1         |  out|    9|   ap_memory|                                                             O_acc_4|         array|
+|O_acc_4_ce1              |  out|    1|   ap_memory|                                                             O_acc_4|         array|
+|O_acc_4_we1              |  out|    1|   ap_memory|                                                             O_acc_4|         array|
+|O_acc_4_d1               |  out|   32|   ap_memory|                                                             O_acc_4|         array|
+|O_acc_5_address1         |  out|    9|   ap_memory|                                                             O_acc_5|         array|
+|O_acc_5_ce1              |  out|    1|   ap_memory|                                                             O_acc_5|         array|
+|O_acc_5_we1              |  out|    1|   ap_memory|                                                             O_acc_5|         array|
+|O_acc_5_d1               |  out|   32|   ap_memory|                                                             O_acc_5|         array|
+|O_acc_6_address1         |  out|    9|   ap_memory|                                                             O_acc_6|         array|
+|O_acc_6_ce1              |  out|    1|   ap_memory|                                                             O_acc_6|         array|
+|O_acc_6_we1              |  out|    1|   ap_memory|                                                             O_acc_6|         array|
+|O_acc_6_d1               |  out|   32|   ap_memory|                                                             O_acc_6|         array|
+|O_acc_7_address1         |  out|    9|   ap_memory|                                                             O_acc_7|         array|
+|O_acc_7_ce1              |  out|    1|   ap_memory|                                                             O_acc_7|         array|
+|O_acc_7_we1              |  out|    1|   ap_memory|                                                             O_acc_7|         array|
+|O_acc_7_d1               |  out|   32|   ap_memory|                                                             O_acc_7|         array|
+|O_acc_8_address1         |  out|    9|   ap_memory|                                                             O_acc_8|         array|
+|O_acc_8_ce1              |  out|    1|   ap_memory|                                                             O_acc_8|         array|
+|O_acc_8_we1              |  out|    1|   ap_memory|                                                             O_acc_8|         array|
+|O_acc_8_d1               |  out|   32|   ap_memory|                                                             O_acc_8|         array|
+|O_acc_9_address1         |  out|    9|   ap_memory|                                                             O_acc_9|         array|
+|O_acc_9_ce1              |  out|    1|   ap_memory|                                                             O_acc_9|         array|
+|O_acc_9_we1              |  out|    1|   ap_memory|                                                             O_acc_9|         array|
+|O_acc_9_d1               |  out|   32|   ap_memory|                                                             O_acc_9|         array|
+|O_acc_10_address1        |  out|    9|   ap_memory|                                                            O_acc_10|         array|
+|O_acc_10_ce1             |  out|    1|   ap_memory|                                                            O_acc_10|         array|
+|O_acc_10_we1             |  out|    1|   ap_memory|                                                            O_acc_10|         array|
+|O_acc_10_d1              |  out|   32|   ap_memory|                                                            O_acc_10|         array|
+|O_acc_11_address1        |  out|    9|   ap_memory|                                                            O_acc_11|         array|
+|O_acc_11_ce1             |  out|    1|   ap_memory|                                                            O_acc_11|         array|
+|O_acc_11_we1             |  out|    1|   ap_memory|                                                            O_acc_11|         array|
+|O_acc_11_d1              |  out|   32|   ap_memory|                                                            O_acc_11|         array|
+|O_acc_12_address1        |  out|    9|   ap_memory|                                                            O_acc_12|         array|
+|O_acc_12_ce1             |  out|    1|   ap_memory|                                                            O_acc_12|         array|
+|O_acc_12_we1             |  out|    1|   ap_memory|                                                            O_acc_12|         array|
+|O_acc_12_d1              |  out|   32|   ap_memory|                                                            O_acc_12|         array|
+|O_acc_13_address1        |  out|    9|   ap_memory|                                                            O_acc_13|         array|
+|O_acc_13_ce1             |  out|    1|   ap_memory|                                                            O_acc_13|         array|
+|O_acc_13_we1             |  out|    1|   ap_memory|                                                            O_acc_13|         array|
+|O_acc_13_d1              |  out|   32|   ap_memory|                                                            O_acc_13|         array|
+|O_acc_14_address1        |  out|    9|   ap_memory|                                                            O_acc_14|         array|
+|O_acc_14_ce1             |  out|    1|   ap_memory|                                                            O_acc_14|         array|
+|O_acc_14_we1             |  out|    1|   ap_memory|                                                            O_acc_14|         array|
+|O_acc_14_d1              |  out|   32|   ap_memory|                                                            O_acc_14|         array|
+|O_acc_15_address1        |  out|    9|   ap_memory|                                                            O_acc_15|         array|
+|O_acc_15_ce1             |  out|    1|   ap_memory|                                                            O_acc_15|         array|
+|O_acc_15_we1             |  out|    1|   ap_memory|                                                            O_acc_15|         array|
+|O_acc_15_d1              |  out|   32|   ap_memory|                                                            O_acc_15|         array|
++-------------------------+-----+-----+------------+--------------------------------------------------------------------+--------------+
+

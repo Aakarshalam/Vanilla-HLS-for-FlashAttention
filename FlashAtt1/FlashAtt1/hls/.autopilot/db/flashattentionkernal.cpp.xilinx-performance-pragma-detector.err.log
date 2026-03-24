@@ -1,0 +1,5 @@
+In file included from C:\Users\Nani\workspace\Vanilla_FA\FlashAtt1\flashattentionkernal.cpp:23:
+In file included from C:\Users\Nani\workspace\Vanilla_FA\FlashAtt1/flashattentiontypes.h:7:
+C:/Xilinx/2025.1/Vitis/common/technology/autopilot\hls_math.h:26:10: fatal error: 'cmath' file not found
+#include <cmath>
+         ^~~~~~~

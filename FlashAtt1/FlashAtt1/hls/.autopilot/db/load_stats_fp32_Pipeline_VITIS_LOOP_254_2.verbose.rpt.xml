@@ -1,0 +1,248 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'load_stats_fp32_Pipeline_VITIS_LOOP_254_2'" level="0">
+<item name = "Date">Sun Mar 22 18:06:44 2026
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">FlashAtt1</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">versalhbm</item>
+<item name = "Target device">xcvh1582-lsva4737-2LHP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.474 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_254_2">?, ?, 1, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 95, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 65, -</column>
+<column name="Register">-, -, 67, -, -</column>
+<specialColumn name="Available SLR">2541, 3696, 1753984, 876992, 650</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">5082, 7392, 3507968, 1753984, 1301</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln254_fu_968_p2">+, 0, 0, 64, 64, 1</column>
+<column name="icmp_ln254_fu_830_p2">icmp, 0, 0, 29, 58, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">1, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">1, 2, 1, 2</column>
+<column name="i_fu_286">63, 2, 64, 128</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="i_fu_286">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, load_stats_fp32_Pipeline_VITIS_LOOP_254_2, return value</column>
+<column name="sext_ln237">in, 32, ap_none, sext_ln237, scalar</column>
+<column name="stats_63">out, 32, ap_vld, stats_63, pointer</column>
+<column name="stats_63_ap_vld">out, 1, ap_vld, stats_63, pointer</column>
+<column name="stats_62">out, 32, ap_vld, stats_62, pointer</column>
+<column name="stats_62_ap_vld">out, 1, ap_vld, stats_62, pointer</column>
+<column name="stats_61">out, 32, ap_vld, stats_61, pointer</column>
+<column name="stats_61_ap_vld">out, 1, ap_vld, stats_61, pointer</column>
+<column name="stats_60">out, 32, ap_vld, stats_60, pointer</column>
+<column name="stats_60_ap_vld">out, 1, ap_vld, stats_60, pointer</column>
+<column name="stats_59">out, 32, ap_vld, stats_59, pointer</column>
+<column name="stats_59_ap_vld">out, 1, ap_vld, stats_59, pointer</column>
+<column name="stats_58">out, 32, ap_vld, stats_58, pointer</column>
+<column name="stats_58_ap_vld">out, 1, ap_vld, stats_58, pointer</column>
+<column name="stats_57">out, 32, ap_vld, stats_57, pointer</column>
+<column name="stats_57_ap_vld">out, 1, ap_vld, stats_57, pointer</column>
+<column name="stats_56">out, 32, ap_vld, stats_56, pointer</column>
+<column name="stats_56_ap_vld">out, 1, ap_vld, stats_56, pointer</column>
+<column name="stats_55">out, 32, ap_vld, stats_55, pointer</column>
+<column name="stats_55_ap_vld">out, 1, ap_vld, stats_55, pointer</column>
+<column name="stats_54">out, 32, ap_vld, stats_54, pointer</column>
+<column name="stats_54_ap_vld">out, 1, ap_vld, stats_54, pointer</column>
+<column name="stats_53">out, 32, ap_vld, stats_53, pointer</column>
+<column name="stats_53_ap_vld">out, 1, ap_vld, stats_53, pointer</column>
+<column name="stats_52">out, 32, ap_vld, stats_52, pointer</column>
+<column name="stats_52_ap_vld">out, 1, ap_vld, stats_52, pointer</column>
+<column name="stats_51">out, 32, ap_vld, stats_51, pointer</column>
+<column name="stats_51_ap_vld">out, 1, ap_vld, stats_51, pointer</column>
+<column name="stats_50">out, 32, ap_vld, stats_50, pointer</column>
+<column name="stats_50_ap_vld">out, 1, ap_vld, stats_50, pointer</column>
+<column name="stats_49">out, 32, ap_vld, stats_49, pointer</column>
+<column name="stats_49_ap_vld">out, 1, ap_vld, stats_49, pointer</column>
+<column name="stats_48">out, 32, ap_vld, stats_48, pointer</column>
+<column name="stats_48_ap_vld">out, 1, ap_vld, stats_48, pointer</column>
+<column name="stats_47">out, 32, ap_vld, stats_47, pointer</column>
+<column name="stats_47_ap_vld">out, 1, ap_vld, stats_47, pointer</column>
+<column name="stats_46">out, 32, ap_vld, stats_46, pointer</column>
+<column name="stats_46_ap_vld">out, 1, ap_vld, stats_46, pointer</column>
+<column name="stats_45">out, 32, ap_vld, stats_45, pointer</column>
+<column name="stats_45_ap_vld">out, 1, ap_vld, stats_45, pointer</column>
+<column name="stats_44">out, 32, ap_vld, stats_44, pointer</column>
+<column name="stats_44_ap_vld">out, 1, ap_vld, stats_44, pointer</column>
+<column name="stats_43">out, 32, ap_vld, stats_43, pointer</column>
+<column name="stats_43_ap_vld">out, 1, ap_vld, stats_43, pointer</column>
+<column name="stats_42">out, 32, ap_vld, stats_42, pointer</column>
+<column name="stats_42_ap_vld">out, 1, ap_vld, stats_42, pointer</column>
+<column name="stats_41">out, 32, ap_vld, stats_41, pointer</column>
+<column name="stats_41_ap_vld">out, 1, ap_vld, stats_41, pointer</column>
+<column name="stats_40">out, 32, ap_vld, stats_40, pointer</column>
+<column name="stats_40_ap_vld">out, 1, ap_vld, stats_40, pointer</column>
+<column name="stats_39">out, 32, ap_vld, stats_39, pointer</column>
+<column name="stats_39_ap_vld">out, 1, ap_vld, stats_39, pointer</column>
+<column name="stats_38">out, 32, ap_vld, stats_38, pointer</column>
+<column name="stats_38_ap_vld">out, 1, ap_vld, stats_38, pointer</column>
+<column name="stats_37">out, 32, ap_vld, stats_37, pointer</column>
+<column name="stats_37_ap_vld">out, 1, ap_vld, stats_37, pointer</column>
+<column name="stats_36">out, 32, ap_vld, stats_36, pointer</column>
+<column name="stats_36_ap_vld">out, 1, ap_vld, stats_36, pointer</column>
+<column name="stats_35">out, 32, ap_vld, stats_35, pointer</column>
+<column name="stats_35_ap_vld">out, 1, ap_vld, stats_35, pointer</column>
+<column name="stats_34">out, 32, ap_vld, stats_34, pointer</column>
+<column name="stats_34_ap_vld">out, 1, ap_vld, stats_34, pointer</column>
+<column name="stats_33">out, 32, ap_vld, stats_33, pointer</column>
+<column name="stats_33_ap_vld">out, 1, ap_vld, stats_33, pointer</column>
+<column name="stats_32">out, 32, ap_vld, stats_32, pointer</column>
+<column name="stats_32_ap_vld">out, 1, ap_vld, stats_32, pointer</column>
+<column name="stats_31">out, 32, ap_vld, stats_31, pointer</column>
+<column name="stats_31_ap_vld">out, 1, ap_vld, stats_31, pointer</column>
+<column name="stats_30">out, 32, ap_vld, stats_30, pointer</column>
+<column name="stats_30_ap_vld">out, 1, ap_vld, stats_30, pointer</column>
+<column name="stats_29">out, 32, ap_vld, stats_29, pointer</column>
+<column name="stats_29_ap_vld">out, 1, ap_vld, stats_29, pointer</column>
+<column name="stats_28">out, 32, ap_vld, stats_28, pointer</column>
+<column name="stats_28_ap_vld">out, 1, ap_vld, stats_28, pointer</column>
+<column name="stats_27">out, 32, ap_vld, stats_27, pointer</column>
+<column name="stats_27_ap_vld">out, 1, ap_vld, stats_27, pointer</column>
+<column name="stats_26">out, 32, ap_vld, stats_26, pointer</column>
+<column name="stats_26_ap_vld">out, 1, ap_vld, stats_26, pointer</column>
+<column name="stats_25">out, 32, ap_vld, stats_25, pointer</column>
+<column name="stats_25_ap_vld">out, 1, ap_vld, stats_25, pointer</column>
+<column name="stats_24">out, 32, ap_vld, stats_24, pointer</column>
+<column name="stats_24_ap_vld">out, 1, ap_vld, stats_24, pointer</column>
+<column name="stats_23">out, 32, ap_vld, stats_23, pointer</column>
+<column name="stats_23_ap_vld">out, 1, ap_vld, stats_23, pointer</column>
+<column name="stats_22">out, 32, ap_vld, stats_22, pointer</column>
+<column name="stats_22_ap_vld">out, 1, ap_vld, stats_22, pointer</column>
+<column name="stats_21">out, 32, ap_vld, stats_21, pointer</column>
+<column name="stats_21_ap_vld">out, 1, ap_vld, stats_21, pointer</column>
+<column name="stats_20">out, 32, ap_vld, stats_20, pointer</column>
+<column name="stats_20_ap_vld">out, 1, ap_vld, stats_20, pointer</column>
+<column name="stats_19">out, 32, ap_vld, stats_19, pointer</column>
+<column name="stats_19_ap_vld">out, 1, ap_vld, stats_19, pointer</column>
+<column name="stats_18">out, 32, ap_vld, stats_18, pointer</column>
+<column name="stats_18_ap_vld">out, 1, ap_vld, stats_18, pointer</column>
+<column name="stats_17">out, 32, ap_vld, stats_17, pointer</column>
+<column name="stats_17_ap_vld">out, 1, ap_vld, stats_17, pointer</column>
+<column name="stats_16">out, 32, ap_vld, stats_16, pointer</column>
+<column name="stats_16_ap_vld">out, 1, ap_vld, stats_16, pointer</column>
+<column name="stats_15">out, 32, ap_vld, stats_15, pointer</column>
+<column name="stats_15_ap_vld">out, 1, ap_vld, stats_15, pointer</column>
+<column name="stats_14">out, 32, ap_vld, stats_14, pointer</column>
+<column name="stats_14_ap_vld">out, 1, ap_vld, stats_14, pointer</column>
+<column name="stats_13">out, 32, ap_vld, stats_13, pointer</column>
+<column name="stats_13_ap_vld">out, 1, ap_vld, stats_13, pointer</column>
+<column name="stats_12">out, 32, ap_vld, stats_12, pointer</column>
+<column name="stats_12_ap_vld">out, 1, ap_vld, stats_12, pointer</column>
+<column name="stats_11">out, 32, ap_vld, stats_11, pointer</column>
+<column name="stats_11_ap_vld">out, 1, ap_vld, stats_11, pointer</column>
+<column name="stats_10">out, 32, ap_vld, stats_10, pointer</column>
+<column name="stats_10_ap_vld">out, 1, ap_vld, stats_10, pointer</column>
+<column name="stats_9">out, 32, ap_vld, stats_9, pointer</column>
+<column name="stats_9_ap_vld">out, 1, ap_vld, stats_9, pointer</column>
+<column name="stats_8">out, 32, ap_vld, stats_8, pointer</column>
+<column name="stats_8_ap_vld">out, 1, ap_vld, stats_8, pointer</column>
+<column name="stats_7">out, 32, ap_vld, stats_7, pointer</column>
+<column name="stats_7_ap_vld">out, 1, ap_vld, stats_7, pointer</column>
+<column name="stats_6">out, 32, ap_vld, stats_6, pointer</column>
+<column name="stats_6_ap_vld">out, 1, ap_vld, stats_6, pointer</column>
+<column name="stats_5">out, 32, ap_vld, stats_5, pointer</column>
+<column name="stats_5_ap_vld">out, 1, ap_vld, stats_5, pointer</column>
+<column name="stats_4">out, 32, ap_vld, stats_4, pointer</column>
+<column name="stats_4_ap_vld">out, 1, ap_vld, stats_4, pointer</column>
+<column name="stats_3">out, 32, ap_vld, stats_3, pointer</column>
+<column name="stats_3_ap_vld">out, 1, ap_vld, stats_3, pointer</column>
+<column name="stats_2">out, 32, ap_vld, stats_2, pointer</column>
+<column name="stats_2_ap_vld">out, 1, ap_vld, stats_2, pointer</column>
+<column name="stats_1">out, 32, ap_vld, stats_1, pointer</column>
+<column name="stats_1_ap_vld">out, 1, ap_vld, stats_1, pointer</column>
+<column name="stats_0">out, 32, ap_vld, stats_0, pointer</column>
+<column name="stats_0_ap_vld">out, 1, ap_vld, stats_0, pointer</column>
+</table>
+</item>
+</section>
+</profile>

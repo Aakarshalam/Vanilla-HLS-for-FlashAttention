@@ -1,0 +1,57 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiontypes.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontypes.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiongemm.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiongemm.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionsoftmax.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionsoftmax.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionmemory.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionmemory.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionkernal.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionkernal.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=flashattentiontb.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=flash_attention_kernel' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcvh1582-lsva4737-2LHP-e-S' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2LHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcvh1582-lsva4737-2LHP-e-S'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+==============================================
+FlashAttention HLS Testbench
+  HEAD_DIM = 128
+  TILE_BR  = 64
+  TILE_BC  = 64
+==============================================
+Test N = 128, d = 128
+Tiles: Tr = 2, Tc = 2
+Computing golden reference (standard attention)...
+Running FlashAttention HLS kernel...
+Kernel complete.
+Comparing DUT output vs golden reference...
+
+Results:
+  Max absolute error: 0.001420
+  Max relative error: 2.3640 (236.40%)
+  Elements exceeding tolerance: 0 / 16384
+
+*** TEST PASSED ***
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 39.206 seconds; peak allocated memory: 427.039 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 45s

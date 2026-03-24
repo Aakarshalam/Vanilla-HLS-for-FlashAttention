@@ -1,0 +1,230 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\FlashAtt1.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/22/26 18:08:20",
+ "timestampMillis": "1774183100013",
+ "buildStep": {
+  "cmdId": "147ff46c-63b7-4c98-a5f6-efcd50d4eddb",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\logs\\FlashAtt1.steps.log",
+  "commandLine": "C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config C:\\Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\hls_config.cfg --work_dir FlashAtt1 ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "C:\\Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\hls_config.cfg",
+   "--work_dir",
+   "FlashAtt1"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 18:08:20",
+ "timestampMillis": "1774183100013",
+ "status": {
+  "cmdId": "147ff46c-63b7-4c98-a5f6-efcd50d4eddb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107798",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "flash_attention_kernel",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\flashattentiontypes.h",
+     "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\flashattentiongemm.h",
+     "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\flashattentionsoftmax.h",
+     "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\flashattentionmemory.h",
+     "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\flashattentionkernal.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107801",
+ "buildStep": {
+  "cmdId": "d5ec4efa-62f6-474b-a2d5-dacc9418ae24",
+  "name": "",
+  "logFile": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107802",
+ "status": {
+  "cmdId": "d5ec4efa-62f6-474b-a2d5-dacc9418ae24",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107803",
+ "report": {
+  "path": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls\\sim\\report\\flash_attention_kernel_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107804",
+ "report": {
+  "path": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107805",
+ "report": {
+  "path": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107806",
+ "report": {
+  "path": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:08:27",
+ "timestampMillis": "1774183107807",
+ "report": {
+  "path": "C:/Users\\Nani\\workspace\\Vanilla_FA\\FlashAtt1\\FlashAtt1\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 18:09:08",
+ "timestampMillis": "1774183148658",
+ "status": {
+  "cmdId": "d5ec4efa-62f6-474b-a2d5-dacc9418ae24",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 18:09:08",
+ "timestampMillis": "1774183148782",
+ "status": {
+  "cmdId": "147ff46c-63b7-4c98-a5f6-efcd50d4eddb",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:09:08",
+ "timestampMillis": "1774183148782",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 18:09:08",
+ "timestampMillis": "1774183148783",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

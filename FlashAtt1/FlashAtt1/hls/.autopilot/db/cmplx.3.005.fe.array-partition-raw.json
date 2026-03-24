@@ -1,0 +1,200 @@
+{
+  "0": {
+    "basicblocks": 121,
+    "calls": "9 9 5 5 10 10 4 6 7 8 1 2 3 3",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "flashattentionkernal.cpp",
+    "fileloc": 31,
+    "instructions": 3086,
+    "loads": {
+      "L": 32
+    },
+    "memory_accesses": 128,
+    "name": "flash_attention_kernel",
+    "stores": {
+      "L": 176
+    },
+    "total_instructions": 25550
+  },
+  "1": {
+    "basicblocks": 38,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 6,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 184,
+    "instructions": 939,
+    "loads": {
+      "L": 80
+    },
+    "memory_accesses": 48,
+    "name": "normalize_output",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 939
+  },
+  "10": {
+    "basicblocks": 201,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 224,
+    "instructions": 554,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 129,
+    "name": "load_stats_fp32",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 554
+  },
+  "2": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "flashattentionmemory.h",
+    "fileloc": 191,
+    "instructions": 852,
+    "loads": {
+      "L": 32
+    },
+    "memory_accesses": 33,
+    "name": "store_tile_fp16",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 852
+  },
+  "3": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 260,
+    "instructions": 209,
+    "loads": {
+      "L": 64
+    },
+    "memory_accesses": 65,
+    "name": "store_stats_fp32",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 209
+  },
+  "4": {
+    "basicblocks": 106,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 21,
+    "file": "flashattentiongemm.h",
+    "fileloc": 41,
+    "instructions": 1735,
+    "loads": {
+      "L": 160
+    },
+    "memory_accesses": 225,
+    "name": "gemm_qkt",
+    "stores": {
+      "L": 136
+    },
+    "total_instructions": 1735
+  },
+  "5": {
+    "basicblocks": 73,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 6,
+    "file": "flashattentionmemory.h",
+    "fileloc": 102,
+    "instructions": 3381,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 196,
+    "name": "load_tile_fp16",
+    "stores": {
+      "L": 160
+    },
+    "total_instructions": 3381
+  },
+  "6": {
+    "basicblocks": 287,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 7,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 30,
+    "instructions": 1566,
+    "loads": {
+      "L": 80
+    },
+    "memory_accesses": 217,
+    "name": "online_softmax_tile",
+    "stores": {
+      "L": 328
+    },
+    "total_instructions": 1566
+  },
+  "7": {
+    "basicblocks": 111,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 8,
+    "file": "flashattentiongemm.h",
+    "fileloc": 125,
+    "instructions": 2446,
+    "loads": {
+      "L": 56
+    },
+    "memory_accesses": 144,
+    "name": "gemm_pv",
+    "stores": {
+      "L": 48
+    },
+    "total_instructions": 2446
+  },
+  "8": {
+    "basicblocks": 499,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 9,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 113,
+    "instructions": 2804,
+    "loads": {
+      "L": 416
+    },
+    "memory_accesses": 710,
+    "name": "update_statistics_and_output",
+    "stores": {
+      "L": 400
+    },
+    "total_instructions": 2804
+  },
+  "9": {
+    "basicblocks": 139,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 148,
+    "instructions": 1917,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 129,
+    "name": "load_tile_fp16_bc",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 1917
+  }
+}

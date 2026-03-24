@@ -1,0 +1,283 @@
+
+
+================================================================
+== Vitis HLS Report for 'gemm_qkt'
+================================================================
+* Date:           Sun Mar 22 18:06:51 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.283 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    34817|    34817|  0.348 ms|  0.348 ms|  34817|  34817|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                       |                                            |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                        Instance                       |                   Module                   |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL_fu_394  |gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL  |      530|      530|  5.300 us|  5.300 us|  513|  513|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_gemm_qkt_Pipeline_STORE_S_ROW_fu_527               |gemm_qkt_Pipeline_STORE_S_ROW               |       10|       10|  0.100 us|  0.100 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- GEMM_QKT_ROW  |    34816|    34816|       544|          -|          -|    64|        no|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|       27|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|    17|     2995|     8667|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|       11|     -|
+|Register             |        -|     -|       27|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|    17|     3022|     8705|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|    ~0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|    ~0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
+    |                        Instance                       |                   Module                   | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
+    |grp_gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL_fu_394  |gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL  |        0|  17|  2986|  2890|    0|
+    |grp_gemm_qkt_Pipeline_STORE_S_ROW_fu_527               |gemm_qkt_Pipeline_STORE_S_ROW               |        0|   0|     9|  5777|    0|
+    +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
+    |Total                                                  |                                            |        0|  17|  2995|  8667|    0|
+    +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln51_fu_622_p2   |         +|   0|  0|   8|           7|           1|
+    |cmp60_fu_651_p2      |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln51_fu_628_p2  |      icmp|   0|  0|   3|           7|           8|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  27|          46|          41|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |   3|          6|    1|          6|
+    |i_fu_122   |   8|          2|    7|         14|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  11|          8|    8|         20|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------+---+----+-----+-----------+
+    |                                Name                                | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                           |  5|   0|    5|          0|
+    |cmp60_reg_1331                                                      |  1|   0|    1|          0|
+    |grp_gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL_fu_394_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gemm_qkt_Pipeline_STORE_S_ROW_fu_527_ap_start_reg               |  1|   0|    1|          0|
+    |i_fu_122                                                            |  7|   0|    7|          0|
+    |tmp_s_reg_1326                                                      |  6|   0|    9|          3|
+    |trunc_ln51_reg_1321                                                 |  6|   0|    6|          0|
+    +--------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                               | 27|   0|   30|          3|
+    +--------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------+-----+-----+------------+--------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|      gemm_qkt|  return value|
+|Q_tile_0_address0   |  out|    9|   ap_memory|      Q_tile_0|         array|
+|Q_tile_0_ce0        |  out|    1|   ap_memory|      Q_tile_0|         array|
+|Q_tile_0_q0         |   in|   16|   ap_memory|      Q_tile_0|         array|
+|Q_tile_1_address0   |  out|    9|   ap_memory|      Q_tile_1|         array|
+|Q_tile_1_ce0        |  out|    1|   ap_memory|      Q_tile_1|         array|
+|Q_tile_1_q0         |   in|   16|   ap_memory|      Q_tile_1|         array|
+|Q_tile_2_address0   |  out|    9|   ap_memory|      Q_tile_2|         array|
+|Q_tile_2_ce0        |  out|    1|   ap_memory|      Q_tile_2|         array|
+|Q_tile_2_q0         |   in|   16|   ap_memory|      Q_tile_2|         array|
+|Q_tile_3_address0   |  out|    9|   ap_memory|      Q_tile_3|         array|
+|Q_tile_3_ce0        |  out|    1|   ap_memory|      Q_tile_3|         array|
+|Q_tile_3_q0         |   in|   16|   ap_memory|      Q_tile_3|         array|
+|Q_tile_4_address0   |  out|    9|   ap_memory|      Q_tile_4|         array|
+|Q_tile_4_ce0        |  out|    1|   ap_memory|      Q_tile_4|         array|
+|Q_tile_4_q0         |   in|   16|   ap_memory|      Q_tile_4|         array|
+|Q_tile_5_address0   |  out|    9|   ap_memory|      Q_tile_5|         array|
+|Q_tile_5_ce0        |  out|    1|   ap_memory|      Q_tile_5|         array|
+|Q_tile_5_q0         |   in|   16|   ap_memory|      Q_tile_5|         array|
+|Q_tile_6_address0   |  out|    9|   ap_memory|      Q_tile_6|         array|
+|Q_tile_6_ce0        |  out|    1|   ap_memory|      Q_tile_6|         array|
+|Q_tile_6_q0         |   in|   16|   ap_memory|      Q_tile_6|         array|
+|Q_tile_7_address0   |  out|    9|   ap_memory|      Q_tile_7|         array|
+|Q_tile_7_ce0        |  out|    1|   ap_memory|      Q_tile_7|         array|
+|Q_tile_7_q0         |   in|   16|   ap_memory|      Q_tile_7|         array|
+|Q_tile_8_address0   |  out|    9|   ap_memory|      Q_tile_8|         array|
+|Q_tile_8_ce0        |  out|    1|   ap_memory|      Q_tile_8|         array|
+|Q_tile_8_q0         |   in|   16|   ap_memory|      Q_tile_8|         array|
+|Q_tile_9_address0   |  out|    9|   ap_memory|      Q_tile_9|         array|
+|Q_tile_9_ce0        |  out|    1|   ap_memory|      Q_tile_9|         array|
+|Q_tile_9_q0         |   in|   16|   ap_memory|      Q_tile_9|         array|
+|Q_tile_10_address0  |  out|    9|   ap_memory|     Q_tile_10|         array|
+|Q_tile_10_ce0       |  out|    1|   ap_memory|     Q_tile_10|         array|
+|Q_tile_10_q0        |   in|   16|   ap_memory|     Q_tile_10|         array|
+|Q_tile_11_address0  |  out|    9|   ap_memory|     Q_tile_11|         array|
+|Q_tile_11_ce0       |  out|    1|   ap_memory|     Q_tile_11|         array|
+|Q_tile_11_q0        |   in|   16|   ap_memory|     Q_tile_11|         array|
+|Q_tile_12_address0  |  out|    9|   ap_memory|     Q_tile_12|         array|
+|Q_tile_12_ce0       |  out|    1|   ap_memory|     Q_tile_12|         array|
+|Q_tile_12_q0        |   in|   16|   ap_memory|     Q_tile_12|         array|
+|Q_tile_13_address0  |  out|    9|   ap_memory|     Q_tile_13|         array|
+|Q_tile_13_ce0       |  out|    1|   ap_memory|     Q_tile_13|         array|
+|Q_tile_13_q0        |   in|   16|   ap_memory|     Q_tile_13|         array|
+|Q_tile_14_address0  |  out|    9|   ap_memory|     Q_tile_14|         array|
+|Q_tile_14_ce0       |  out|    1|   ap_memory|     Q_tile_14|         array|
+|Q_tile_14_q0        |   in|   16|   ap_memory|     Q_tile_14|         array|
+|Q_tile_15_address0  |  out|    9|   ap_memory|     Q_tile_15|         array|
+|Q_tile_15_ce0       |  out|    1|   ap_memory|     Q_tile_15|         array|
+|Q_tile_15_q0        |   in|   16|   ap_memory|     Q_tile_15|         array|
+|K_tile_0_address0   |  out|    9|   ap_memory|      K_tile_0|         array|
+|K_tile_0_ce0        |  out|    1|   ap_memory|      K_tile_0|         array|
+|K_tile_0_q0         |   in|   16|   ap_memory|      K_tile_0|         array|
+|K_tile_1_address0   |  out|    9|   ap_memory|      K_tile_1|         array|
+|K_tile_1_ce0        |  out|    1|   ap_memory|      K_tile_1|         array|
+|K_tile_1_q0         |   in|   16|   ap_memory|      K_tile_1|         array|
+|K_tile_2_address0   |  out|    9|   ap_memory|      K_tile_2|         array|
+|K_tile_2_ce0        |  out|    1|   ap_memory|      K_tile_2|         array|
+|K_tile_2_q0         |   in|   16|   ap_memory|      K_tile_2|         array|
+|K_tile_3_address0   |  out|    9|   ap_memory|      K_tile_3|         array|
+|K_tile_3_ce0        |  out|    1|   ap_memory|      K_tile_3|         array|
+|K_tile_3_q0         |   in|   16|   ap_memory|      K_tile_3|         array|
+|K_tile_4_address0   |  out|    9|   ap_memory|      K_tile_4|         array|
+|K_tile_4_ce0        |  out|    1|   ap_memory|      K_tile_4|         array|
+|K_tile_4_q0         |   in|   16|   ap_memory|      K_tile_4|         array|
+|K_tile_5_address0   |  out|    9|   ap_memory|      K_tile_5|         array|
+|K_tile_5_ce0        |  out|    1|   ap_memory|      K_tile_5|         array|
+|K_tile_5_q0         |   in|   16|   ap_memory|      K_tile_5|         array|
+|K_tile_6_address0   |  out|    9|   ap_memory|      K_tile_6|         array|
+|K_tile_6_ce0        |  out|    1|   ap_memory|      K_tile_6|         array|
+|K_tile_6_q0         |   in|   16|   ap_memory|      K_tile_6|         array|
+|K_tile_7_address0   |  out|    9|   ap_memory|      K_tile_7|         array|
+|K_tile_7_ce0        |  out|    1|   ap_memory|      K_tile_7|         array|
+|K_tile_7_q0         |   in|   16|   ap_memory|      K_tile_7|         array|
+|K_tile_8_address0   |  out|    9|   ap_memory|      K_tile_8|         array|
+|K_tile_8_ce0        |  out|    1|   ap_memory|      K_tile_8|         array|
+|K_tile_8_q0         |   in|   16|   ap_memory|      K_tile_8|         array|
+|K_tile_9_address0   |  out|    9|   ap_memory|      K_tile_9|         array|
+|K_tile_9_ce0        |  out|    1|   ap_memory|      K_tile_9|         array|
+|K_tile_9_q0         |   in|   16|   ap_memory|      K_tile_9|         array|
+|K_tile_10_address0  |  out|    9|   ap_memory|     K_tile_10|         array|
+|K_tile_10_ce0       |  out|    1|   ap_memory|     K_tile_10|         array|
+|K_tile_10_q0        |   in|   16|   ap_memory|     K_tile_10|         array|
+|K_tile_11_address0  |  out|    9|   ap_memory|     K_tile_11|         array|
+|K_tile_11_ce0       |  out|    1|   ap_memory|     K_tile_11|         array|
+|K_tile_11_q0        |   in|   16|   ap_memory|     K_tile_11|         array|
+|K_tile_12_address0  |  out|    9|   ap_memory|     K_tile_12|         array|
+|K_tile_12_ce0       |  out|    1|   ap_memory|     K_tile_12|         array|
+|K_tile_12_q0        |   in|   16|   ap_memory|     K_tile_12|         array|
+|K_tile_13_address0  |  out|    9|   ap_memory|     K_tile_13|         array|
+|K_tile_13_ce0       |  out|    1|   ap_memory|     K_tile_13|         array|
+|K_tile_13_q0        |   in|   16|   ap_memory|     K_tile_13|         array|
+|K_tile_14_address0  |  out|    9|   ap_memory|     K_tile_14|         array|
+|K_tile_14_ce0       |  out|    1|   ap_memory|     K_tile_14|         array|
+|K_tile_14_q0        |   in|   16|   ap_memory|     K_tile_14|         array|
+|K_tile_15_address0  |  out|    9|   ap_memory|     K_tile_15|         array|
+|K_tile_15_ce0       |  out|    1|   ap_memory|     K_tile_15|         array|
+|K_tile_15_q0        |   in|   16|   ap_memory|     K_tile_15|         array|
+|S_tile_0_address1   |  out|    9|   ap_memory|      S_tile_0|         array|
+|S_tile_0_ce1        |  out|    1|   ap_memory|      S_tile_0|         array|
+|S_tile_0_we1        |  out|    1|   ap_memory|      S_tile_0|         array|
+|S_tile_0_d1         |  out|   32|   ap_memory|      S_tile_0|         array|
+|S_tile_1_address1   |  out|    9|   ap_memory|      S_tile_1|         array|
+|S_tile_1_ce1        |  out|    1|   ap_memory|      S_tile_1|         array|
+|S_tile_1_we1        |  out|    1|   ap_memory|      S_tile_1|         array|
+|S_tile_1_d1         |  out|   32|   ap_memory|      S_tile_1|         array|
+|S_tile_2_address1   |  out|    9|   ap_memory|      S_tile_2|         array|
+|S_tile_2_ce1        |  out|    1|   ap_memory|      S_tile_2|         array|
+|S_tile_2_we1        |  out|    1|   ap_memory|      S_tile_2|         array|
+|S_tile_2_d1         |  out|   32|   ap_memory|      S_tile_2|         array|
+|S_tile_3_address1   |  out|    9|   ap_memory|      S_tile_3|         array|
+|S_tile_3_ce1        |  out|    1|   ap_memory|      S_tile_3|         array|
+|S_tile_3_we1        |  out|    1|   ap_memory|      S_tile_3|         array|
+|S_tile_3_d1         |  out|   32|   ap_memory|      S_tile_3|         array|
+|S_tile_4_address1   |  out|    9|   ap_memory|      S_tile_4|         array|
+|S_tile_4_ce1        |  out|    1|   ap_memory|      S_tile_4|         array|
+|S_tile_4_we1        |  out|    1|   ap_memory|      S_tile_4|         array|
+|S_tile_4_d1         |  out|   32|   ap_memory|      S_tile_4|         array|
+|S_tile_5_address1   |  out|    9|   ap_memory|      S_tile_5|         array|
+|S_tile_5_ce1        |  out|    1|   ap_memory|      S_tile_5|         array|
+|S_tile_5_we1        |  out|    1|   ap_memory|      S_tile_5|         array|
+|S_tile_5_d1         |  out|   32|   ap_memory|      S_tile_5|         array|
+|S_tile_6_address1   |  out|    9|   ap_memory|      S_tile_6|         array|
+|S_tile_6_ce1        |  out|    1|   ap_memory|      S_tile_6|         array|
+|S_tile_6_we1        |  out|    1|   ap_memory|      S_tile_6|         array|
+|S_tile_6_d1         |  out|   32|   ap_memory|      S_tile_6|         array|
+|S_tile_7_address1   |  out|    9|   ap_memory|      S_tile_7|         array|
+|S_tile_7_ce1        |  out|    1|   ap_memory|      S_tile_7|         array|
+|S_tile_7_we1        |  out|    1|   ap_memory|      S_tile_7|         array|
+|S_tile_7_d1         |  out|   32|   ap_memory|      S_tile_7|         array|
+|br_actual           |   in|   32|     ap_none|     br_actual|        scalar|
+|bc_actual           |   in|   32|     ap_none|     bc_actual|        scalar|
++--------------------+-----+-----+------------+--------------+--------------+
+

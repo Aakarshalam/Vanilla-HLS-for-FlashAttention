@@ -1,0 +1,199 @@
+
+
+================================================================
+== Vitis HLS Report for 'gemm_pv_Pipeline_INIT_PV_ACC'
+================================================================
+* Date:           Sun Mar 22 18:06:54 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.448 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       10|       10|  0.100 us|  0.100 us|    9|    9|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- INIT_PV_ACC  |        8|        8|         1|          1|          1|     8|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|        8|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|     -|        -|        -|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|       17|     -|
+|Register             |        -|     -|       10|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|     0|       10|       25|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln142_fu_312_p2  |         +|   0|  0|   8|           8|           5|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|   8|           8|           5|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   1|          2|    1|          2|
+    |ap_sig_allocacmp_k_2  |   8|          2|    8|         16|
+    |k_fu_68               |   8|          2|    8|         16|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  17|          6|   17|         34|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |k_fu_68      |  8|   0|    8|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        | 10|   0|   10|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++-------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  gemm_pv_Pipeline_INIT_PV_ACC|  return value|
+|acc_d_15_address0  |  out|    3|   ap_memory|                      acc_d_15|         array|
+|acc_d_15_ce0       |  out|    1|   ap_memory|                      acc_d_15|         array|
+|acc_d_15_we0       |  out|    1|   ap_memory|                      acc_d_15|         array|
+|acc_d_15_d0        |  out|   32|   ap_memory|                      acc_d_15|         array|
+|acc_d_14_address0  |  out|    3|   ap_memory|                      acc_d_14|         array|
+|acc_d_14_ce0       |  out|    1|   ap_memory|                      acc_d_14|         array|
+|acc_d_14_we0       |  out|    1|   ap_memory|                      acc_d_14|         array|
+|acc_d_14_d0        |  out|   32|   ap_memory|                      acc_d_14|         array|
+|acc_d_13_address0  |  out|    3|   ap_memory|                      acc_d_13|         array|
+|acc_d_13_ce0       |  out|    1|   ap_memory|                      acc_d_13|         array|
+|acc_d_13_we0       |  out|    1|   ap_memory|                      acc_d_13|         array|
+|acc_d_13_d0        |  out|   32|   ap_memory|                      acc_d_13|         array|
+|acc_d_12_address0  |  out|    3|   ap_memory|                      acc_d_12|         array|
+|acc_d_12_ce0       |  out|    1|   ap_memory|                      acc_d_12|         array|
+|acc_d_12_we0       |  out|    1|   ap_memory|                      acc_d_12|         array|
+|acc_d_12_d0        |  out|   32|   ap_memory|                      acc_d_12|         array|
+|acc_d_11_address0  |  out|    3|   ap_memory|                      acc_d_11|         array|
+|acc_d_11_ce0       |  out|    1|   ap_memory|                      acc_d_11|         array|
+|acc_d_11_we0       |  out|    1|   ap_memory|                      acc_d_11|         array|
+|acc_d_11_d0        |  out|   32|   ap_memory|                      acc_d_11|         array|
+|acc_d_10_address0  |  out|    3|   ap_memory|                      acc_d_10|         array|
+|acc_d_10_ce0       |  out|    1|   ap_memory|                      acc_d_10|         array|
+|acc_d_10_we0       |  out|    1|   ap_memory|                      acc_d_10|         array|
+|acc_d_10_d0        |  out|   32|   ap_memory|                      acc_d_10|         array|
+|acc_d_9_address0   |  out|    3|   ap_memory|                       acc_d_9|         array|
+|acc_d_9_ce0        |  out|    1|   ap_memory|                       acc_d_9|         array|
+|acc_d_9_we0        |  out|    1|   ap_memory|                       acc_d_9|         array|
+|acc_d_9_d0         |  out|   32|   ap_memory|                       acc_d_9|         array|
+|acc_d_8_address0   |  out|    3|   ap_memory|                       acc_d_8|         array|
+|acc_d_8_ce0        |  out|    1|   ap_memory|                       acc_d_8|         array|
+|acc_d_8_we0        |  out|    1|   ap_memory|                       acc_d_8|         array|
+|acc_d_8_d0         |  out|   32|   ap_memory|                       acc_d_8|         array|
+|acc_d_7_address0   |  out|    3|   ap_memory|                       acc_d_7|         array|
+|acc_d_7_ce0        |  out|    1|   ap_memory|                       acc_d_7|         array|
+|acc_d_7_we0        |  out|    1|   ap_memory|                       acc_d_7|         array|
+|acc_d_7_d0         |  out|   32|   ap_memory|                       acc_d_7|         array|
+|acc_d_6_address0   |  out|    3|   ap_memory|                       acc_d_6|         array|
+|acc_d_6_ce0        |  out|    1|   ap_memory|                       acc_d_6|         array|
+|acc_d_6_we0        |  out|    1|   ap_memory|                       acc_d_6|         array|
+|acc_d_6_d0         |  out|   32|   ap_memory|                       acc_d_6|         array|
+|acc_d_5_address0   |  out|    3|   ap_memory|                       acc_d_5|         array|
+|acc_d_5_ce0        |  out|    1|   ap_memory|                       acc_d_5|         array|
+|acc_d_5_we0        |  out|    1|   ap_memory|                       acc_d_5|         array|
+|acc_d_5_d0         |  out|   32|   ap_memory|                       acc_d_5|         array|
+|acc_d_4_address0   |  out|    3|   ap_memory|                       acc_d_4|         array|
+|acc_d_4_ce0        |  out|    1|   ap_memory|                       acc_d_4|         array|
+|acc_d_4_we0        |  out|    1|   ap_memory|                       acc_d_4|         array|
+|acc_d_4_d0         |  out|   32|   ap_memory|                       acc_d_4|         array|
+|acc_d_3_address0   |  out|    3|   ap_memory|                       acc_d_3|         array|
+|acc_d_3_ce0        |  out|    1|   ap_memory|                       acc_d_3|         array|
+|acc_d_3_we0        |  out|    1|   ap_memory|                       acc_d_3|         array|
+|acc_d_3_d0         |  out|   32|   ap_memory|                       acc_d_3|         array|
+|acc_d_2_address0   |  out|    3|   ap_memory|                       acc_d_2|         array|
+|acc_d_2_ce0        |  out|    1|   ap_memory|                       acc_d_2|         array|
+|acc_d_2_we0        |  out|    1|   ap_memory|                       acc_d_2|         array|
+|acc_d_2_d0         |  out|   32|   ap_memory|                       acc_d_2|         array|
+|acc_d_1_address0   |  out|    3|   ap_memory|                       acc_d_1|         array|
+|acc_d_1_ce0        |  out|    1|   ap_memory|                       acc_d_1|         array|
+|acc_d_1_we0        |  out|    1|   ap_memory|                       acc_d_1|         array|
+|acc_d_1_d0         |  out|   32|   ap_memory|                       acc_d_1|         array|
+|acc_d_address0     |  out|    3|   ap_memory|                         acc_d|         array|
+|acc_d_ce0          |  out|    1|   ap_memory|                         acc_d|         array|
+|acc_d_we0          |  out|    1|   ap_memory|                         acc_d|         array|
+|acc_d_d0           |  out|   32|   ap_memory|                         acc_d|         array|
++-------------------+-----+-----+------------+------------------------------+--------------+
+

@@ -1,0 +1,1178 @@
+
+
+================================================================
+== Vitis HLS Report for 'online_softmax_tile'
+================================================================
+* Date:           Sun Mar 22 18:06:54 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.976 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |                                                        |                                            |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+        |                        Instance                        |                   Module                   |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+        +--------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+        |grp_online_softmax_tile_Pipeline_ROWMAX_INNER_fu_1778   |online_softmax_tile_Pipeline_ROWMAX_INNER   |       66|       66|  0.660 us|  0.660 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_online_softmax_tile_Pipeline_EXP_SUM_INNER_fu_1802  |online_softmax_tile_Pipeline_EXP_SUM_INNER  |       70|       70|  0.700 us|  0.700 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_online_softmax_tile_Pipeline_SOFTMAX_PAD_fu_1843    |online_softmax_tile_Pipeline_SOFTMAX_PAD    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +--------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- SOFTMAX_ROWMAX   |     4480|     4480|        70|          -|          -|    64|        no|
+        |- SOFTMAX_EXP_SUM  |     4672|     4672|        73|          -|          -|    64|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|      114|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|     2|      524|     1959|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|     4654|     -|
+|Register             |        -|     -|     6359|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|     2|     6883|     6727|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|    ~0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|    ~0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |                        Instance                        |                   Module                   | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |grp_online_softmax_tile_Pipeline_EXP_SUM_INNER_fu_1802  |online_softmax_tile_Pipeline_EXP_SUM_INNER  |        0|   2|  101|  263|    0|
+    |grp_online_softmax_tile_Pipeline_ROWMAX_INNER_fu_1778   |online_softmax_tile_Pipeline_ROWMAX_INNER   |        0|   0|   46|  269|    0|
+    |grp_online_softmax_tile_Pipeline_SOFTMAX_PAD_fu_1843    |online_softmax_tile_Pipeline_SOFTMAX_PAD    |        0|   0|  377|  755|    0|
+    |sparsemux_129_6_32_1_1_U840                             |sparsemux_129_6_32_1_1                      |        0|   0|    0|  672|    0|
+    +--------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                   |                                            |        0|   2|  524| 1959|    0|
+    +--------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln44_fu_2128_p2     |         +|   0|  0|   8|           7|           1|
+    |add_ln61_fu_2376_p2     |         +|   0|  0|   8|           7|           1|
+    |cmp32_fu_2598_p2        |      icmp|   0|  0|  16|          32|          32|
+    |cmp6_fu_2149_p2         |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln44_fu_2134_p2    |      icmp|   0|  0|   3|           7|           8|
+    |icmp_ln61_fu_2382_p2    |      icmp|   0|  0|   3|           7|           8|
+    |select_ln55_fu_2169_p3  |    select|   0|  0|  29|           1|          32|
+    |select_ln80_fu_2607_p3  |    select|   0|  0|  29|           1|          32|
+    |cmp6_not_fu_2154_p2     |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 114|          95|         148|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |P_tile_0_address1    |  16|          3|    9|         27|
+    |P_tile_0_ce1         |   1|          3|    1|          3|
+    |P_tile_0_d1          |  16|          3|   16|         48|
+    |P_tile_0_we1         |   1|          3|    1|          3|
+    |P_tile_1_address1    |  16|          3|    9|         27|
+    |P_tile_1_ce1         |   1|          3|    1|          3|
+    |P_tile_1_d1          |  16|          3|   16|         48|
+    |P_tile_1_we1         |   1|          3|    1|          3|
+    |P_tile_2_address1    |  16|          3|    9|         27|
+    |P_tile_2_ce1         |   1|          3|    1|          3|
+    |P_tile_2_d1          |  16|          3|   16|         48|
+    |P_tile_2_we1         |   1|          3|    1|          3|
+    |P_tile_3_address1    |  16|          3|    9|         27|
+    |P_tile_3_ce1         |   1|          3|    1|          3|
+    |P_tile_3_d1          |  16|          3|   16|         48|
+    |P_tile_3_we1         |   1|          3|    1|          3|
+    |P_tile_4_address1    |  16|          3|    9|         27|
+    |P_tile_4_ce1         |   1|          3|    1|          3|
+    |P_tile_4_d1          |  16|          3|   16|         48|
+    |P_tile_4_we1         |   1|          3|    1|          3|
+    |P_tile_5_address1    |  16|          3|    9|         27|
+    |P_tile_5_ce1         |   1|          3|    1|          3|
+    |P_tile_5_d1          |  16|          3|   16|         48|
+    |P_tile_5_we1         |   1|          3|    1|          3|
+    |P_tile_6_address1    |  16|          3|    9|         27|
+    |P_tile_6_ce1         |   1|          3|    1|          3|
+    |P_tile_6_d1          |  16|          3|   16|         48|
+    |P_tile_6_we1         |   1|          3|    1|          3|
+    |P_tile_7_address1    |  16|          3|    9|         27|
+    |P_tile_7_ce1         |   1|          3|    1|          3|
+    |P_tile_7_d1          |  16|          3|   16|         48|
+    |P_tile_7_we1         |   1|          3|    1|          3|
+    |S_tile_0_address0    |  16|          3|    9|         27|
+    |S_tile_0_ce0         |   1|          3|    1|          3|
+    |S_tile_1_address0    |  16|          3|    9|         27|
+    |S_tile_1_ce0         |   1|          3|    1|          3|
+    |S_tile_2_address0    |  16|          3|    9|         27|
+    |S_tile_2_ce0         |   1|          3|    1|          3|
+    |S_tile_3_address0    |  16|          3|    9|         27|
+    |S_tile_3_ce0         |   1|          3|    1|          3|
+    |S_tile_4_address0    |  16|          3|    9|         27|
+    |S_tile_4_ce0         |   1|          3|    1|          3|
+    |S_tile_5_address0    |  16|          3|    9|         27|
+    |S_tile_5_ce0         |   1|          3|    1|          3|
+    |S_tile_6_address0    |  16|          3|    9|         27|
+    |S_tile_6_ce0         |   1|          3|    1|          3|
+    |S_tile_7_address0    |  16|          3|    9|         27|
+    |S_tile_7_ce0         |   1|          3|    1|          3|
+    |ap_NS_fsm            |   5|         10|    1|         10|
+    |grp_fu_3219_ce       |   1|          2|    1|          2|
+    |i_2_fu_482           |   8|          2|    7|         14|
+    |i_fu_470             |   8|          2|    7|         14|
+    |l_tilde_0            |  32|          3|   32|         96|
+    |l_tilde_0_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_1            |  32|          3|   32|         96|
+    |l_tilde_10           |  32|          3|   32|         96|
+    |l_tilde_10_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_11           |  32|          3|   32|         96|
+    |l_tilde_11_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_12           |  32|          3|   32|         96|
+    |l_tilde_12_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_13           |  32|          3|   32|         96|
+    |l_tilde_13_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_14           |  32|          3|   32|         96|
+    |l_tilde_14_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_15           |  32|          3|   32|         96|
+    |l_tilde_15_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_16           |  32|          3|   32|         96|
+    |l_tilde_16_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_17           |  32|          3|   32|         96|
+    |l_tilde_17_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_18           |  32|          3|   32|         96|
+    |l_tilde_18_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_19           |  32|          3|   32|         96|
+    |l_tilde_19_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_1_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_2            |  32|          3|   32|         96|
+    |l_tilde_20           |  32|          3|   32|         96|
+    |l_tilde_20_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_21           |  32|          3|   32|         96|
+    |l_tilde_21_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_22           |  32|          3|   32|         96|
+    |l_tilde_22_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_23           |  32|          3|   32|         96|
+    |l_tilde_23_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_24           |  32|          3|   32|         96|
+    |l_tilde_24_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_25           |  32|          3|   32|         96|
+    |l_tilde_25_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_26           |  32|          3|   32|         96|
+    |l_tilde_26_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_27           |  32|          3|   32|         96|
+    |l_tilde_27_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_28           |  32|          3|   32|         96|
+    |l_tilde_28_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_29           |  32|          3|   32|         96|
+    |l_tilde_29_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_2_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_3            |  32|          3|   32|         96|
+    |l_tilde_30           |  32|          3|   32|         96|
+    |l_tilde_30_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_31           |  32|          3|   32|         96|
+    |l_tilde_31_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_32           |  32|          3|   32|         96|
+    |l_tilde_32_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_33           |  32|          3|   32|         96|
+    |l_tilde_33_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_34           |  32|          3|   32|         96|
+    |l_tilde_34_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_35           |  32|          3|   32|         96|
+    |l_tilde_35_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_36           |  32|          3|   32|         96|
+    |l_tilde_36_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_37           |  32|          3|   32|         96|
+    |l_tilde_37_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_38           |  32|          3|   32|         96|
+    |l_tilde_38_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_39           |  32|          3|   32|         96|
+    |l_tilde_39_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_3_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_4            |  32|          3|   32|         96|
+    |l_tilde_40           |  32|          3|   32|         96|
+    |l_tilde_40_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_41           |  32|          3|   32|         96|
+    |l_tilde_41_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_42           |  32|          3|   32|         96|
+    |l_tilde_42_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_43           |  32|          3|   32|         96|
+    |l_tilde_43_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_44           |  32|          3|   32|         96|
+    |l_tilde_44_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_45           |  32|          3|   32|         96|
+    |l_tilde_45_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_46           |  32|          3|   32|         96|
+    |l_tilde_46_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_47           |  32|          3|   32|         96|
+    |l_tilde_47_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_48           |  32|          3|   32|         96|
+    |l_tilde_48_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_49           |  32|          3|   32|         96|
+    |l_tilde_49_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_4_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_5            |  32|          3|   32|         96|
+    |l_tilde_50           |  32|          3|   32|         96|
+    |l_tilde_50_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_51           |  32|          3|   32|         96|
+    |l_tilde_51_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_52           |  32|          3|   32|         96|
+    |l_tilde_52_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_53           |  32|          3|   32|         96|
+    |l_tilde_53_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_54           |  32|          3|   32|         96|
+    |l_tilde_54_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_55           |  32|          3|   32|         96|
+    |l_tilde_55_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_56           |  32|          3|   32|         96|
+    |l_tilde_56_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_57           |  32|          3|   32|         96|
+    |l_tilde_57_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_58           |  32|          3|   32|         96|
+    |l_tilde_58_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_59           |  32|          3|   32|         96|
+    |l_tilde_59_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_5_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_6            |  32|          3|   32|         96|
+    |l_tilde_60           |  32|          3|   32|         96|
+    |l_tilde_60_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_61           |  32|          3|   32|         96|
+    |l_tilde_61_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_62           |  32|          3|   32|         96|
+    |l_tilde_62_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_63           |  32|          3|   32|         96|
+    |l_tilde_63_ap_vld    |   1|          3|    1|          3|
+    |l_tilde_6_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_7            |  32|          3|   32|         96|
+    |l_tilde_7_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_8            |  32|          3|   32|         96|
+    |l_tilde_8_ap_vld     |   1|          3|    1|          3|
+    |l_tilde_9            |  32|          3|   32|         96|
+    |l_tilde_9_ap_vld     |   1|          3|    1|          3|
+    |m_tilde_0_o          |  32|          3|   32|         96|
+    |m_tilde_0_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_10_o         |  32|          3|   32|         96|
+    |m_tilde_10_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_11_o         |  32|          3|   32|         96|
+    |m_tilde_11_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_12_o         |  32|          3|   32|         96|
+    |m_tilde_12_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_13_o         |  32|          3|   32|         96|
+    |m_tilde_13_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_14_o         |  32|          3|   32|         96|
+    |m_tilde_14_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_15_o         |  32|          3|   32|         96|
+    |m_tilde_15_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_16_o         |  32|          3|   32|         96|
+    |m_tilde_16_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_17_o         |  32|          3|   32|         96|
+    |m_tilde_17_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_18_o         |  32|          3|   32|         96|
+    |m_tilde_18_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_19_o         |  32|          3|   32|         96|
+    |m_tilde_19_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_1_o          |  32|          3|   32|         96|
+    |m_tilde_1_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_20_o         |  32|          3|   32|         96|
+    |m_tilde_20_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_21_o         |  32|          3|   32|         96|
+    |m_tilde_21_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_22_o         |  32|          3|   32|         96|
+    |m_tilde_22_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_23_o         |  32|          3|   32|         96|
+    |m_tilde_23_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_24_o         |  32|          3|   32|         96|
+    |m_tilde_24_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_25_o         |  32|          3|   32|         96|
+    |m_tilde_25_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_26_o         |  32|          3|   32|         96|
+    |m_tilde_26_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_27_o         |  32|          3|   32|         96|
+    |m_tilde_27_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_28_o         |  32|          3|   32|         96|
+    |m_tilde_28_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_29_o         |  32|          3|   32|         96|
+    |m_tilde_29_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_2_o          |  32|          3|   32|         96|
+    |m_tilde_2_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_30_o         |  32|          3|   32|         96|
+    |m_tilde_30_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_31_o         |  32|          3|   32|         96|
+    |m_tilde_31_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_32_o         |  32|          3|   32|         96|
+    |m_tilde_32_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_33_o         |  32|          3|   32|         96|
+    |m_tilde_33_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_34_o         |  32|          3|   32|         96|
+    |m_tilde_34_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_35_o         |  32|          3|   32|         96|
+    |m_tilde_35_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_36_o         |  32|          3|   32|         96|
+    |m_tilde_36_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_37_o         |  32|          3|   32|         96|
+    |m_tilde_37_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_38_o         |  32|          3|   32|         96|
+    |m_tilde_38_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_39_o         |  32|          3|   32|         96|
+    |m_tilde_39_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_3_o          |  32|          3|   32|         96|
+    |m_tilde_3_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_40_o         |  32|          3|   32|         96|
+    |m_tilde_40_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_41_o         |  32|          3|   32|         96|
+    |m_tilde_41_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_42_o         |  32|          3|   32|         96|
+    |m_tilde_42_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_43_o         |  32|          3|   32|         96|
+    |m_tilde_43_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_44_o         |  32|          3|   32|         96|
+    |m_tilde_44_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_45_o         |  32|          3|   32|         96|
+    |m_tilde_45_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_46_o         |  32|          3|   32|         96|
+    |m_tilde_46_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_47_o         |  32|          3|   32|         96|
+    |m_tilde_47_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_48_o         |  32|          3|   32|         96|
+    |m_tilde_48_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_49_o         |  32|          3|   32|         96|
+    |m_tilde_49_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_4_o          |  32|          3|   32|         96|
+    |m_tilde_4_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_50_o         |  32|          3|   32|         96|
+    |m_tilde_50_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_51_o         |  32|          3|   32|         96|
+    |m_tilde_51_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_52_o         |  32|          3|   32|         96|
+    |m_tilde_52_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_53_o         |  32|          3|   32|         96|
+    |m_tilde_53_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_54_o         |  32|          3|   32|         96|
+    |m_tilde_54_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_55_o         |  32|          3|   32|         96|
+    |m_tilde_55_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_56_o         |  32|          3|   32|         96|
+    |m_tilde_56_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_57_o         |  32|          3|   32|         96|
+    |m_tilde_57_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_58_o         |  32|          3|   32|         96|
+    |m_tilde_58_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_59_o         |  32|          3|   32|         96|
+    |m_tilde_59_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_5_o          |  32|          3|   32|         96|
+    |m_tilde_5_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_60_o         |  32|          3|   32|         96|
+    |m_tilde_60_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_61_o         |  32|          3|   32|         96|
+    |m_tilde_61_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_62_o         |  32|          3|   32|         96|
+    |m_tilde_62_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_63_o         |  32|          3|   32|         96|
+    |m_tilde_63_o_ap_vld  |   1|          3|    1|          3|
+    |m_tilde_6_o          |  32|          3|   32|         96|
+    |m_tilde_6_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_7_o          |  32|          3|   32|         96|
+    |m_tilde_7_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_8_o          |  32|          3|   32|         96|
+    |m_tilde_8_o_ap_vld   |   1|          3|    1|          3|
+    |m_tilde_9_o          |  32|          3|   32|         96|
+    |m_tilde_9_o_ap_vld   |   1|          3|    1|          3|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |4654|        928| 4536|      13600|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln44_reg_2843                                                    |   7|   0|    7|          0|
+    |add_ln61_reg_3194                                                    |   7|   0|    7|          0|
+    |ap_CS_fsm                                                            |   9|   0|    9|          0|
+    |ap_predicate_pred1530_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1538_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1543_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1548_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1553_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1558_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1563_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1568_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1573_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1578_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1583_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1588_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1593_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1598_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1603_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1608_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1613_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1618_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1623_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1628_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1633_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1638_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1643_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1648_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1653_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1658_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1663_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1668_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1673_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1678_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1683_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1688_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1693_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1698_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1703_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1708_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1713_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1718_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1723_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1728_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1733_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1738_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1743_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1748_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1753_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1758_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1763_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1768_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1773_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1778_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1783_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1788_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1793_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1798_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1803_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1808_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1813_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1818_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1823_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1828_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1833_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1838_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1843_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1848_state4                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1853_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1860_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1864_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1868_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1872_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1876_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1880_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1884_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1888_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1892_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1896_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1900_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1904_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1908_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1912_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1916_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1920_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1924_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1928_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1932_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1936_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1940_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1944_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1948_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1952_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1956_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1960_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1964_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1968_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1972_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1976_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1980_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1984_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1988_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1992_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred1996_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2000_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2004_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2008_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2012_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2016_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2020_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2024_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2028_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2032_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2036_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2040_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2044_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2048_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2052_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2056_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2060_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2064_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2068_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2072_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2076_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2080_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2084_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2088_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2092_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2096_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2100_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2104_state8                                         |   1|   0|    1|          0|
+    |ap_predicate_pred2108_state8                                         |   1|   0|    1|          0|
+    |cmp32_reg_3213                                                       |   1|   0|    1|          0|
+    |cmp6_not_reg_2862                                                    |   1|   0|    1|          0|
+    |cmp6_reg_2857                                                        |   1|   0|    1|          0|
+    |grp_online_softmax_tile_Pipeline_EXP_SUM_INNER_fu_1802_ap_start_reg  |   1|   0|    1|          0|
+    |grp_online_softmax_tile_Pipeline_ROWMAX_INNER_fu_1778_ap_start_reg   |   1|   0|    1|          0|
+    |grp_online_softmax_tile_Pipeline_SOFTMAX_PAD_fu_1843_ap_start_reg    |   1|   0|    1|          0|
+    |i_2_fu_482                                                           |   7|   0|    7|          0|
+    |i_fu_470                                                             |   7|   0|    7|          0|
+    |l_tilde_0_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_10_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_11_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_12_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_13_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_14_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_15_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_16_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_17_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_18_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_19_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_1_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_20_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_21_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_22_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_23_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_24_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_25_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_26_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_27_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_28_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_29_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_2_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_30_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_31_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_32_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_33_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_34_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_35_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_36_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_37_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_38_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_39_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_3_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_40_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_41_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_42_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_43_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_44_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_45_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_46_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_47_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_48_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_49_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_4_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_50_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_51_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_52_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_53_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_54_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_55_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_56_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_57_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_58_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_59_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_5_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_60_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_61_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_62_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_63_reg                                                       |  32|   0|   32|          0|
+    |l_tilde_6_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_7_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_8_reg                                                        |  32|   0|   32|          0|
+    |l_tilde_9_reg                                                        |  32|   0|   32|          0|
+    |m_tilde_0_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_0_read_reg_2874                                              |  32|   0|   32|          0|
+    |m_tilde_10_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_10_read_reg_2924                                             |  32|   0|   32|          0|
+    |m_tilde_11_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_11_read_reg_2929                                             |  32|   0|   32|          0|
+    |m_tilde_12_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_12_read_reg_2934                                             |  32|   0|   32|          0|
+    |m_tilde_13_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_13_read_reg_2939                                             |  32|   0|   32|          0|
+    |m_tilde_14_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_14_read_reg_2944                                             |  32|   0|   32|          0|
+    |m_tilde_15_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_15_read_reg_2949                                             |  32|   0|   32|          0|
+    |m_tilde_16_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_16_read_reg_2954                                             |  32|   0|   32|          0|
+    |m_tilde_17_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_17_read_reg_2959                                             |  32|   0|   32|          0|
+    |m_tilde_18_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_18_read_reg_2964                                             |  32|   0|   32|          0|
+    |m_tilde_19_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_19_read_reg_2969                                             |  32|   0|   32|          0|
+    |m_tilde_1_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_1_read_reg_2879                                              |  32|   0|   32|          0|
+    |m_tilde_20_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_20_read_reg_2974                                             |  32|   0|   32|          0|
+    |m_tilde_21_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_21_read_reg_2979                                             |  32|   0|   32|          0|
+    |m_tilde_22_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_22_read_reg_2984                                             |  32|   0|   32|          0|
+    |m_tilde_23_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_23_read_reg_2989                                             |  32|   0|   32|          0|
+    |m_tilde_24_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_24_read_reg_2994                                             |  32|   0|   32|          0|
+    |m_tilde_25_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_25_read_reg_2999                                             |  32|   0|   32|          0|
+    |m_tilde_26_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_26_read_reg_3004                                             |  32|   0|   32|          0|
+    |m_tilde_27_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_27_read_reg_3009                                             |  32|   0|   32|          0|
+    |m_tilde_28_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_28_read_reg_3014                                             |  32|   0|   32|          0|
+    |m_tilde_29_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_29_read_reg_3019                                             |  32|   0|   32|          0|
+    |m_tilde_2_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_2_read_reg_2884                                              |  32|   0|   32|          0|
+    |m_tilde_30_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_30_read_reg_3024                                             |  32|   0|   32|          0|
+    |m_tilde_31_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_31_read_reg_3029                                             |  32|   0|   32|          0|
+    |m_tilde_32_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_32_read_reg_3034                                             |  32|   0|   32|          0|
+    |m_tilde_33_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_33_read_reg_3039                                             |  32|   0|   32|          0|
+    |m_tilde_34_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_34_read_reg_3044                                             |  32|   0|   32|          0|
+    |m_tilde_35_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_35_read_reg_3049                                             |  32|   0|   32|          0|
+    |m_tilde_36_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_36_read_reg_3054                                             |  32|   0|   32|          0|
+    |m_tilde_37_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_37_read_reg_3059                                             |  32|   0|   32|          0|
+    |m_tilde_38_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_38_read_reg_3064                                             |  32|   0|   32|          0|
+    |m_tilde_39_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_39_read_reg_3069                                             |  32|   0|   32|          0|
+    |m_tilde_3_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_3_read_reg_2889                                              |  32|   0|   32|          0|
+    |m_tilde_40_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_40_read_reg_3074                                             |  32|   0|   32|          0|
+    |m_tilde_41_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_41_read_reg_3079                                             |  32|   0|   32|          0|
+    |m_tilde_42_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_42_read_reg_3084                                             |  32|   0|   32|          0|
+    |m_tilde_43_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_43_read_reg_3089                                             |  32|   0|   32|          0|
+    |m_tilde_44_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_44_read_reg_3094                                             |  32|   0|   32|          0|
+    |m_tilde_45_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_45_read_reg_3099                                             |  32|   0|   32|          0|
+    |m_tilde_46_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_46_read_reg_3104                                             |  32|   0|   32|          0|
+    |m_tilde_47_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_47_read_reg_3109                                             |  32|   0|   32|          0|
+    |m_tilde_48_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_48_read_reg_3114                                             |  32|   0|   32|          0|
+    |m_tilde_49_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_49_read_reg_3119                                             |  32|   0|   32|          0|
+    |m_tilde_4_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_4_read_reg_2894                                              |  32|   0|   32|          0|
+    |m_tilde_50_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_50_read_reg_3124                                             |  32|   0|   32|          0|
+    |m_tilde_51_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_51_read_reg_3129                                             |  32|   0|   32|          0|
+    |m_tilde_52_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_52_read_reg_3134                                             |  32|   0|   32|          0|
+    |m_tilde_53_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_53_read_reg_3139                                             |  32|   0|   32|          0|
+    |m_tilde_54_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_54_read_reg_3144                                             |  32|   0|   32|          0|
+    |m_tilde_55_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_55_read_reg_3149                                             |  32|   0|   32|          0|
+    |m_tilde_56_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_56_read_reg_3154                                             |  32|   0|   32|          0|
+    |m_tilde_57_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_57_read_reg_3159                                             |  32|   0|   32|          0|
+    |m_tilde_58_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_58_read_reg_3164                                             |  32|   0|   32|          0|
+    |m_tilde_59_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_59_read_reg_3169                                             |  32|   0|   32|          0|
+    |m_tilde_5_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_5_read_reg_2899                                              |  32|   0|   32|          0|
+    |m_tilde_60_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_60_read_reg_3174                                             |  32|   0|   32|          0|
+    |m_tilde_61_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_61_read_reg_3179                                             |  32|   0|   32|          0|
+    |m_tilde_62_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_62_read_reg_3184                                             |  32|   0|   32|          0|
+    |m_tilde_63_o_reg                                                     |  32|   0|   32|          0|
+    |m_tilde_63_read_reg_3189                                             |  32|   0|   32|          0|
+    |m_tilde_6_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_6_read_reg_2904                                              |  32|   0|   32|          0|
+    |m_tilde_7_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_7_read_reg_2909                                              |  32|   0|   32|          0|
+    |m_tilde_8_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_8_read_reg_2914                                              |  32|   0|   32|          0|
+    |m_tilde_9_o_reg                                                      |  32|   0|   32|          0|
+    |m_tilde_9_read_reg_2919                                              |  32|   0|   32|          0|
+    |m_val_reg_3208                                                       |  32|   0|   32|          0|
+    |trunc_ln44_reg_2851                                                  |   6|   0|    6|          0|
+    |trunc_ln61_reg_3202                                                  |   6|   0|    6|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                |6359|   0| 6359|          0|
+    +---------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+---------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++---------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|grp_fu_8042_p_din0   |  out|   32|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|grp_fu_8042_p_din1   |  out|   32|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|grp_fu_8042_p_dout0  |   in|   32|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|grp_fu_8042_p_ce     |  out|    1|  ap_ctrl_hs|  online_softmax_tile|  return value|
+|S_tile_0_address0    |  out|    9|   ap_memory|             S_tile_0|         array|
+|S_tile_0_ce0         |  out|    1|   ap_memory|             S_tile_0|         array|
+|S_tile_0_q0          |   in|   32|   ap_memory|             S_tile_0|         array|
+|S_tile_1_address0    |  out|    9|   ap_memory|             S_tile_1|         array|
+|S_tile_1_ce0         |  out|    1|   ap_memory|             S_tile_1|         array|
+|S_tile_1_q0          |   in|   32|   ap_memory|             S_tile_1|         array|
+|S_tile_2_address0    |  out|    9|   ap_memory|             S_tile_2|         array|
+|S_tile_2_ce0         |  out|    1|   ap_memory|             S_tile_2|         array|
+|S_tile_2_q0          |   in|   32|   ap_memory|             S_tile_2|         array|
+|S_tile_3_address0    |  out|    9|   ap_memory|             S_tile_3|         array|
+|S_tile_3_ce0         |  out|    1|   ap_memory|             S_tile_3|         array|
+|S_tile_3_q0          |   in|   32|   ap_memory|             S_tile_3|         array|
+|S_tile_4_address0    |  out|    9|   ap_memory|             S_tile_4|         array|
+|S_tile_4_ce0         |  out|    1|   ap_memory|             S_tile_4|         array|
+|S_tile_4_q0          |   in|   32|   ap_memory|             S_tile_4|         array|
+|S_tile_5_address0    |  out|    9|   ap_memory|             S_tile_5|         array|
+|S_tile_5_ce0         |  out|    1|   ap_memory|             S_tile_5|         array|
+|S_tile_5_q0          |   in|   32|   ap_memory|             S_tile_5|         array|
+|S_tile_6_address0    |  out|    9|   ap_memory|             S_tile_6|         array|
+|S_tile_6_ce0         |  out|    1|   ap_memory|             S_tile_6|         array|
+|S_tile_6_q0          |   in|   32|   ap_memory|             S_tile_6|         array|
+|S_tile_7_address0    |  out|    9|   ap_memory|             S_tile_7|         array|
+|S_tile_7_ce0         |  out|    1|   ap_memory|             S_tile_7|         array|
+|S_tile_7_q0          |   in|   32|   ap_memory|             S_tile_7|         array|
+|P_tile_0_address1    |  out|    9|   ap_memory|             P_tile_0|         array|
+|P_tile_0_ce1         |  out|    1|   ap_memory|             P_tile_0|         array|
+|P_tile_0_we1         |  out|    1|   ap_memory|             P_tile_0|         array|
+|P_tile_0_d1          |  out|   16|   ap_memory|             P_tile_0|         array|
+|P_tile_1_address1    |  out|    9|   ap_memory|             P_tile_1|         array|
+|P_tile_1_ce1         |  out|    1|   ap_memory|             P_tile_1|         array|
+|P_tile_1_we1         |  out|    1|   ap_memory|             P_tile_1|         array|
+|P_tile_1_d1          |  out|   16|   ap_memory|             P_tile_1|         array|
+|P_tile_2_address1    |  out|    9|   ap_memory|             P_tile_2|         array|
+|P_tile_2_ce1         |  out|    1|   ap_memory|             P_tile_2|         array|
+|P_tile_2_we1         |  out|    1|   ap_memory|             P_tile_2|         array|
+|P_tile_2_d1          |  out|   16|   ap_memory|             P_tile_2|         array|
+|P_tile_3_address1    |  out|    9|   ap_memory|             P_tile_3|         array|
+|P_tile_3_ce1         |  out|    1|   ap_memory|             P_tile_3|         array|
+|P_tile_3_we1         |  out|    1|   ap_memory|             P_tile_3|         array|
+|P_tile_3_d1          |  out|   16|   ap_memory|             P_tile_3|         array|
+|P_tile_4_address1    |  out|    9|   ap_memory|             P_tile_4|         array|
+|P_tile_4_ce1         |  out|    1|   ap_memory|             P_tile_4|         array|
+|P_tile_4_we1         |  out|    1|   ap_memory|             P_tile_4|         array|
+|P_tile_4_d1          |  out|   16|   ap_memory|             P_tile_4|         array|
+|P_tile_5_address1    |  out|    9|   ap_memory|             P_tile_5|         array|
+|P_tile_5_ce1         |  out|    1|   ap_memory|             P_tile_5|         array|
+|P_tile_5_we1         |  out|    1|   ap_memory|             P_tile_5|         array|
+|P_tile_5_d1          |  out|   16|   ap_memory|             P_tile_5|         array|
+|P_tile_6_address1    |  out|    9|   ap_memory|             P_tile_6|         array|
+|P_tile_6_ce1         |  out|    1|   ap_memory|             P_tile_6|         array|
+|P_tile_6_we1         |  out|    1|   ap_memory|             P_tile_6|         array|
+|P_tile_6_d1          |  out|   16|   ap_memory|             P_tile_6|         array|
+|P_tile_7_address1    |  out|    9|   ap_memory|             P_tile_7|         array|
+|P_tile_7_ce1         |  out|    1|   ap_memory|             P_tile_7|         array|
+|P_tile_7_we1         |  out|    1|   ap_memory|             P_tile_7|         array|
+|P_tile_7_d1          |  out|   16|   ap_memory|             P_tile_7|         array|
+|m_tilde_0_i          |   in|   32|     ap_ovld|            m_tilde_0|       pointer|
+|m_tilde_0_o          |  out|   32|     ap_ovld|            m_tilde_0|       pointer|
+|m_tilde_0_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_0|       pointer|
+|m_tilde_1_i          |   in|   32|     ap_ovld|            m_tilde_1|       pointer|
+|m_tilde_1_o          |  out|   32|     ap_ovld|            m_tilde_1|       pointer|
+|m_tilde_1_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_1|       pointer|
+|m_tilde_2_i          |   in|   32|     ap_ovld|            m_tilde_2|       pointer|
+|m_tilde_2_o          |  out|   32|     ap_ovld|            m_tilde_2|       pointer|
+|m_tilde_2_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_2|       pointer|
+|m_tilde_3_i          |   in|   32|     ap_ovld|            m_tilde_3|       pointer|
+|m_tilde_3_o          |  out|   32|     ap_ovld|            m_tilde_3|       pointer|
+|m_tilde_3_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_3|       pointer|
+|m_tilde_4_i          |   in|   32|     ap_ovld|            m_tilde_4|       pointer|
+|m_tilde_4_o          |  out|   32|     ap_ovld|            m_tilde_4|       pointer|
+|m_tilde_4_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_4|       pointer|
+|m_tilde_5_i          |   in|   32|     ap_ovld|            m_tilde_5|       pointer|
+|m_tilde_5_o          |  out|   32|     ap_ovld|            m_tilde_5|       pointer|
+|m_tilde_5_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_5|       pointer|
+|m_tilde_6_i          |   in|   32|     ap_ovld|            m_tilde_6|       pointer|
+|m_tilde_6_o          |  out|   32|     ap_ovld|            m_tilde_6|       pointer|
+|m_tilde_6_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_6|       pointer|
+|m_tilde_7_i          |   in|   32|     ap_ovld|            m_tilde_7|       pointer|
+|m_tilde_7_o          |  out|   32|     ap_ovld|            m_tilde_7|       pointer|
+|m_tilde_7_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_7|       pointer|
+|m_tilde_8_i          |   in|   32|     ap_ovld|            m_tilde_8|       pointer|
+|m_tilde_8_o          |  out|   32|     ap_ovld|            m_tilde_8|       pointer|
+|m_tilde_8_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_8|       pointer|
+|m_tilde_9_i          |   in|   32|     ap_ovld|            m_tilde_9|       pointer|
+|m_tilde_9_o          |  out|   32|     ap_ovld|            m_tilde_9|       pointer|
+|m_tilde_9_o_ap_vld   |  out|    1|     ap_ovld|            m_tilde_9|       pointer|
+|m_tilde_10_i         |   in|   32|     ap_ovld|           m_tilde_10|       pointer|
+|m_tilde_10_o         |  out|   32|     ap_ovld|           m_tilde_10|       pointer|
+|m_tilde_10_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_10|       pointer|
+|m_tilde_11_i         |   in|   32|     ap_ovld|           m_tilde_11|       pointer|
+|m_tilde_11_o         |  out|   32|     ap_ovld|           m_tilde_11|       pointer|
+|m_tilde_11_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_11|       pointer|
+|m_tilde_12_i         |   in|   32|     ap_ovld|           m_tilde_12|       pointer|
+|m_tilde_12_o         |  out|   32|     ap_ovld|           m_tilde_12|       pointer|
+|m_tilde_12_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_12|       pointer|
+|m_tilde_13_i         |   in|   32|     ap_ovld|           m_tilde_13|       pointer|
+|m_tilde_13_o         |  out|   32|     ap_ovld|           m_tilde_13|       pointer|
+|m_tilde_13_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_13|       pointer|
+|m_tilde_14_i         |   in|   32|     ap_ovld|           m_tilde_14|       pointer|
+|m_tilde_14_o         |  out|   32|     ap_ovld|           m_tilde_14|       pointer|
+|m_tilde_14_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_14|       pointer|
+|m_tilde_15_i         |   in|   32|     ap_ovld|           m_tilde_15|       pointer|
+|m_tilde_15_o         |  out|   32|     ap_ovld|           m_tilde_15|       pointer|
+|m_tilde_15_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_15|       pointer|
+|m_tilde_16_i         |   in|   32|     ap_ovld|           m_tilde_16|       pointer|
+|m_tilde_16_o         |  out|   32|     ap_ovld|           m_tilde_16|       pointer|
+|m_tilde_16_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_16|       pointer|
+|m_tilde_17_i         |   in|   32|     ap_ovld|           m_tilde_17|       pointer|
+|m_tilde_17_o         |  out|   32|     ap_ovld|           m_tilde_17|       pointer|
+|m_tilde_17_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_17|       pointer|
+|m_tilde_18_i         |   in|   32|     ap_ovld|           m_tilde_18|       pointer|
+|m_tilde_18_o         |  out|   32|     ap_ovld|           m_tilde_18|       pointer|
+|m_tilde_18_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_18|       pointer|
+|m_tilde_19_i         |   in|   32|     ap_ovld|           m_tilde_19|       pointer|
+|m_tilde_19_o         |  out|   32|     ap_ovld|           m_tilde_19|       pointer|
+|m_tilde_19_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_19|       pointer|
+|m_tilde_20_i         |   in|   32|     ap_ovld|           m_tilde_20|       pointer|
+|m_tilde_20_o         |  out|   32|     ap_ovld|           m_tilde_20|       pointer|
+|m_tilde_20_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_20|       pointer|
+|m_tilde_21_i         |   in|   32|     ap_ovld|           m_tilde_21|       pointer|
+|m_tilde_21_o         |  out|   32|     ap_ovld|           m_tilde_21|       pointer|
+|m_tilde_21_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_21|       pointer|
+|m_tilde_22_i         |   in|   32|     ap_ovld|           m_tilde_22|       pointer|
+|m_tilde_22_o         |  out|   32|     ap_ovld|           m_tilde_22|       pointer|
+|m_tilde_22_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_22|       pointer|
+|m_tilde_23_i         |   in|   32|     ap_ovld|           m_tilde_23|       pointer|
+|m_tilde_23_o         |  out|   32|     ap_ovld|           m_tilde_23|       pointer|
+|m_tilde_23_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_23|       pointer|
+|m_tilde_24_i         |   in|   32|     ap_ovld|           m_tilde_24|       pointer|
+|m_tilde_24_o         |  out|   32|     ap_ovld|           m_tilde_24|       pointer|
+|m_tilde_24_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_24|       pointer|
+|m_tilde_25_i         |   in|   32|     ap_ovld|           m_tilde_25|       pointer|
+|m_tilde_25_o         |  out|   32|     ap_ovld|           m_tilde_25|       pointer|
+|m_tilde_25_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_25|       pointer|
+|m_tilde_26_i         |   in|   32|     ap_ovld|           m_tilde_26|       pointer|
+|m_tilde_26_o         |  out|   32|     ap_ovld|           m_tilde_26|       pointer|
+|m_tilde_26_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_26|       pointer|
+|m_tilde_27_i         |   in|   32|     ap_ovld|           m_tilde_27|       pointer|
+|m_tilde_27_o         |  out|   32|     ap_ovld|           m_tilde_27|       pointer|
+|m_tilde_27_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_27|       pointer|
+|m_tilde_28_i         |   in|   32|     ap_ovld|           m_tilde_28|       pointer|
+|m_tilde_28_o         |  out|   32|     ap_ovld|           m_tilde_28|       pointer|
+|m_tilde_28_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_28|       pointer|
+|m_tilde_29_i         |   in|   32|     ap_ovld|           m_tilde_29|       pointer|
+|m_tilde_29_o         |  out|   32|     ap_ovld|           m_tilde_29|       pointer|
+|m_tilde_29_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_29|       pointer|
+|m_tilde_30_i         |   in|   32|     ap_ovld|           m_tilde_30|       pointer|
+|m_tilde_30_o         |  out|   32|     ap_ovld|           m_tilde_30|       pointer|
+|m_tilde_30_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_30|       pointer|
+|m_tilde_31_i         |   in|   32|     ap_ovld|           m_tilde_31|       pointer|
+|m_tilde_31_o         |  out|   32|     ap_ovld|           m_tilde_31|       pointer|
+|m_tilde_31_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_31|       pointer|
+|m_tilde_32_i         |   in|   32|     ap_ovld|           m_tilde_32|       pointer|
+|m_tilde_32_o         |  out|   32|     ap_ovld|           m_tilde_32|       pointer|
+|m_tilde_32_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_32|       pointer|
+|m_tilde_33_i         |   in|   32|     ap_ovld|           m_tilde_33|       pointer|
+|m_tilde_33_o         |  out|   32|     ap_ovld|           m_tilde_33|       pointer|
+|m_tilde_33_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_33|       pointer|
+|m_tilde_34_i         |   in|   32|     ap_ovld|           m_tilde_34|       pointer|
+|m_tilde_34_o         |  out|   32|     ap_ovld|           m_tilde_34|       pointer|
+|m_tilde_34_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_34|       pointer|
+|m_tilde_35_i         |   in|   32|     ap_ovld|           m_tilde_35|       pointer|
+|m_tilde_35_o         |  out|   32|     ap_ovld|           m_tilde_35|       pointer|
+|m_tilde_35_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_35|       pointer|
+|m_tilde_36_i         |   in|   32|     ap_ovld|           m_tilde_36|       pointer|
+|m_tilde_36_o         |  out|   32|     ap_ovld|           m_tilde_36|       pointer|
+|m_tilde_36_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_36|       pointer|
+|m_tilde_37_i         |   in|   32|     ap_ovld|           m_tilde_37|       pointer|
+|m_tilde_37_o         |  out|   32|     ap_ovld|           m_tilde_37|       pointer|
+|m_tilde_37_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_37|       pointer|
+|m_tilde_38_i         |   in|   32|     ap_ovld|           m_tilde_38|       pointer|
+|m_tilde_38_o         |  out|   32|     ap_ovld|           m_tilde_38|       pointer|
+|m_tilde_38_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_38|       pointer|
+|m_tilde_39_i         |   in|   32|     ap_ovld|           m_tilde_39|       pointer|
+|m_tilde_39_o         |  out|   32|     ap_ovld|           m_tilde_39|       pointer|
+|m_tilde_39_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_39|       pointer|
+|m_tilde_40_i         |   in|   32|     ap_ovld|           m_tilde_40|       pointer|
+|m_tilde_40_o         |  out|   32|     ap_ovld|           m_tilde_40|       pointer|
+|m_tilde_40_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_40|       pointer|
+|m_tilde_41_i         |   in|   32|     ap_ovld|           m_tilde_41|       pointer|
+|m_tilde_41_o         |  out|   32|     ap_ovld|           m_tilde_41|       pointer|
+|m_tilde_41_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_41|       pointer|
+|m_tilde_42_i         |   in|   32|     ap_ovld|           m_tilde_42|       pointer|
+|m_tilde_42_o         |  out|   32|     ap_ovld|           m_tilde_42|       pointer|
+|m_tilde_42_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_42|       pointer|
+|m_tilde_43_i         |   in|   32|     ap_ovld|           m_tilde_43|       pointer|
+|m_tilde_43_o         |  out|   32|     ap_ovld|           m_tilde_43|       pointer|
+|m_tilde_43_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_43|       pointer|
+|m_tilde_44_i         |   in|   32|     ap_ovld|           m_tilde_44|       pointer|
+|m_tilde_44_o         |  out|   32|     ap_ovld|           m_tilde_44|       pointer|
+|m_tilde_44_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_44|       pointer|
+|m_tilde_45_i         |   in|   32|     ap_ovld|           m_tilde_45|       pointer|
+|m_tilde_45_o         |  out|   32|     ap_ovld|           m_tilde_45|       pointer|
+|m_tilde_45_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_45|       pointer|
+|m_tilde_46_i         |   in|   32|     ap_ovld|           m_tilde_46|       pointer|
+|m_tilde_46_o         |  out|   32|     ap_ovld|           m_tilde_46|       pointer|
+|m_tilde_46_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_46|       pointer|
+|m_tilde_47_i         |   in|   32|     ap_ovld|           m_tilde_47|       pointer|
+|m_tilde_47_o         |  out|   32|     ap_ovld|           m_tilde_47|       pointer|
+|m_tilde_47_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_47|       pointer|
+|m_tilde_48_i         |   in|   32|     ap_ovld|           m_tilde_48|       pointer|
+|m_tilde_48_o         |  out|   32|     ap_ovld|           m_tilde_48|       pointer|
+|m_tilde_48_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_48|       pointer|
+|m_tilde_49_i         |   in|   32|     ap_ovld|           m_tilde_49|       pointer|
+|m_tilde_49_o         |  out|   32|     ap_ovld|           m_tilde_49|       pointer|
+|m_tilde_49_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_49|       pointer|
+|m_tilde_50_i         |   in|   32|     ap_ovld|           m_tilde_50|       pointer|
+|m_tilde_50_o         |  out|   32|     ap_ovld|           m_tilde_50|       pointer|
+|m_tilde_50_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_50|       pointer|
+|m_tilde_51_i         |   in|   32|     ap_ovld|           m_tilde_51|       pointer|
+|m_tilde_51_o         |  out|   32|     ap_ovld|           m_tilde_51|       pointer|
+|m_tilde_51_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_51|       pointer|
+|m_tilde_52_i         |   in|   32|     ap_ovld|           m_tilde_52|       pointer|
+|m_tilde_52_o         |  out|   32|     ap_ovld|           m_tilde_52|       pointer|
+|m_tilde_52_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_52|       pointer|
+|m_tilde_53_i         |   in|   32|     ap_ovld|           m_tilde_53|       pointer|
+|m_tilde_53_o         |  out|   32|     ap_ovld|           m_tilde_53|       pointer|
+|m_tilde_53_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_53|       pointer|
+|m_tilde_54_i         |   in|   32|     ap_ovld|           m_tilde_54|       pointer|
+|m_tilde_54_o         |  out|   32|     ap_ovld|           m_tilde_54|       pointer|
+|m_tilde_54_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_54|       pointer|
+|m_tilde_55_i         |   in|   32|     ap_ovld|           m_tilde_55|       pointer|
+|m_tilde_55_o         |  out|   32|     ap_ovld|           m_tilde_55|       pointer|
+|m_tilde_55_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_55|       pointer|
+|m_tilde_56_i         |   in|   32|     ap_ovld|           m_tilde_56|       pointer|
+|m_tilde_56_o         |  out|   32|     ap_ovld|           m_tilde_56|       pointer|
+|m_tilde_56_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_56|       pointer|
+|m_tilde_57_i         |   in|   32|     ap_ovld|           m_tilde_57|       pointer|
+|m_tilde_57_o         |  out|   32|     ap_ovld|           m_tilde_57|       pointer|
+|m_tilde_57_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_57|       pointer|
+|m_tilde_58_i         |   in|   32|     ap_ovld|           m_tilde_58|       pointer|
+|m_tilde_58_o         |  out|   32|     ap_ovld|           m_tilde_58|       pointer|
+|m_tilde_58_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_58|       pointer|
+|m_tilde_59_i         |   in|   32|     ap_ovld|           m_tilde_59|       pointer|
+|m_tilde_59_o         |  out|   32|     ap_ovld|           m_tilde_59|       pointer|
+|m_tilde_59_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_59|       pointer|
+|m_tilde_60_i         |   in|   32|     ap_ovld|           m_tilde_60|       pointer|
+|m_tilde_60_o         |  out|   32|     ap_ovld|           m_tilde_60|       pointer|
+|m_tilde_60_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_60|       pointer|
+|m_tilde_61_i         |   in|   32|     ap_ovld|           m_tilde_61|       pointer|
+|m_tilde_61_o         |  out|   32|     ap_ovld|           m_tilde_61|       pointer|
+|m_tilde_61_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_61|       pointer|
+|m_tilde_62_i         |   in|   32|     ap_ovld|           m_tilde_62|       pointer|
+|m_tilde_62_o         |  out|   32|     ap_ovld|           m_tilde_62|       pointer|
+|m_tilde_62_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_62|       pointer|
+|m_tilde_63_i         |   in|   32|     ap_ovld|           m_tilde_63|       pointer|
+|m_tilde_63_o         |  out|   32|     ap_ovld|           m_tilde_63|       pointer|
+|m_tilde_63_o_ap_vld  |  out|    1|     ap_ovld|           m_tilde_63|       pointer|
+|l_tilde_0            |  out|   32|      ap_vld|            l_tilde_0|       pointer|
+|l_tilde_0_ap_vld     |  out|    1|      ap_vld|            l_tilde_0|       pointer|
+|l_tilde_1            |  out|   32|      ap_vld|            l_tilde_1|       pointer|
+|l_tilde_1_ap_vld     |  out|    1|      ap_vld|            l_tilde_1|       pointer|
+|l_tilde_2            |  out|   32|      ap_vld|            l_tilde_2|       pointer|
+|l_tilde_2_ap_vld     |  out|    1|      ap_vld|            l_tilde_2|       pointer|
+|l_tilde_3            |  out|   32|      ap_vld|            l_tilde_3|       pointer|
+|l_tilde_3_ap_vld     |  out|    1|      ap_vld|            l_tilde_3|       pointer|
+|l_tilde_4            |  out|   32|      ap_vld|            l_tilde_4|       pointer|
+|l_tilde_4_ap_vld     |  out|    1|      ap_vld|            l_tilde_4|       pointer|
+|l_tilde_5            |  out|   32|      ap_vld|            l_tilde_5|       pointer|
+|l_tilde_5_ap_vld     |  out|    1|      ap_vld|            l_tilde_5|       pointer|
+|l_tilde_6            |  out|   32|      ap_vld|            l_tilde_6|       pointer|
+|l_tilde_6_ap_vld     |  out|    1|      ap_vld|            l_tilde_6|       pointer|
+|l_tilde_7            |  out|   32|      ap_vld|            l_tilde_7|       pointer|
+|l_tilde_7_ap_vld     |  out|    1|      ap_vld|            l_tilde_7|       pointer|
+|l_tilde_8            |  out|   32|      ap_vld|            l_tilde_8|       pointer|
+|l_tilde_8_ap_vld     |  out|    1|      ap_vld|            l_tilde_8|       pointer|
+|l_tilde_9            |  out|   32|      ap_vld|            l_tilde_9|       pointer|
+|l_tilde_9_ap_vld     |  out|    1|      ap_vld|            l_tilde_9|       pointer|
+|l_tilde_10           |  out|   32|      ap_vld|           l_tilde_10|       pointer|
+|l_tilde_10_ap_vld    |  out|    1|      ap_vld|           l_tilde_10|       pointer|
+|l_tilde_11           |  out|   32|      ap_vld|           l_tilde_11|       pointer|
+|l_tilde_11_ap_vld    |  out|    1|      ap_vld|           l_tilde_11|       pointer|
+|l_tilde_12           |  out|   32|      ap_vld|           l_tilde_12|       pointer|
+|l_tilde_12_ap_vld    |  out|    1|      ap_vld|           l_tilde_12|       pointer|
+|l_tilde_13           |  out|   32|      ap_vld|           l_tilde_13|       pointer|
+|l_tilde_13_ap_vld    |  out|    1|      ap_vld|           l_tilde_13|       pointer|
+|l_tilde_14           |  out|   32|      ap_vld|           l_tilde_14|       pointer|
+|l_tilde_14_ap_vld    |  out|    1|      ap_vld|           l_tilde_14|       pointer|
+|l_tilde_15           |  out|   32|      ap_vld|           l_tilde_15|       pointer|
+|l_tilde_15_ap_vld    |  out|    1|      ap_vld|           l_tilde_15|       pointer|
+|l_tilde_16           |  out|   32|      ap_vld|           l_tilde_16|       pointer|
+|l_tilde_16_ap_vld    |  out|    1|      ap_vld|           l_tilde_16|       pointer|
+|l_tilde_17           |  out|   32|      ap_vld|           l_tilde_17|       pointer|
+|l_tilde_17_ap_vld    |  out|    1|      ap_vld|           l_tilde_17|       pointer|
+|l_tilde_18           |  out|   32|      ap_vld|           l_tilde_18|       pointer|
+|l_tilde_18_ap_vld    |  out|    1|      ap_vld|           l_tilde_18|       pointer|
+|l_tilde_19           |  out|   32|      ap_vld|           l_tilde_19|       pointer|
+|l_tilde_19_ap_vld    |  out|    1|      ap_vld|           l_tilde_19|       pointer|
+|l_tilde_20           |  out|   32|      ap_vld|           l_tilde_20|       pointer|
+|l_tilde_20_ap_vld    |  out|    1|      ap_vld|           l_tilde_20|       pointer|
+|l_tilde_21           |  out|   32|      ap_vld|           l_tilde_21|       pointer|
+|l_tilde_21_ap_vld    |  out|    1|      ap_vld|           l_tilde_21|       pointer|
+|l_tilde_22           |  out|   32|      ap_vld|           l_tilde_22|       pointer|
+|l_tilde_22_ap_vld    |  out|    1|      ap_vld|           l_tilde_22|       pointer|
+|l_tilde_23           |  out|   32|      ap_vld|           l_tilde_23|       pointer|
+|l_tilde_23_ap_vld    |  out|    1|      ap_vld|           l_tilde_23|       pointer|
+|l_tilde_24           |  out|   32|      ap_vld|           l_tilde_24|       pointer|
+|l_tilde_24_ap_vld    |  out|    1|      ap_vld|           l_tilde_24|       pointer|
+|l_tilde_25           |  out|   32|      ap_vld|           l_tilde_25|       pointer|
+|l_tilde_25_ap_vld    |  out|    1|      ap_vld|           l_tilde_25|       pointer|
+|l_tilde_26           |  out|   32|      ap_vld|           l_tilde_26|       pointer|
+|l_tilde_26_ap_vld    |  out|    1|      ap_vld|           l_tilde_26|       pointer|
+|l_tilde_27           |  out|   32|      ap_vld|           l_tilde_27|       pointer|
+|l_tilde_27_ap_vld    |  out|    1|      ap_vld|           l_tilde_27|       pointer|
+|l_tilde_28           |  out|   32|      ap_vld|           l_tilde_28|       pointer|
+|l_tilde_28_ap_vld    |  out|    1|      ap_vld|           l_tilde_28|       pointer|
+|l_tilde_29           |  out|   32|      ap_vld|           l_tilde_29|       pointer|
+|l_tilde_29_ap_vld    |  out|    1|      ap_vld|           l_tilde_29|       pointer|
+|l_tilde_30           |  out|   32|      ap_vld|           l_tilde_30|       pointer|
+|l_tilde_30_ap_vld    |  out|    1|      ap_vld|           l_tilde_30|       pointer|
+|l_tilde_31           |  out|   32|      ap_vld|           l_tilde_31|       pointer|
+|l_tilde_31_ap_vld    |  out|    1|      ap_vld|           l_tilde_31|       pointer|
+|l_tilde_32           |  out|   32|      ap_vld|           l_tilde_32|       pointer|
+|l_tilde_32_ap_vld    |  out|    1|      ap_vld|           l_tilde_32|       pointer|
+|l_tilde_33           |  out|   32|      ap_vld|           l_tilde_33|       pointer|
+|l_tilde_33_ap_vld    |  out|    1|      ap_vld|           l_tilde_33|       pointer|
+|l_tilde_34           |  out|   32|      ap_vld|           l_tilde_34|       pointer|
+|l_tilde_34_ap_vld    |  out|    1|      ap_vld|           l_tilde_34|       pointer|
+|l_tilde_35           |  out|   32|      ap_vld|           l_tilde_35|       pointer|
+|l_tilde_35_ap_vld    |  out|    1|      ap_vld|           l_tilde_35|       pointer|
+|l_tilde_36           |  out|   32|      ap_vld|           l_tilde_36|       pointer|
+|l_tilde_36_ap_vld    |  out|    1|      ap_vld|           l_tilde_36|       pointer|
+|l_tilde_37           |  out|   32|      ap_vld|           l_tilde_37|       pointer|
+|l_tilde_37_ap_vld    |  out|    1|      ap_vld|           l_tilde_37|       pointer|
+|l_tilde_38           |  out|   32|      ap_vld|           l_tilde_38|       pointer|
+|l_tilde_38_ap_vld    |  out|    1|      ap_vld|           l_tilde_38|       pointer|
+|l_tilde_39           |  out|   32|      ap_vld|           l_tilde_39|       pointer|
+|l_tilde_39_ap_vld    |  out|    1|      ap_vld|           l_tilde_39|       pointer|
+|l_tilde_40           |  out|   32|      ap_vld|           l_tilde_40|       pointer|
+|l_tilde_40_ap_vld    |  out|    1|      ap_vld|           l_tilde_40|       pointer|
+|l_tilde_41           |  out|   32|      ap_vld|           l_tilde_41|       pointer|
+|l_tilde_41_ap_vld    |  out|    1|      ap_vld|           l_tilde_41|       pointer|
+|l_tilde_42           |  out|   32|      ap_vld|           l_tilde_42|       pointer|
+|l_tilde_42_ap_vld    |  out|    1|      ap_vld|           l_tilde_42|       pointer|
+|l_tilde_43           |  out|   32|      ap_vld|           l_tilde_43|       pointer|
+|l_tilde_43_ap_vld    |  out|    1|      ap_vld|           l_tilde_43|       pointer|
+|l_tilde_44           |  out|   32|      ap_vld|           l_tilde_44|       pointer|
+|l_tilde_44_ap_vld    |  out|    1|      ap_vld|           l_tilde_44|       pointer|
+|l_tilde_45           |  out|   32|      ap_vld|           l_tilde_45|       pointer|
+|l_tilde_45_ap_vld    |  out|    1|      ap_vld|           l_tilde_45|       pointer|
+|l_tilde_46           |  out|   32|      ap_vld|           l_tilde_46|       pointer|
+|l_tilde_46_ap_vld    |  out|    1|      ap_vld|           l_tilde_46|       pointer|
+|l_tilde_47           |  out|   32|      ap_vld|           l_tilde_47|       pointer|
+|l_tilde_47_ap_vld    |  out|    1|      ap_vld|           l_tilde_47|       pointer|
+|l_tilde_48           |  out|   32|      ap_vld|           l_tilde_48|       pointer|
+|l_tilde_48_ap_vld    |  out|    1|      ap_vld|           l_tilde_48|       pointer|
+|l_tilde_49           |  out|   32|      ap_vld|           l_tilde_49|       pointer|
+|l_tilde_49_ap_vld    |  out|    1|      ap_vld|           l_tilde_49|       pointer|
+|l_tilde_50           |  out|   32|      ap_vld|           l_tilde_50|       pointer|
+|l_tilde_50_ap_vld    |  out|    1|      ap_vld|           l_tilde_50|       pointer|
+|l_tilde_51           |  out|   32|      ap_vld|           l_tilde_51|       pointer|
+|l_tilde_51_ap_vld    |  out|    1|      ap_vld|           l_tilde_51|       pointer|
+|l_tilde_52           |  out|   32|      ap_vld|           l_tilde_52|       pointer|
+|l_tilde_52_ap_vld    |  out|    1|      ap_vld|           l_tilde_52|       pointer|
+|l_tilde_53           |  out|   32|      ap_vld|           l_tilde_53|       pointer|
+|l_tilde_53_ap_vld    |  out|    1|      ap_vld|           l_tilde_53|       pointer|
+|l_tilde_54           |  out|   32|      ap_vld|           l_tilde_54|       pointer|
+|l_tilde_54_ap_vld    |  out|    1|      ap_vld|           l_tilde_54|       pointer|
+|l_tilde_55           |  out|   32|      ap_vld|           l_tilde_55|       pointer|
+|l_tilde_55_ap_vld    |  out|    1|      ap_vld|           l_tilde_55|       pointer|
+|l_tilde_56           |  out|   32|      ap_vld|           l_tilde_56|       pointer|
+|l_tilde_56_ap_vld    |  out|    1|      ap_vld|           l_tilde_56|       pointer|
+|l_tilde_57           |  out|   32|      ap_vld|           l_tilde_57|       pointer|
+|l_tilde_57_ap_vld    |  out|    1|      ap_vld|           l_tilde_57|       pointer|
+|l_tilde_58           |  out|   32|      ap_vld|           l_tilde_58|       pointer|
+|l_tilde_58_ap_vld    |  out|    1|      ap_vld|           l_tilde_58|       pointer|
+|l_tilde_59           |  out|   32|      ap_vld|           l_tilde_59|       pointer|
+|l_tilde_59_ap_vld    |  out|    1|      ap_vld|           l_tilde_59|       pointer|
+|l_tilde_60           |  out|   32|      ap_vld|           l_tilde_60|       pointer|
+|l_tilde_60_ap_vld    |  out|    1|      ap_vld|           l_tilde_60|       pointer|
+|l_tilde_61           |  out|   32|      ap_vld|           l_tilde_61|       pointer|
+|l_tilde_61_ap_vld    |  out|    1|      ap_vld|           l_tilde_61|       pointer|
+|l_tilde_62           |  out|   32|      ap_vld|           l_tilde_62|       pointer|
+|l_tilde_62_ap_vld    |  out|    1|      ap_vld|           l_tilde_62|       pointer|
+|l_tilde_63           |  out|   32|      ap_vld|           l_tilde_63|       pointer|
+|l_tilde_63_ap_vld    |  out|    1|      ap_vld|           l_tilde_63|       pointer|
+|br_actual            |   in|   32|     ap_none|            br_actual|        scalar|
+|bc_actual            |   in|   32|     ap_none|            bc_actual|        scalar|
++---------------------+-----+-----+------------+---------------------+--------------+
+

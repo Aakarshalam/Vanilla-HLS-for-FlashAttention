@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'online_softmax_tile_Pipeline_ROWMAX_INNER'
+================================================================
+* Date:           Sun Mar 22 18:06:04 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.870 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       66|       66|  0.660 us|  0.660 us|   65|   65|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ROWMAX_INNER  |       64|       64|         2|          1|          1|    64|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.98>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%row_max = alloca i32 1" [./flashattentionsoftmax.h:46]   --->   Operation 5 'alloca' 'row_max' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [./flashattentionsoftmax.h:50]   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_7, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 7 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_6, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_5, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_4, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_3, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %S_tile_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%cmp6_not_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp6_not"   --->   Operation 15 'read' 'cmp6_not_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bc_actual_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %bc_actual"   --->   Operation 16 'read' 'bc_actual_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %i"   --->   Operation 17 'read' 'i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.36ns)   --->   "%store_ln50 = store i7 0, i7 %j" [./flashattentionsoftmax.h:50]   --->   Operation 18 'store' 'store_ln50' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln46 = store i32 -1e+30, i32 %row_max" [./flashattentionsoftmax.h:46]   --->   Operation 19 'store' 'store_ln46' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body4"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%j_1 = load i7 %j" [./flashattentionsoftmax.h:50]   --->   Operation 21 'load' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.66ns)   --->   "%add_ln50 = add i7 %j_1, i7 1" [./flashattentionsoftmax.h:50]   --->   Operation 22 'add' 'add_ln50' <Predicate = true> <Delay = 0.66> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.57ns)   --->   "%icmp_ln50 = icmp_eq  i7 %j_1, i7 64" [./flashattentionsoftmax.h:50]   --->   Operation 23 'icmp' 'icmp_ln50' <Predicate = true> <Delay = 0.57> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln50 = br i1 %icmp_ln50, void %for.body4.split_ifconv, void %for.end.exitStub" [./flashattentionsoftmax.h:50]   --->   Operation 24 'br' 'br_ln50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln50 = zext i7 %j_1" [./flashattentionsoftmax.h:50]   --->   Operation 25 'zext' 'zext_ln50' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln50 = trunc i7 %j_1" [./flashattentionsoftmax.h:50]   --->   Operation 26 'trunc' 'trunc_ln50' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i3 @_ssdm_op_PartSelect.i3.i7.i32.i32, i7 %j_1, i32 3, i32 5" [./flashattentionsoftmax.h:50]   --->   Operation 27 'partselect' 'lshr_ln' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_20 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %i_read, i3 %lshr_ln" [./flashattentionsoftmax.h:52]   --->   Operation 28 'bitconcatenate' 'tmp_20' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln52 = zext i9 %tmp_20" [./flashattentionsoftmax.h:52]   --->   Operation 29 'zext' 'zext_ln52' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%S_tile_0_addr = getelementptr i32 %S_tile_0, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 30 'getelementptr' 'S_tile_0_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%S_tile_1_addr = getelementptr i32 %S_tile_1, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 31 'getelementptr' 'S_tile_1_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%S_tile_2_addr = getelementptr i32 %S_tile_2, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 32 'getelementptr' 'S_tile_2_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%S_tile_3_addr = getelementptr i32 %S_tile_3, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 33 'getelementptr' 'S_tile_3_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%S_tile_4_addr = getelementptr i32 %S_tile_4, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 34 'getelementptr' 'S_tile_4_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%S_tile_5_addr = getelementptr i32 %S_tile_5, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 35 'getelementptr' 'S_tile_5_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%S_tile_6_addr = getelementptr i32 %S_tile_6, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 36 'getelementptr' 'S_tile_6_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%S_tile_7_addr = getelementptr i32 %S_tile_7, i64 0, i64 %zext_ln52" [./flashattentionsoftmax.h:52]   --->   Operation 37 'getelementptr' 'S_tile_7_addr' <Predicate = (!icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.67ns)   --->   "%icmp_ln52 = icmp_slt  i32 %zext_ln50, i32 %bc_actual_read" [./flashattentionsoftmax.h:52]   --->   Operation 38 'icmp' 'icmp_ln52' <Predicate = (!icmp_ln50)> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_0_load = muxlogic i9 %S_tile_0_addr"   --->   Operation 39 'muxlogic' 'muxLogicRAMAddr_to_S_tile_0_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 40 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_0_load = load i9 %S_tile_0_addr" [./flashattentionsoftmax.h:52]   --->   Operation 40 'load' 'S_tile_0_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 41 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_1_load = muxlogic i9 %S_tile_1_addr"   --->   Operation 41 'muxlogic' 'muxLogicRAMAddr_to_S_tile_1_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 42 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_1_load = load i9 %S_tile_1_addr" [./flashattentionsoftmax.h:52]   --->   Operation 42 'load' 'S_tile_1_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 43 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_2_load = muxlogic i9 %S_tile_2_addr"   --->   Operation 43 'muxlogic' 'muxLogicRAMAddr_to_S_tile_2_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 44 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_2_load = load i9 %S_tile_2_addr" [./flashattentionsoftmax.h:52]   --->   Operation 44 'load' 'S_tile_2_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 45 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_3_load = muxlogic i9 %S_tile_3_addr"   --->   Operation 45 'muxlogic' 'muxLogicRAMAddr_to_S_tile_3_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 46 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_3_load = load i9 %S_tile_3_addr" [./flashattentionsoftmax.h:52]   --->   Operation 46 'load' 'S_tile_3_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 47 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_4_load = muxlogic i9 %S_tile_4_addr"   --->   Operation 47 'muxlogic' 'muxLogicRAMAddr_to_S_tile_4_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 48 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_4_load = load i9 %S_tile_4_addr" [./flashattentionsoftmax.h:52]   --->   Operation 48 'load' 'S_tile_4_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 49 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_5_load = muxlogic i9 %S_tile_5_addr"   --->   Operation 49 'muxlogic' 'muxLogicRAMAddr_to_S_tile_5_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 50 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_5_load = load i9 %S_tile_5_addr" [./flashattentionsoftmax.h:52]   --->   Operation 50 'load' 'S_tile_5_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 51 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_6_load = muxlogic i9 %S_tile_6_addr"   --->   Operation 51 'muxlogic' 'muxLogicRAMAddr_to_S_tile_6_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 52 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_6_load = load i9 %S_tile_6_addr" [./flashattentionsoftmax.h:52]   --->   Operation 52 'load' 'S_tile_6_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 53 [1/1] (0.42ns) (share mux size 2)   --->   "%muxLogicRAMAddr_to_S_tile_7_load = muxlogic i9 %S_tile_7_addr"   --->   Operation 53 'muxlogic' 'muxLogicRAMAddr_to_S_tile_7_load' <Predicate = (!icmp_ln50)> <Delay = 0.42>
+ST_1 : Operation 54 [2/2] (0.62ns) (share mux size 3)   --->   "%S_tile_7_load = load i9 %S_tile_7_addr" [./flashattentionsoftmax.h:52]   --->   Operation 54 'load' 'S_tile_7_load' <Predicate = (!icmp_ln50)> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_1 : Operation 55 [1/1] (0.36ns)   --->   "%store_ln50 = store i7 %add_ln50, i7 %j" [./flashattentionsoftmax.h:50]   --->   Operation 55 'store' 'store_ln50' <Predicate = (!icmp_ln50)> <Delay = 0.36>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%row_max_load = load i32 %row_max"   --->   Operation 92 'load' 'row_max_load' <Predicate = (icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %row_max_out, i32 %row_max_load"   --->   Operation 93 'write' 'write_ln0' <Predicate = (icmp_ln50)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.28ns)   --->   "%ret_ln0 = ret"   --->   Operation 94 'ret' 'ret_ln0' <Predicate = (icmp_ln50)> <Delay = 0.28>
+
+State 2 <SV = 1> <Delay = 4.87>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%row_max_load_1 = load i32 %row_max" [./flashattentionsoftmax.h:53]   --->   Operation 56 'load' 'row_max_load_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%specpipeline_ln51 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_27" [./flashattentionsoftmax.h:51]   --->   Operation 57 'specpipeline' 'specpipeline_ln51' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%speclooptripcount_ln50 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [./flashattentionsoftmax.h:50]   --->   Operation 58 'speclooptripcount' 'speclooptripcount_ln50' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%specloopname_ln50 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [./flashattentionsoftmax.h:50]   --->   Operation 59 'specloopname' 'specloopname_ln50' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%xor_ln52 = xor i1 %icmp_ln52, i1 1" [./flashattentionsoftmax.h:52]   --->   Operation 60 'xor' 'xor_ln52' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node val)   --->   "%or_ln52 = or i1 %xor_ln52, i1 %cmp6_not_read" [./flashattentionsoftmax.h:52]   --->   Operation 61 'or' 'or_ln52' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_0_load = load i9 %S_tile_0_addr" [./flashattentionsoftmax.h:52]   --->   Operation 62 'load' 'S_tile_0_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 63 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_1_load = load i9 %S_tile_1_addr" [./flashattentionsoftmax.h:52]   --->   Operation 63 'load' 'S_tile_1_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 64 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_2_load = load i9 %S_tile_2_addr" [./flashattentionsoftmax.h:52]   --->   Operation 64 'load' 'S_tile_2_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 65 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_3_load = load i9 %S_tile_3_addr" [./flashattentionsoftmax.h:52]   --->   Operation 65 'load' 'S_tile_3_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 66 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_4_load = load i9 %S_tile_4_addr" [./flashattentionsoftmax.h:52]   --->   Operation 66 'load' 'S_tile_4_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 67 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_5_load = load i9 %S_tile_5_addr" [./flashattentionsoftmax.h:52]   --->   Operation 67 'load' 'S_tile_5_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 68 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_6_load = load i9 %S_tile_6_addr" [./flashattentionsoftmax.h:52]   --->   Operation 68 'load' 'S_tile_6_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 69 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 3)   --->   "%S_tile_7_load = load i9 %S_tile_7_addr" [./flashattentionsoftmax.h:52]   --->   Operation 69 'load' 'S_tile_7_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_2 : Operation 70 [1/1] (0.70ns)   --->   "%tmp = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.8float.float.i3, i3 0, i32 %S_tile_0_load, i3 1, i32 %S_tile_1_load, i3 2, i32 %S_tile_2_load, i3 3, i32 %S_tile_3_load, i3 4, i32 %S_tile_4_load, i3 5, i32 %S_tile_5_load, i3 6, i32 %S_tile_6_load, i3 7, i32 %S_tile_7_load, i32 <undef>, i3 %trunc_ln50" [./flashattentionsoftmax.h:52]   --->   Operation 70 'sparsemux' 'tmp' <Predicate = true> <Delay = 0.70> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 150 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 0> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (0.41ns) (out node of the LUT)   --->   "%val = select i1 %or_ln52, i32 -1e+30, i32 %tmp" [./flashattentionsoftmax.h:52]   --->   Operation 71 'select' 'val' <Predicate = true> <Delay = 0.41> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln53 = bitcast i32 %val" [./flashattentionsoftmax.h:53]   --->   Operation 72 'bitcast' 'bitcast_ln53' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln53, i32 23, i32 30" [./flashattentionsoftmax.h:53]   --->   Operation 73 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln53 = trunc i32 %bitcast_ln53" [./flashattentionsoftmax.h:53]   --->   Operation 74 'trunc' 'trunc_ln53' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%bitcast_ln53_1 = bitcast i32 %row_max_load_1" [./flashattentionsoftmax.h:53]   --->   Operation 75 'bitcast' 'bitcast_ln53_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln53_1, i32 23, i32 30" [./flashattentionsoftmax.h:53]   --->   Operation 76 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%trunc_ln53_1 = trunc i32 %bitcast_ln53_1" [./flashattentionsoftmax.h:53]   --->   Operation 77 'trunc' 'trunc_ln53_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.55ns)   --->   "%icmp_ln53 = icmp_ne  i8 %tmp_5, i8 255" [./flashattentionsoftmax.h:53]   --->   Operation 78 'icmp' 'icmp_ln53' <Predicate = true> <Delay = 0.55> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.55> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.70ns)   --->   "%icmp_ln53_1 = icmp_eq  i23 %trunc_ln53, i23 0" [./flashattentionsoftmax.h:53]   --->   Operation 79 'icmp' 'icmp_ln53_1' <Predicate = true> <Delay = 0.70> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node and_ln53_1)   --->   "%or_ln53 = or i1 %icmp_ln53_1, i1 %icmp_ln53" [./flashattentionsoftmax.h:53]   --->   Operation 80 'or' 'or_ln53' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 81 [1/1] (0.55ns)   --->   "%icmp_ln53_2 = icmp_ne  i8 %tmp_6, i8 255" [./flashattentionsoftmax.h:53]   --->   Operation 81 'icmp' 'icmp_ln53_2' <Predicate = true> <Delay = 0.55> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.55> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 82 [1/1] (0.70ns)   --->   "%icmp_ln53_3 = icmp_eq  i23 %trunc_ln53_1, i23 0" [./flashattentionsoftmax.h:53]   --->   Operation 82 'icmp' 'icmp_ln53_3' <Predicate = true> <Delay = 0.70> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node and_ln53_1)   --->   "%or_ln53_1 = or i1 %icmp_ln53_3, i1 %icmp_ln53_2" [./flashattentionsoftmax.h:53]   --->   Operation 83 'or' 'or_ln53_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.28ns) (share mux size 2)   --->   "%muxLogicI0_to_tmp_7 = muxlogic i32 %val"   --->   Operation 84 'muxlogic' 'muxLogicI0_to_tmp_7' <Predicate = true> <Delay = 0.28>
+ST_2 : Operation 85 [1/1] (0.28ns) (share mux size 2)   --->   "%muxLogicI1_to_tmp_7 = muxlogic i32 %row_max_load_1"   --->   Operation 85 'muxlogic' 'muxLogicI1_to_tmp_7' <Predicate = true> <Delay = 0.28>
+ST_2 : Operation 86 [1/1] (1.51ns) (share mux size 2)   --->   "%tmp_7 = fcmp_ogt  i32 %val, i32 %row_max_load_1" [./flashattentionsoftmax.h:53]   --->   Operation 86 'fcmp' 'tmp_7' <Predicate = true> <Delay = 1.51> <CoreInst = "FCompare">   --->   Core 23 'FCompare' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 87 [1/1] (0.00ns) (grouped into LUT with out node and_ln53_1)   --->   "%and_ln53 = and i1 %tmp_7, i1 %or_ln53" [./flashattentionsoftmax.h:53]   --->   Operation 87 'and' 'and_ln53' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.25ns) (out node of the LUT)   --->   "%and_ln53_1 = and i1 %and_ln53, i1 %or_ln53_1" [./flashattentionsoftmax.h:53]   --->   Operation 88 'and' 'and_ln53_1' <Predicate = true> <Delay = 0.25> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.25> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.41ns) (out node of the LUT)   --->   "%row_max_2 = select i1 %and_ln53_1, i32 %val, i32 %row_max_load_1" [./flashattentionsoftmax.h:53]   --->   Operation 89 'select' 'row_max_2' <Predicate = true> <Delay = 0.41> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.42ns)   --->   "%store_ln46 = store i32 %row_max_2, i32 %row_max" [./flashattentionsoftmax.h:46]   --->   Operation 90 'store' 'store_ln46' <Predicate = true> <Delay = 0.42>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln50 = br void %for.body4" [./flashattentionsoftmax.h:50]   --->   Operation 91 'br' 'br_ln50' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.982ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln50', ./flashattentionsoftmax.h:50) of constant 0 on local variable 'j', ./flashattentionsoftmax.h:50 [26]  (0.360 ns)
+	'load' operation 7 bit ('j', ./flashattentionsoftmax.h:50) on local variable 'j', ./flashattentionsoftmax.h:50 [30]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln50', ./flashattentionsoftmax.h:50) [32]  (0.573 ns)
+	'muxlogic' operation 32 bit ('muxLogicRAMAddr_to_S_tile_0_load') [55]  (0.421 ns)
+	'load' operation 32 bit ('S_tile_0_load', ./flashattentionsoftmax.h:52) on array 'S_tile_0' [56]  (0.628 ns)
+
+ <State 2>: 4.870ns
+The critical path consists of the following:
+	'load' operation 32 bit ('S_tile_0_load', ./flashattentionsoftmax.h:52) on array 'S_tile_0' [56]  (0.868 ns)
+	'sparsemux' operation 32 bit ('tmp', ./flashattentionsoftmax.h:52) [71]  (0.705 ns)
+	'select' operation 32 bit ('val', ./flashattentionsoftmax.h:52) [72]  (0.413 ns)
+	'muxlogic' operation 1 bit ('muxLogicI0_to_tmp_7') [85]  (0.284 ns)
+	'fcmp' operation 1 bit ('tmp_7', ./flashattentionsoftmax.h:53) [87]  (1.511 ns)
+	'and' operation 1 bit ('and_ln53', ./flashattentionsoftmax.h:53) [88]  (0.000 ns)
+	'and' operation 1 bit ('and_ln53_1', ./flashattentionsoftmax.h:53) [89]  (0.255 ns)
+	'select' operation 32 bit ('row_max', ./flashattentionsoftmax.h:53) [90]  (0.413 ns)
+	'store' operation 0 bit ('store_ln46', ./flashattentionsoftmax.h:46) of variable 'row_max', ./flashattentionsoftmax.h:53 on local variable 'row_max', ./flashattentionsoftmax.h:46 [92]  (0.421 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

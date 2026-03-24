@@ -1,0 +1,182 @@
+{
+  "0": {
+    "basicblocks": 31,
+    "calls": "5 5 6 6 3 3 1 2 8 10 7 9 4 4",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "flashattentionkernal.cpp",
+    "fileloc": 31,
+    "instructions": 1581,
+    "loads": {
+      "L": 352
+    },
+    "memory_accesses": 80,
+    "name": "flash_attention_kernel",
+    "stores": {
+      "L": 176
+    },
+    "total_instructions": 8660
+  },
+  "1": {
+    "basicblocks": 94,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 20,
+    "file": "flashattentiongemm.h",
+    "fileloc": 41,
+    "instructions": 708,
+    "loads": {
+      "L": 160
+    },
+    "memory_accesses": 153,
+    "name": "gemm_qkt",
+    "stores": {
+      "L": 136
+    },
+    "total_instructions": 708
+  },
+  "10": {
+    "basicblocks": 208,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 8,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 113,
+    "instructions": 1226,
+    "loads": {
+      "L": 160
+    },
+    "memory_accesses": 308,
+    "name": "update_statistics_and_output",
+    "stores": {
+      "L": 144
+    },
+    "total_instructions": 1226
+  },
+  "2": {
+    "basicblocks": 289,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 30,
+    "instructions": 1127,
+    "loads": {
+      "L": 80
+    },
+    "memory_accesses": 218,
+    "name": "online_softmax_tile",
+    "stores": {
+      "L": 328
+    },
+    "total_instructions": 1127
+  },
+  "3": {
+    "basicblocks": 184,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 224,
+    "instructions": 531,
+    "memory_accesses": 129,
+    "name": "load_stats_fp32",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 531
+  },
+  "4": {
+    "basicblocks": 36,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 260,
+    "instructions": 140,
+    "memory_accesses": 1,
+    "name": "store_stats_fp32",
+    "total_instructions": 140
+  },
+  "5": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 148,
+    "instructions": 307,
+    "memory_accesses": 65,
+    "name": "load_tile_fp16_bc",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 307
+  },
+  "6": {
+    "basicblocks": 10,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "flashattentionmemory.h",
+    "fileloc": 102,
+    "instructions": 668,
+    "memory_accesses": 164,
+    "name": "load_tile_fp16",
+    "stores": {
+      "L": 160
+    },
+    "total_instructions": 668
+  },
+  "7": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 4,
+    "file": "flashattentionsoftmax.h",
+    "fileloc": 184,
+    "instructions": 150,
+    "loads": {
+      "L": 16
+    },
+    "memory_accesses": 32,
+    "name": "normalize_output",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 150
+  },
+  "8": {
+    "basicblocks": 20,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "flashattentiongemm.h",
+    "fileloc": 125,
+    "instructions": 445,
+    "loads": {
+      "L": 56
+    },
+    "memory_accesses": 96,
+    "name": "gemm_pv",
+    "stores": {
+      "L": 48
+    },
+    "total_instructions": 445
+  },
+  "9": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "flashattentionmemory.h",
+    "fileloc": 191,
+    "instructions": 131,
+    "loads": {
+      "L": 32
+    },
+    "memory_accesses": 33,
+    "name": "store_tile_fp16",
+    "total_instructions": 131
+  }
+}

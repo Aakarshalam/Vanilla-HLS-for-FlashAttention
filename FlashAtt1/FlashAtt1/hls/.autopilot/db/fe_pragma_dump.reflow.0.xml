@@ -1,0 +1,128 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="C:\scratch\2025.1\hls_product\640\2025.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp" line="21" pragmaType="inline" parentfunction="expf" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="44" pragmaType="inline" parentfunction="raw_to_half" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="86" pragmaType="inline" parentfunction="unpack_axi_to_fp32" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="88" pragmaType="unroll" parentfunction="unpack_axi_to_fp32" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="64" pragmaType="inline" parentfunction="unpack_axi_to_fp16" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="66" pragmaType="unroll" parentfunction="unpack_axi_to_fp16" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="53" pragmaType="inline" parentfunction="pack_fp16_to_axi" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="56" pragmaType="unroll" parentfunction="pack_fp16_to_axi" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint<512, false>(ap_range_ref<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base<512, false>(ap_range_ref<512, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<16>::ap_uint(unsigned short)" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="37" pragmaType="inline" parentfunction="half_to_raw" off="0" region="0" recursive="0"/>
+<pragma file="C:\scratch\2025.1\hls_product\640\2025.1\src\shared\hls\clib\hlsmath\src\common\hls_exp_float.cpp" line="16" pragmaType="inline" parentfunction="exp" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/2025.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="542" pragmaType="inline" parentfunction="ssdm_int<16, false>::ssdm_int(unsigned short)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<16, false>::ap_int_base(unsigned short)" off="0" region="0" recursive="0"/>
+<pragma file="flashattentionkernal.cpp" line="196" pragmaType="unroll" parentfunction="flash_attention_kernel" factor="-1" skip_exit_check="0"/>
+<pragma file="flashattentionkernal.cpp" line="204" pragmaType="unroll" parentfunction="flash_attention_kernel" factor="16" skip_exit_check="0"/>
+<pragma file="flashattentionkernal.cpp" line="203" pragmaType="pipeline" parentfunction="flash_attention_kernel" off="0" ii="1" rewind="0" style=""/>
+<pragma file="flashattentionkernal.cpp" line="188" pragmaType="unroll" parentfunction="flash_attention_kernel" factor="16" skip_exit_check="0"/>
+<pragma file="flashattentionkernal.cpp" line="187" pragmaType="pipeline" parentfunction="flash_attention_kernel" off="0" ii="1" rewind="0" style=""/>
+<pragma file="flashattentionkernal.cpp" line="249" pragmaType="unroll" parentfunction="flash_attention_kernel" factor="16" skip_exit_check="0"/>
+<pragma file="flashattentionkernal.cpp" line="248" pragmaType="pipeline" parentfunction="flash_attention_kernel" off="0" ii="1" rewind="0" style=""/>
+<pragma file="flashattentionkernal.cpp" line="53" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_Q" bundle="gmem_Q" offset="slave" name="" depth="65536" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="55" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_K" bundle="gmem_K" offset="slave" name="" depth="65536" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="57" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_V" bundle="gmem_V" offset="slave" name="" depth="65536" num_read_outstanding="16" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="59" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_O" bundle="gmem_O" offset="slave" name="" depth="65536" num_read_outstanding="-1" num_write_outstanding="16" max_burst_read_length="-1" max_burst_write_length="64" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="61" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_l" bundle="gmem_l" offset="slave" name="" depth="4096" num_read_outstanding="-1" num_write_outstanding="4" max_burst_read_length="-1" max_burst_write_length="16" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="63" pragmaType="interface" parentfunction="flash_attention_kernel" mode="m_axi" port="hbm_m" bundle="gmem_m" offset="slave" name="" depth="4096" num_read_outstanding="-1" num_write_outstanding="4" max_burst_read_length="-1" max_burst_write_length="16" latency="64" max_widen_bitwidth="-1" channel=""/>
+<pragma file="flashattentionkernal.cpp" line="67" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_Q" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="68" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_K" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="69" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_V" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="70" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_O" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="71" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_l" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="72" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="hbm_m" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="73" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="N" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="74" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="num_heads" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="75" pragmaType="interface" parentfunction="flash_attention_kernel" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="flashattentionkernal.cpp" line="94" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="24" latency="-1" variable="K_tile"/>
+<pragma file="flashattentionkernal.cpp" line="95" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="24" latency="-1" variable="V_tile"/>
+<pragma file="flashattentionkernal.cpp" line="96" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="K_tile"/>
+<pragma file="flashattentionkernal.cpp" line="97" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="V_tile"/>
+<pragma file="flashattentionkernal.cpp" line="105" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="Q_tile"/>
+<pragma file="flashattentionkernal.cpp" line="106" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="O_tile_fp16"/>
+<pragma file="flashattentionkernal.cpp" line="107" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="Q_tile"/>
+<pragma file="flashattentionkernal.cpp" line="108" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="O_tile_fp16"/>
+<pragma file="flashattentionkernal.cpp" line="113" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="S_tile"/>
+<pragma file="flashattentionkernal.cpp" line="114" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="8" mode="cyclic" dynamic="0" variable="S_tile"/>
+<pragma file="flashattentionkernal.cpp" line="118" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="P_tile"/>
+<pragma file="flashattentionkernal.cpp" line="119" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="8" mode="cyclic" dynamic="0" variable="P_tile"/>
+<pragma file="flashattentionkernal.cpp" line="123" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="PV_tile"/>
+<pragma file="flashattentionkernal.cpp" line="124" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="PV_tile"/>
+<pragma file="flashattentionkernal.cpp" line="128" pragmaType="bind_storage" parentfunction="flash_attention_kernel" op="666" impl="22" latency="-1" variable="O_acc"/>
+<pragma file="flashattentionkernal.cpp" line="129" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="2" factor="16" mode="cyclic" dynamic="0" variable="O_acc"/>
+<pragma file="flashattentionkernal.cpp" line="136" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="1" factor="0" mode="complete" dynamic="0" variable="m_i"/>
+<pragma file="flashattentionkernal.cpp" line="137" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="1" factor="0" mode="complete" dynamic="0" variable="l_i"/>
+<pragma file="flashattentionkernal.cpp" line="138" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="1" factor="0" mode="complete" dynamic="0" variable="m_tilde"/>
+<pragma file="flashattentionkernal.cpp" line="139" pragmaType="array_partition" parentfunction="flash_attention_kernel" dim="1" factor="0" mode="complete" dynamic="0" variable="l_tilde"/>
+<pragma file="./flashattentionmemory.h" line="266" pragmaType="inline" parentfunction="store_stats_fp32" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="273" pragmaType="pipeline" parentfunction="store_stats_fp32" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="277" pragmaType="unroll" parentfunction="store_stats_fp32" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="132" pragmaType="inline" parentfunction="gemm_pv" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentiongemm.h" line="143" pragmaType="unroll" parentfunction="gemm_pv" factor="16" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="175" pragmaType="unroll" parentfunction="gemm_pv" factor="16" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="174" pragmaType="pipeline" parentfunction="gemm_pv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentiongemm.h" line="158" pragmaType="pipeline" parentfunction="gemm_pv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentiongemm.h" line="164" pragmaType="unroll" parentfunction="gemm_pv" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="139" pragmaType="array_partition" parentfunction="gemm_pv" dim="1" factor="16" mode="cyclic" dynamic="0" variable="acc_d"/>
+<pragma file="./flashattentiongemm.h" line="160" pragmaType="dependence" parentfunction="gemm_pv" class="" direction="NODIR" type="inter" distance="0" variable="acc_d"/>
+<pragma file="./flashattentionmemory.h" line="155" pragmaType="inline" parentfunction="load_tile_fp16_bc" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="183" pragmaType="unroll" parentfunction="load_tile_fp16_bc" factor="32" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="182" pragmaType="pipeline" parentfunction="load_tile_fp16_bc" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="163" pragmaType="pipeline" parentfunction="load_tile_fp16_bc" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="170" pragmaType="unroll" parentfunction="load_tile_fp16_bc" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="230" pragmaType="inline" parentfunction="load_stats_fp32" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="255" pragmaType="unroll" parentfunction="load_stats_fp32" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="238" pragmaType="pipeline" parentfunction="load_stats_fp32" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="245" pragmaType="unroll" parentfunction="load_stats_fp32" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentionsoftmax.h" line="38" pragmaType="inline" parentfunction="online_softmax_tile" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionsoftmax.h" line="86" pragmaType="pipeline" parentfunction="online_softmax_tile" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionsoftmax.h" line="68" pragmaType="pipeline" parentfunction="online_softmax_tile" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionsoftmax.h" line="51" pragmaType="pipeline" parentfunction="online_softmax_tile" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionsoftmax.h" line="190" pragmaType="inline" parentfunction="normalize_output" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionsoftmax.h" line="199" pragmaType="unroll" parentfunction="normalize_output" factor="16" skip_exit_check="0"/>
+<pragma file="./flashattentionsoftmax.h" line="198" pragmaType="pipeline" parentfunction="normalize_output" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="73" pragmaType="inline" parentfunction="pack_fp32_to_axi" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="76" pragmaType="unroll" parentfunction="pack_fp32_to_axi" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionsoftmax.h" line="123" pragmaType="inline" parentfunction="update_statistics_and_output" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionsoftmax.h" line="170" pragmaType="unroll" parentfunction="update_statistics_and_output" factor="16" skip_exit_check="0"/>
+<pragma file="./flashattentionsoftmax.h" line="169" pragmaType="pipeline" parentfunction="update_statistics_and_output" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionsoftmax.h" line="133" pragmaType="pipeline" parentfunction="update_statistics_and_output" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionsoftmax.h" line="128" pragmaType="array_partition" parentfunction="update_statistics_and_output" dim="1" factor="0" mode="complete" dynamic="0" variable="exp_old_arr"/>
+<pragma file="./flashattentionsoftmax.h" line="129" pragmaType="array_partition" parentfunction="update_statistics_and_output" dim="1" factor="0" mode="complete" dynamic="0" variable="exp_new_arr"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="109" pragmaType="inline" parentfunction="load_tile_fp16" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="141" pragmaType="unroll" parentfunction="load_tile_fp16" factor="32" skip_exit_check="0"/>
+<pragma file="./flashattentionmemory.h" line="140" pragmaType="pipeline" parentfunction="load_tile_fp16" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="113" pragmaType="pipeline" parentfunction="load_tile_fp16" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="119" pragmaType="pipeline" parentfunction="load_tile_fp16" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="127" pragmaType="unroll" parentfunction="load_tile_fp16" factor="-1" skip_exit_check="0"/>
+<pragma file="C:/Xilinx/2025.1/Vitis/common/technology/autopilot\etc/ap_common.h" line="542" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="198" pragmaType="inline" parentfunction="store_tile_fp16" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentionmemory.h" line="206" pragmaType="pipeline" parentfunction="store_tile_fp16" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentionmemory.h" line="210" pragmaType="unroll" parentfunction="store_tile_fp16" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>::ap_range_ref(ap_int_base<512, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="./flashattentiongemm.h" line="48" pragmaType="inline" parentfunction="gemm_qkt" off="1" region="0" recursive="0"/>
+<pragma file="./flashattentiongemm.h" line="59" pragmaType="unroll" parentfunction="gemm_qkt" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="101" pragmaType="unroll" parentfunction="gemm_qkt" factor="8" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="100" pragmaType="pipeline" parentfunction="gemm_qkt" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentiongemm.h" line="72" pragmaType="unroll" parentfunction="gemm_qkt" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="79" pragmaType="pipeline" parentfunction="gemm_qkt" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./flashattentiongemm.h" line="88" pragmaType="unroll" parentfunction="gemm_qkt" factor="-1" skip_exit_check="0"/>
+<pragma file="./flashattentiongemm.h" line="55" pragmaType="array_partition" parentfunction="gemm_qkt" dim="1" factor="0" mode="complete" dynamic="0" variable="acc_row"/>
+<pragma file="./flashattentiongemm.h" line="69" pragmaType="array_partition" parentfunction="gemm_qkt" dim="1" factor="0" mode="complete" dynamic="0" variable="q_vec"/>
+<pragma file="./flashattentiongemm.h" line="82" pragmaType="dependence" parentfunction="gemm_qkt" class="" direction="NODIR" type="inter" distance="0" variable="acc_row"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>::operator=(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>& ap_range_ref<512, false>::operator=<16, false>(ap_int_base<16, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

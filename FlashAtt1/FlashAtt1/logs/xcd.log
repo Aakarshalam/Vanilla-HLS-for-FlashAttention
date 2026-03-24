@@ -1,0 +1,325 @@
+03/22/26 17:41:11: Running xcd server. This server was built by gradle.
+03/22/26 17:41:11: Server was asked to start on port: '64397'
+03/22/26 17:41:11: Server is using token UUID: '782d32df-f25b-4dc4-9821-150bf091fe85'
+03/22/26 17:41:11: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:41:11: Attempting to start server on port '64397'
+03/22/26 17:41:11: Running Dispatch Server
+03/22/26 17:41:11: Version 2.2.0
+03/22/26 17:41:14: Dispatch Server: Accepted socket connection from client
+03/22/26 17:41:14: Starting Socket connection
+03/22/26 17:41:14: EXCHANGE_TOKEN received, server token: 782d32df-f25b-4dc4-9821-150bf091fe85, passed token: 782d32df-f25b-4dc4-9821-150bf091fe85
+03/22/26 17:41:14: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:41:14: SESSION_MGR: creating session with session uuid: '966d213d-ec1d-44af-80eb-68abb9fcf5bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:41:14: KERNEL_SVC: creating session with uuid: '966d213d-ec1d-44af-80eb-68abb9fcf5bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:41:14: GUIDANCE_SMGR: creating guidance session with uuid: '966d213d-ec1d-44af-80eb-68abb9fcf5bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:41:14: SYSTEM_DIAGRAM: creating session with uuid: '966d213d-ec1d-44af-80eb-68abb9fcf5bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:41:30: Dispatch Server: Accepted socket connection from client
+03/22/26 17:41:30: Starting Socket connection
+03/22/26 17:42:08: SESSION_MGR: closing session for UUID '966d213d-ec1d-44af-80eb-68abb9fcf5bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:08: KERNEL_SVC: closing session for UUID '966d213d-ec1d-44af-80eb-68abb9fcf5bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:08: GUIDANCE_SMGR: closing session for UUID '966d213d-ec1d-44af-80eb-68abb9fcf5bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:08: SYSTEM_DIAGRAM: closing session for UUID '966d213d-ec1d-44af-80eb-68abb9fcf5bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:08: STOP_SERVER received, server token: 782d32df-f25b-4dc4-9821-150bf091fe85, passed token: 782d32df-f25b-4dc4-9821-150bf091fe85
+03/22/26 17:42:08: Socket received request to stop server.
+03/22/26 17:42:08: Dispatch Server: do_await_stop
+03/22/26 17:42:08: SERVER: destructor for server bound to port 64397
+03/22/26 17:42:49: Running xcd server. This server was built by gradle.
+03/22/26 17:42:49: Server was asked to start on port: '64777'
+03/22/26 17:42:49: Server is using token UUID: '327666eb-87ab-424d-b48b-7b613409975b'
+03/22/26 17:42:49: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:42:49: Attempting to start server on port '64777'
+03/22/26 17:42:49: Running Dispatch Server
+03/22/26 17:42:49: Version 2.2.0
+03/22/26 17:42:52: Dispatch Server: Accepted socket connection from client
+03/22/26 17:42:52: Starting Socket connection
+03/22/26 17:42:52: EXCHANGE_TOKEN received, server token: 327666eb-87ab-424d-b48b-7b613409975b, passed token: 327666eb-87ab-424d-b48b-7b613409975b
+03/22/26 17:42:52: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:42:52: SESSION_MGR: creating session with session uuid: 'bda0d60f-e933-490b-a7bc-dbc152462907' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:52: KERNEL_SVC: creating session with uuid: 'bda0d60f-e933-490b-a7bc-dbc152462907' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:52: GUIDANCE_SMGR: creating guidance session with uuid: 'bda0d60f-e933-490b-a7bc-dbc152462907' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:42:52: SYSTEM_DIAGRAM: creating session with uuid: 'bda0d60f-e933-490b-a7bc-dbc152462907' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:43:00: Dispatch Server: Accepted socket connection from client
+03/22/26 17:43:00: Starting Socket connection
+03/22/26 17:43:15: SESSION_MGR: closing session for UUID 'bda0d60f-e933-490b-a7bc-dbc152462907' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:43:15: KERNEL_SVC: closing session for UUID 'bda0d60f-e933-490b-a7bc-dbc152462907' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:43:15: GUIDANCE_SMGR: closing session for UUID 'bda0d60f-e933-490b-a7bc-dbc152462907' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:43:15: SYSTEM_DIAGRAM: closing session for UUID 'bda0d60f-e933-490b-a7bc-dbc152462907' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:43:15: STOP_SERVER received, server token: 327666eb-87ab-424d-b48b-7b613409975b, passed token: 327666eb-87ab-424d-b48b-7b613409975b
+03/22/26 17:43:15: Socket received request to stop server.
+03/22/26 17:43:15: Dispatch Server: do_await_stop
+03/22/26 17:43:15: SERVER: destructor for server bound to port 64777
+03/22/26 17:44:35: Running xcd server. This server was built by gradle.
+03/22/26 17:44:35: Server was asked to start on port: '65239'
+03/22/26 17:44:35: Server is using token UUID: '0c8acba0-ad74-4303-bc11-9823a7fbabc8'
+03/22/26 17:44:35: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:44:35: Attempting to start server on port '65239'
+03/22/26 17:44:35: Running Dispatch Server
+03/22/26 17:44:35: Version 2.2.0
+03/22/26 17:44:38: Dispatch Server: Accepted socket connection from client
+03/22/26 17:44:38: Starting Socket connection
+03/22/26 17:44:38: EXCHANGE_TOKEN received, server token: 0c8acba0-ad74-4303-bc11-9823a7fbabc8, passed token: 0c8acba0-ad74-4303-bc11-9823a7fbabc8
+03/22/26 17:44:38: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:44:38: SESSION_MGR: creating session with session uuid: 'ea4c4e17-845c-4f08-88db-9f28f15f44de' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:44:38: KERNEL_SVC: creating session with uuid: 'ea4c4e17-845c-4f08-88db-9f28f15f44de' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:44:38: GUIDANCE_SMGR: creating guidance session with uuid: 'ea4c4e17-845c-4f08-88db-9f28f15f44de' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:44:38: SYSTEM_DIAGRAM: creating session with uuid: 'ea4c4e17-845c-4f08-88db-9f28f15f44de' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:44:45: Dispatch Server: Accepted socket connection from client
+03/22/26 17:44:45: Starting Socket connection
+03/22/26 17:45:19: SESSION_MGR: closing session for UUID 'ea4c4e17-845c-4f08-88db-9f28f15f44de' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:45:19: KERNEL_SVC: closing session for UUID 'ea4c4e17-845c-4f08-88db-9f28f15f44de' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:45:19: GUIDANCE_SMGR: closing session for UUID 'ea4c4e17-845c-4f08-88db-9f28f15f44de' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:45:19: SYSTEM_DIAGRAM: closing session for UUID 'ea4c4e17-845c-4f08-88db-9f28f15f44de' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:45:19: STOP_SERVER received, server token: 0c8acba0-ad74-4303-bc11-9823a7fbabc8, passed token: 0c8acba0-ad74-4303-bc11-9823a7fbabc8
+03/22/26 17:45:19: Socket received request to stop server.
+03/22/26 17:45:19: Dispatch Server: do_await_stop
+03/22/26 17:45:19: SERVER: destructor for server bound to port 65239
+03/22/26 17:47:06: Running xcd server. This server was built by gradle.
+03/22/26 17:47:06: Server was asked to start on port: '55699'
+03/22/26 17:47:06: Server is using token UUID: 'e68cfdf5-3f21-4515-99d8-8897a1f7f135'
+03/22/26 17:47:06: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:47:06: Attempting to start server on port '55699'
+03/22/26 17:47:06: Running Dispatch Server
+03/22/26 17:47:06: Version 2.2.0
+03/22/26 17:47:08: Dispatch Server: Accepted socket connection from client
+03/22/26 17:47:08: Starting Socket connection
+03/22/26 17:47:08: EXCHANGE_TOKEN received, server token: e68cfdf5-3f21-4515-99d8-8897a1f7f135, passed token: e68cfdf5-3f21-4515-99d8-8897a1f7f135
+03/22/26 17:47:08: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:47:08: SESSION_MGR: creating session with session uuid: 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' and name 'v++_compile_FlashAtt1'
+03/22/26 17:47:08: KERNEL_SVC: creating session with uuid: 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' and name 'v++_compile_FlashAtt1'
+03/22/26 17:47:08: GUIDANCE_SMGR: creating guidance session with uuid: 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' and name 'v++_compile_FlashAtt1'
+03/22/26 17:47:08: SYSTEM_DIAGRAM: creating session with uuid: 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' and name 'v++_compile_FlashAtt1'
+03/22/26 17:47:16: Dispatch Server: Accepted socket connection from client
+03/22/26 17:47:16: Starting Socket connection
+03/22/26 17:47:46: SESSION_MGR: closing session for UUID 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' with name 'v++_compile_FlashAtt1'
+03/22/26 17:47:46: KERNEL_SVC: closing session for UUID 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' with name 'v++_compile_FlashAtt1'
+03/22/26 17:47:46: GUIDANCE_SMGR: closing session for UUID 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' with name 'v++_compile_FlashAtt1'
+03/22/26 17:47:46: SYSTEM_DIAGRAM: closing session for UUID 'e6f7543f-4d0d-4e76-a3d9-bafefa5f5c71' with name 'v++_compile_FlashAtt1'
+03/22/26 17:47:46: STOP_SERVER received, server token: e68cfdf5-3f21-4515-99d8-8897a1f7f135, passed token: e68cfdf5-3f21-4515-99d8-8897a1f7f135
+03/22/26 17:47:46: Socket received request to stop server.
+03/22/26 17:47:46: Dispatch Server: do_await_stop
+03/22/26 17:47:46: SERVER: destructor for server bound to port 55699
+03/22/26 17:48:28: Running xcd server. This server was built by gradle.
+03/22/26 17:48:28: Server was asked to start on port: '62032'
+03/22/26 17:48:28: Server is using token UUID: '579499bc-ec7f-4c13-905c-3aef3991f8d5'
+03/22/26 17:48:28: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:48:28: Attempting to start server on port '62032'
+03/22/26 17:48:28: Running Dispatch Server
+03/22/26 17:48:28: Version 2.2.0
+03/22/26 17:48:30: Dispatch Server: Accepted socket connection from client
+03/22/26 17:48:30: Starting Socket connection
+03/22/26 17:48:30: EXCHANGE_TOKEN received, server token: 579499bc-ec7f-4c13-905c-3aef3991f8d5, passed token: 579499bc-ec7f-4c13-905c-3aef3991f8d5
+03/22/26 17:48:30: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:48:30: SESSION_MGR: creating session with session uuid: 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' and name 'v++_compile_FlashAtt1'
+03/22/26 17:48:30: KERNEL_SVC: creating session with uuid: 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' and name 'v++_compile_FlashAtt1'
+03/22/26 17:48:30: GUIDANCE_SMGR: creating guidance session with uuid: 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' and name 'v++_compile_FlashAtt1'
+03/22/26 17:48:30: SYSTEM_DIAGRAM: creating session with uuid: 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' and name 'v++_compile_FlashAtt1'
+03/22/26 17:48:38: Dispatch Server: Accepted socket connection from client
+03/22/26 17:48:38: Starting Socket connection
+03/22/26 17:49:06: SESSION_MGR: closing session for UUID 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' with name 'v++_compile_FlashAtt1'
+03/22/26 17:49:06: KERNEL_SVC: closing session for UUID 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' with name 'v++_compile_FlashAtt1'
+03/22/26 17:49:06: GUIDANCE_SMGR: closing session for UUID 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' with name 'v++_compile_FlashAtt1'
+03/22/26 17:49:06: SYSTEM_DIAGRAM: closing session for UUID 'ec09c2dc-74eb-4b6b-9a87-ad68616d97d2' with name 'v++_compile_FlashAtt1'
+03/22/26 17:49:06: STOP_SERVER received, server token: 579499bc-ec7f-4c13-905c-3aef3991f8d5, passed token: 579499bc-ec7f-4c13-905c-3aef3991f8d5
+03/22/26 17:49:06: Socket received request to stop server.
+03/22/26 17:49:06: Dispatch Server: do_await_stop
+03/22/26 17:49:06: SERVER: destructor for server bound to port 62032
+03/22/26 17:49:55: Running xcd server. This server was built by gradle.
+03/22/26 17:49:55: Server was asked to start on port: '62405'
+03/22/26 17:49:55: Server is using token UUID: 'daeff72e-1fc2-4af4-8748-1b397eb5a9cb'
+03/22/26 17:49:55: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:49:55: Attempting to start server on port '62405'
+03/22/26 17:49:55: Running Dispatch Server
+03/22/26 17:49:55: Version 2.2.0
+03/22/26 17:49:57: Dispatch Server: Accepted socket connection from client
+03/22/26 17:49:57: Starting Socket connection
+03/22/26 17:49:57: EXCHANGE_TOKEN received, server token: daeff72e-1fc2-4af4-8748-1b397eb5a9cb, passed token: daeff72e-1fc2-4af4-8748-1b397eb5a9cb
+03/22/26 17:49:57: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:49:57: SESSION_MGR: creating session with session uuid: '790c250d-9850-4565-ba2c-74515192959a' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:49:57: KERNEL_SVC: creating session with uuid: '790c250d-9850-4565-ba2c-74515192959a' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:49:57: GUIDANCE_SMGR: creating guidance session with uuid: '790c250d-9850-4565-ba2c-74515192959a' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:49:57: SYSTEM_DIAGRAM: creating session with uuid: '790c250d-9850-4565-ba2c-74515192959a' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:50:04: Dispatch Server: Accepted socket connection from client
+03/22/26 17:50:04: Starting Socket connection
+03/22/26 17:50:22: SESSION_MGR: closing session for UUID '790c250d-9850-4565-ba2c-74515192959a' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:50:22: KERNEL_SVC: closing session for UUID '790c250d-9850-4565-ba2c-74515192959a' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:50:22: GUIDANCE_SMGR: closing session for UUID '790c250d-9850-4565-ba2c-74515192959a' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:50:22: SYSTEM_DIAGRAM: closing session for UUID '790c250d-9850-4565-ba2c-74515192959a' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:50:22: STOP_SERVER received, server token: daeff72e-1fc2-4af4-8748-1b397eb5a9cb, passed token: daeff72e-1fc2-4af4-8748-1b397eb5a9cb
+03/22/26 17:50:22: Socket received request to stop server.
+03/22/26 17:50:22: Dispatch Server: do_await_stop
+03/22/26 17:50:22: SERVER: destructor for server bound to port 62405
+03/22/26 17:50:51: Running xcd server. This server was built by gradle.
+03/22/26 17:50:51: Server was asked to start on port: '54127'
+03/22/26 17:50:51: Server is using token UUID: 'e73495b3-709a-4ac5-94a9-b8e0c4086624'
+03/22/26 17:50:51: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:50:51: Attempting to start server on port '54127'
+03/22/26 17:50:51: Running Dispatch Server
+03/22/26 17:50:51: Version 2.2.0
+03/22/26 17:50:54: Dispatch Server: Accepted socket connection from client
+03/22/26 17:50:54: Starting Socket connection
+03/22/26 17:50:54: EXCHANGE_TOKEN received, server token: e73495b3-709a-4ac5-94a9-b8e0c4086624, passed token: e73495b3-709a-4ac5-94a9-b8e0c4086624
+03/22/26 17:50:54: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:50:54: SESSION_MGR: creating session with session uuid: '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' and name 'v++_compile_FlashAtt1'
+03/22/26 17:50:54: KERNEL_SVC: creating session with uuid: '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' and name 'v++_compile_FlashAtt1'
+03/22/26 17:50:54: GUIDANCE_SMGR: creating guidance session with uuid: '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' and name 'v++_compile_FlashAtt1'
+03/22/26 17:50:54: SYSTEM_DIAGRAM: creating session with uuid: '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' and name 'v++_compile_FlashAtt1'
+03/22/26 17:51:01: Dispatch Server: Accepted socket connection from client
+03/22/26 17:51:01: Starting Socket connection
+03/22/26 17:51:30: SESSION_MGR: closing session for UUID '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' with name 'v++_compile_FlashAtt1'
+03/22/26 17:51:30: KERNEL_SVC: closing session for UUID '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' with name 'v++_compile_FlashAtt1'
+03/22/26 17:51:30: GUIDANCE_SMGR: closing session for UUID '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' with name 'v++_compile_FlashAtt1'
+03/22/26 17:51:30: SYSTEM_DIAGRAM: closing session for UUID '5dd4c6d6-ce64-46f3-8180-68d65aa8a2a7' with name 'v++_compile_FlashAtt1'
+03/22/26 17:51:30: STOP_SERVER received, server token: e73495b3-709a-4ac5-94a9-b8e0c4086624, passed token: e73495b3-709a-4ac5-94a9-b8e0c4086624
+03/22/26 17:51:30: Socket received request to stop server.
+03/22/26 17:51:30: Dispatch Server: do_await_stop
+03/22/26 17:51:30: SERVER: destructor for server bound to port 54127
+03/22/26 17:52:11: Running xcd server. This server was built by gradle.
+03/22/26 17:52:11: Server was asked to start on port: '54469'
+03/22/26 17:52:11: Server is using token UUID: 'df41c10b-daef-48e1-b14c-251673fa753e'
+03/22/26 17:52:11: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:52:11: Attempting to start server on port '54469'
+03/22/26 17:52:11: Running Dispatch Server
+03/22/26 17:52:11: Version 2.2.0
+03/22/26 17:52:13: Dispatch Server: Accepted socket connection from client
+03/22/26 17:52:13: Starting Socket connection
+03/22/26 17:52:13: EXCHANGE_TOKEN received, server token: df41c10b-daef-48e1-b14c-251673fa753e, passed token: df41c10b-daef-48e1-b14c-251673fa753e
+03/22/26 17:52:13: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:52:13: SESSION_MGR: creating session with session uuid: 'ed4bc56e-edea-433d-a762-c7305c0bda48' and name 'v++_compile_FlashAtt1'
+03/22/26 17:52:13: KERNEL_SVC: creating session with uuid: 'ed4bc56e-edea-433d-a762-c7305c0bda48' and name 'v++_compile_FlashAtt1'
+03/22/26 17:52:13: GUIDANCE_SMGR: creating guidance session with uuid: 'ed4bc56e-edea-433d-a762-c7305c0bda48' and name 'v++_compile_FlashAtt1'
+03/22/26 17:52:13: SYSTEM_DIAGRAM: creating session with uuid: 'ed4bc56e-edea-433d-a762-c7305c0bda48' and name 'v++_compile_FlashAtt1'
+03/22/26 17:52:21: Dispatch Server: Accepted socket connection from client
+03/22/26 17:52:21: Starting Socket connection
+03/22/26 17:55:16: SESSION_MGR: closing session for UUID 'ed4bc56e-edea-433d-a762-c7305c0bda48' with name 'v++_compile_FlashAtt1'
+03/22/26 17:55:16: KERNEL_SVC: closing session for UUID 'ed4bc56e-edea-433d-a762-c7305c0bda48' with name 'v++_compile_FlashAtt1'
+03/22/26 17:55:16: GUIDANCE_SMGR: closing session for UUID 'ed4bc56e-edea-433d-a762-c7305c0bda48' with name 'v++_compile_FlashAtt1'
+03/22/26 17:55:16: SYSTEM_DIAGRAM: closing session for UUID 'ed4bc56e-edea-433d-a762-c7305c0bda48' with name 'v++_compile_FlashAtt1'
+03/22/26 17:55:16: STOP_SERVER received, server token: df41c10b-daef-48e1-b14c-251673fa753e, passed token: df41c10b-daef-48e1-b14c-251673fa753e
+03/22/26 17:55:16: Socket received request to stop server.
+03/22/26 17:55:16: Dispatch Server: do_await_stop
+03/22/26 17:55:16: SERVER: destructor for server bound to port 54469
+03/22/26 17:59:47: Running xcd server. This server was built by gradle.
+03/22/26 17:59:47: Server was asked to start on port: '54650'
+03/22/26 17:59:47: Server is using token UUID: '222871a7-b3d8-4986-adb6-e8305431a79e'
+03/22/26 17:59:47: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 17:59:47: Attempting to start server on port '54650'
+03/22/26 17:59:47: Running Dispatch Server
+03/22/26 17:59:47: Version 2.2.0
+03/22/26 17:59:50: Dispatch Server: Accepted socket connection from client
+03/22/26 17:59:50: Starting Socket connection
+03/22/26 17:59:50: EXCHANGE_TOKEN received, server token: 222871a7-b3d8-4986-adb6-e8305431a79e, passed token: 222871a7-b3d8-4986-adb6-e8305431a79e
+03/22/26 17:59:50: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 17:59:50: SESSION_MGR: creating session with session uuid: '60698c39-1fd2-4c54-8332-8cd64fc03bcb' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:59:50: KERNEL_SVC: creating session with uuid: '60698c39-1fd2-4c54-8332-8cd64fc03bcb' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:59:50: GUIDANCE_SMGR: creating guidance session with uuid: '60698c39-1fd2-4c54-8332-8cd64fc03bcb' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:59:50: SYSTEM_DIAGRAM: creating session with uuid: '60698c39-1fd2-4c54-8332-8cd64fc03bcb' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 17:59:58: Dispatch Server: Accepted socket connection from client
+03/22/26 17:59:58: Starting Socket connection
+03/22/26 18:00:45: SESSION_MGR: closing session for UUID '60698c39-1fd2-4c54-8332-8cd64fc03bcb' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:00:45: KERNEL_SVC: closing session for UUID '60698c39-1fd2-4c54-8332-8cd64fc03bcb' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:00:45: GUIDANCE_SMGR: closing session for UUID '60698c39-1fd2-4c54-8332-8cd64fc03bcb' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:00:45: SYSTEM_DIAGRAM: closing session for UUID '60698c39-1fd2-4c54-8332-8cd64fc03bcb' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:00:45: STOP_SERVER received, server token: 222871a7-b3d8-4986-adb6-e8305431a79e, passed token: 222871a7-b3d8-4986-adb6-e8305431a79e
+03/22/26 18:00:45: Socket received request to stop server.
+03/22/26 18:00:45: Dispatch Server: do_await_stop
+03/22/26 18:00:45: SERVER: destructor for server bound to port 54650
+03/22/26 18:01:26: Running xcd server. This server was built by gradle.
+03/22/26 18:01:26: Server was asked to start on port: '55115'
+03/22/26 18:01:26: Server is using token UUID: 'f045a419-c1e1-4112-a61f-2c6b93113b21'
+03/22/26 18:01:26: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 18:01:26: Attempting to start server on port '55115'
+03/22/26 18:01:26: Running Dispatch Server
+03/22/26 18:01:26: Version 2.2.0
+03/22/26 18:01:28: Dispatch Server: Accepted socket connection from client
+03/22/26 18:01:28: Starting Socket connection
+03/22/26 18:01:28: EXCHANGE_TOKEN received, server token: f045a419-c1e1-4112-a61f-2c6b93113b21, passed token: f045a419-c1e1-4112-a61f-2c6b93113b21
+03/22/26 18:01:29: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 18:01:29: SESSION_MGR: creating session with session uuid: 'd337548c-b558-48a5-a749-38f4c2abb0bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:01:29: KERNEL_SVC: creating session with uuid: 'd337548c-b558-48a5-a749-38f4c2abb0bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:01:29: GUIDANCE_SMGR: creating guidance session with uuid: 'd337548c-b558-48a5-a749-38f4c2abb0bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:01:29: SYSTEM_DIAGRAM: creating session with uuid: 'd337548c-b558-48a5-a749-38f4c2abb0bd' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:01:54: Dispatch Server: Accepted socket connection from client
+03/22/26 18:01:54: Starting Socket connection
+03/22/26 18:02:12: SESSION_MGR: closing session for UUID 'd337548c-b558-48a5-a749-38f4c2abb0bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:02:12: KERNEL_SVC: closing session for UUID 'd337548c-b558-48a5-a749-38f4c2abb0bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:02:12: GUIDANCE_SMGR: closing session for UUID 'd337548c-b558-48a5-a749-38f4c2abb0bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:02:12: SYSTEM_DIAGRAM: closing session for UUID 'd337548c-b558-48a5-a749-38f4c2abb0bd' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:02:12: STOP_SERVER received, server token: f045a419-c1e1-4112-a61f-2c6b93113b21, passed token: f045a419-c1e1-4112-a61f-2c6b93113b21
+03/22/26 18:02:12: Socket received request to stop server.
+03/22/26 18:02:12: Dispatch Server: do_await_stop
+03/22/26 18:02:12: SERVER: destructor for server bound to port 55115
+03/22/26 18:02:58: Running xcd server. This server was built by gradle.
+03/22/26 18:02:58: Server was asked to start on port: '59247'
+03/22/26 18:02:58: Server is using token UUID: '7db458b3-9bd2-484c-b737-b07a5afaddf7'
+03/22/26 18:02:58: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 18:02:58: Attempting to start server on port '59247'
+03/22/26 18:02:58: Running Dispatch Server
+03/22/26 18:02:58: Version 2.2.0
+03/22/26 18:03:00: Dispatch Server: Accepted socket connection from client
+03/22/26 18:03:00: Starting Socket connection
+03/22/26 18:03:00: EXCHANGE_TOKEN received, server token: 7db458b3-9bd2-484c-b737-b07a5afaddf7, passed token: 7db458b3-9bd2-484c-b737-b07a5afaddf7
+03/22/26 18:03:01: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 18:03:01: SESSION_MGR: creating session with session uuid: '65165569-3829-423f-a472-b77456170ee2' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:01: KERNEL_SVC: creating session with uuid: '65165569-3829-423f-a472-b77456170ee2' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:01: GUIDANCE_SMGR: creating guidance session with uuid: '65165569-3829-423f-a472-b77456170ee2' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:01: SYSTEM_DIAGRAM: creating session with uuid: '65165569-3829-423f-a472-b77456170ee2' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:08: Dispatch Server: Accepted socket connection from client
+03/22/26 18:03:08: Starting Socket connection
+03/22/26 18:03:55: SESSION_MGR: closing session for UUID '65165569-3829-423f-a472-b77456170ee2' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:55: KERNEL_SVC: closing session for UUID '65165569-3829-423f-a472-b77456170ee2' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:55: GUIDANCE_SMGR: closing session for UUID '65165569-3829-423f-a472-b77456170ee2' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:55: SYSTEM_DIAGRAM: closing session for UUID '65165569-3829-423f-a472-b77456170ee2' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:03:55: STOP_SERVER received, server token: 7db458b3-9bd2-484c-b737-b07a5afaddf7, passed token: 7db458b3-9bd2-484c-b737-b07a5afaddf7
+03/22/26 18:03:55: Socket received request to stop server.
+03/22/26 18:03:55: Dispatch Server: do_await_stop
+03/22/26 18:03:55: SERVER: destructor for server bound to port 59247
+03/22/26 18:04:27: Running xcd server. This server was built by gradle.
+03/22/26 18:04:27: Server was asked to start on port: '64063'
+03/22/26 18:04:27: Server is using token UUID: '4554fb4e-009d-4dd3-a523-e1a696fdab88'
+03/22/26 18:04:27: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 18:04:27: Attempting to start server on port '64063'
+03/22/26 18:04:27: Running Dispatch Server
+03/22/26 18:04:27: Version 2.2.0
+03/22/26 18:04:30: Dispatch Server: Accepted socket connection from client
+03/22/26 18:04:30: Starting Socket connection
+03/22/26 18:04:30: EXCHANGE_TOKEN received, server token: 4554fb4e-009d-4dd3-a523-e1a696fdab88, passed token: 4554fb4e-009d-4dd3-a523-e1a696fdab88
+03/22/26 18:04:30: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 18:04:30: SESSION_MGR: creating session with session uuid: '94789ca7-e722-42b7-9f60-4e2751f21844' and name 'v++_compile_FlashAtt1'
+03/22/26 18:04:30: KERNEL_SVC: creating session with uuid: '94789ca7-e722-42b7-9f60-4e2751f21844' and name 'v++_compile_FlashAtt1'
+03/22/26 18:04:30: GUIDANCE_SMGR: creating guidance session with uuid: '94789ca7-e722-42b7-9f60-4e2751f21844' and name 'v++_compile_FlashAtt1'
+03/22/26 18:04:30: SYSTEM_DIAGRAM: creating session with uuid: '94789ca7-e722-42b7-9f60-4e2751f21844' and name 'v++_compile_FlashAtt1'
+03/22/26 18:04:37: Dispatch Server: Accepted socket connection from client
+03/22/26 18:04:37: Starting Socket connection
+03/22/26 18:07:29: SESSION_MGR: closing session for UUID '94789ca7-e722-42b7-9f60-4e2751f21844' with name 'v++_compile_FlashAtt1'
+03/22/26 18:07:29: KERNEL_SVC: closing session for UUID '94789ca7-e722-42b7-9f60-4e2751f21844' with name 'v++_compile_FlashAtt1'
+03/22/26 18:07:29: GUIDANCE_SMGR: closing session for UUID '94789ca7-e722-42b7-9f60-4e2751f21844' with name 'v++_compile_FlashAtt1'
+03/22/26 18:07:29: SYSTEM_DIAGRAM: closing session for UUID '94789ca7-e722-42b7-9f60-4e2751f21844' with name 'v++_compile_FlashAtt1'
+03/22/26 18:07:29: STOP_SERVER received, server token: 4554fb4e-009d-4dd3-a523-e1a696fdab88, passed token: 4554fb4e-009d-4dd3-a523-e1a696fdab88
+03/22/26 18:07:29: Socket received request to stop server.
+03/22/26 18:07:29: Dispatch Server: do_await_stop
+03/22/26 18:07:29: SERVER: destructor for server bound to port 64063
+03/22/26 18:08:17: Running xcd server. This server was built by gradle.
+03/22/26 18:08:17: Server was asked to start on port: '64853'
+03/22/26 18:08:17: Server is using token UUID: '738935e3-28a0-46c1-aa96-58f564f68684'
+03/22/26 18:08:17: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+03/22/26 18:08:17: Attempting to start server on port '64853'
+03/22/26 18:08:17: Running Dispatch Server
+03/22/26 18:08:17: Version 2.2.0
+03/22/26 18:08:20: Dispatch Server: Accepted socket connection from client
+03/22/26 18:08:20: Starting Socket connection
+03/22/26 18:08:20: EXCHANGE_TOKEN received, server token: 738935e3-28a0-46c1-aa96-58f564f68684, passed token: 738935e3-28a0-46c1-aa96-58f564f68684
+03/22/26 18:08:20: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+03/22/26 18:08:20: SESSION_MGR: creating session with session uuid: '0716eab1-3773-4b43-980d-3c92bbc58978' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:08:20: KERNEL_SVC: creating session with uuid: '0716eab1-3773-4b43-980d-3c92bbc58978' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:08:20: GUIDANCE_SMGR: creating guidance session with uuid: '0716eab1-3773-4b43-980d-3c92bbc58978' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:08:20: SYSTEM_DIAGRAM: creating session with uuid: '0716eab1-3773-4b43-980d-3c92bbc58978' and name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:08:27: Dispatch Server: Accepted socket connection from client
+03/22/26 18:08:27: Starting Socket connection
+03/22/26 18:09:08: SESSION_MGR: closing session for UUID '0716eab1-3773-4b43-980d-3c92bbc58978' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:09:08: KERNEL_SVC: closing session for UUID '0716eab1-3773-4b43-980d-3c92bbc58978' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:09:08: GUIDANCE_SMGR: closing session for UUID '0716eab1-3773-4b43-980d-3c92bbc58978' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:09:08: SYSTEM_DIAGRAM: closing session for UUID '0716eab1-3773-4b43-980d-3c92bbc58978' with name 'vitis-run_compile_FlashAtt1'
+03/22/26 18:09:08: STOP_SERVER received, server token: 738935e3-28a0-46c1-aa96-58f564f68684, passed token: 738935e3-28a0-46c1-aa96-58f564f68684
+03/22/26 18:09:08: Socket received request to stop server.
+03/22/26 18:09:08: Dispatch Server: do_await_stop
+03/22/26 18:09:08: SERVER: destructor for server bound to port 64853

@@ -1,0 +1,6 @@
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling apatb_flash_attention_kernel.cpp
+   Compiling flashattentiontb.cpp_pre.cpp.tb.cpp
+   Compiling flashattentionkernal.cpp_pre.cpp.tb.cpp
+   Compiling apatb_flash_attention_kernel_ir.ll
+   Generating cosim.tv.exe

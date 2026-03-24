@@ -1,0 +1,66 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1'.
+WARNING: [HLS 200-655] The device family 'versalhbm-2LHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcvh1582-lsva4737-2LHP-e-S'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiontypes.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontypes.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiongemm.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiongemm.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionsoftmax.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionsoftmax.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionmemory.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionmemory.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionkernal.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionkernal.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=flashattentiontb.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=flash_attention_kernel' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcvh1582-lsva4737-2LHP-e-S' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2LHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling apatb_flash_attention_kernel.cpp
+   Compiling flashattentiontb.cpp_pre.cpp.tb.cpp
+   Compiling flashattentionkernal.cpp_pre.cpp.tb.cpp
+   Compiling apatb_flash_attention_kernel_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+==============================================
+FlashAttention HLS Testbench
+  HEAD_DIM = 128
+  TILE_BR  = 64
+  TILE_BC  = 64
+==============================================
+Test N = 128, d = 128
+Tiles: Tr = 2, Tc = 2
+Computing golden reference (standard attention)...
+Running FlashAttention HLS kernel...
+ERROR: System received a signal named SIGSEGV and the program has to stop immediately!
+This signal was generated when a program tries to read or write outside the memory that is allocated for it, or to write memory that can only be read.
+Possible cause of this problem may be:
+  1) Missing depth information for one or more pointers to arrays in the interface;
+  2) Insufficient depth setting for array argument(s);
+  3) Excessive depth setting for array argument(s), that exceeds the maximum virtual memory size for the process;
+  4) Null pointer etc.
+Current execution stopped during CodeState = ENTER_WRAPC.
+You can search CodeState variable name in apatb*.cpp file under ./sim/wrapc dir to locate the position.
+
+ERROR: [COSIM 212-360] Aborting co-simulation: C TB simulation failed.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 52.113 seconds; peak allocated memory: 516.832 MB.

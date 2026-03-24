@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2'
+================================================================
+* Date:           Sun Mar 22 18:06:48 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.433 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |      514|      514|  5.140 us|  5.140 us|  513|  513|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |           Loop Name           |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- INIT_O_ACC_VITIS_LOOP_202_2  |      512|      512|         1|          1|          1|   512|       yes|
+        +-------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|       44|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|     -|        -|        -|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|       65|     -|
+|Register             |        -|     -|       27|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|     0|       27|      109|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln201_2_fu_404_p2     |         +|   0|  0|  10|          10|           1|
+    |add_ln201_fu_426_p2       |         +|   0|  0|   8|           7|           1|
+    |add_ln202_fu_630_p2       |         +|   0|  0|   8|           8|           5|
+    |icmp_ln201_fu_410_p2      |      icmp|   0|  0|   4|          10|          11|
+    |select_ln201_2_fu_452_p3  |    select|   0|  0|   7|           1|           7|
+    |select_ln201_fu_440_p3    |    select|   0|  0|   7|           1|           1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  44|          37|          26|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                            |   1|          2|    1|          2|
+    |ap_sig_allocacmp_c_load                |   8|          2|    8|         16|
+    |ap_sig_allocacmp_indvar_flatten9_load  |  16|          2|   10|         20|
+    |ap_sig_allocacmp_r_load                |   8|          2|    7|         14|
+    |c_fu_86                                |   8|          2|    8|         16|
+    |indvar_flatten9_fu_94                  |  16|          2|   10|         20|
+    |r_fu_90                                |   8|          2|    7|         14|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  65|         14|   51|        102|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |   1|   0|    1|          0|
+    |ap_done_reg            |   1|   0|    1|          0|
+    |c_fu_86                |   8|   0|    8|          0|
+    |indvar_flatten9_fu_94  |  10|   0|   10|          0|
+    |r_fu_90                |   7|   0|    7|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  |  27|   0|   27|          0|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-------------------------------------------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |                        Source Object                        |    C Type    |
++-------------------+-----+-----+------------+-------------------------------------------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2|  return value|
+|O_acc_address1     |  out|    9|   ap_memory|                                                        O_acc|         array|
+|O_acc_ce1          |  out|    1|   ap_memory|                                                        O_acc|         array|
+|O_acc_we1          |  out|    1|   ap_memory|                                                        O_acc|         array|
+|O_acc_d1           |  out|   32|   ap_memory|                                                        O_acc|         array|
+|O_acc_1_address1   |  out|    9|   ap_memory|                                                      O_acc_1|         array|
+|O_acc_1_ce1        |  out|    1|   ap_memory|                                                      O_acc_1|         array|
+|O_acc_1_we1        |  out|    1|   ap_memory|                                                      O_acc_1|         array|
+|O_acc_1_d1         |  out|   32|   ap_memory|                                                      O_acc_1|         array|
+|O_acc_2_address1   |  out|    9|   ap_memory|                                                      O_acc_2|         array|
+|O_acc_2_ce1        |  out|    1|   ap_memory|                                                      O_acc_2|         array|
+|O_acc_2_we1        |  out|    1|   ap_memory|                                                      O_acc_2|         array|
+|O_acc_2_d1         |  out|   32|   ap_memory|                                                      O_acc_2|         array|
+|O_acc_3_address1   |  out|    9|   ap_memory|                                                      O_acc_3|         array|
+|O_acc_3_ce1        |  out|    1|   ap_memory|                                                      O_acc_3|         array|
+|O_acc_3_we1        |  out|    1|   ap_memory|                                                      O_acc_3|         array|
+|O_acc_3_d1         |  out|   32|   ap_memory|                                                      O_acc_3|         array|
+|O_acc_4_address1   |  out|    9|   ap_memory|                                                      O_acc_4|         array|
+|O_acc_4_ce1        |  out|    1|   ap_memory|                                                      O_acc_4|         array|
+|O_acc_4_we1        |  out|    1|   ap_memory|                                                      O_acc_4|         array|
+|O_acc_4_d1         |  out|   32|   ap_memory|                                                      O_acc_4|         array|
+|O_acc_5_address1   |  out|    9|   ap_memory|                                                      O_acc_5|         array|
+|O_acc_5_ce1        |  out|    1|   ap_memory|                                                      O_acc_5|         array|
+|O_acc_5_we1        |  out|    1|   ap_memory|                                                      O_acc_5|         array|
+|O_acc_5_d1         |  out|   32|   ap_memory|                                                      O_acc_5|         array|
+|O_acc_6_address1   |  out|    9|   ap_memory|                                                      O_acc_6|         array|
+|O_acc_6_ce1        |  out|    1|   ap_memory|                                                      O_acc_6|         array|
+|O_acc_6_we1        |  out|    1|   ap_memory|                                                      O_acc_6|         array|
+|O_acc_6_d1         |  out|   32|   ap_memory|                                                      O_acc_6|         array|
+|O_acc_7_address1   |  out|    9|   ap_memory|                                                      O_acc_7|         array|
+|O_acc_7_ce1        |  out|    1|   ap_memory|                                                      O_acc_7|         array|
+|O_acc_7_we1        |  out|    1|   ap_memory|                                                      O_acc_7|         array|
+|O_acc_7_d1         |  out|   32|   ap_memory|                                                      O_acc_7|         array|
+|O_acc_8_address1   |  out|    9|   ap_memory|                                                      O_acc_8|         array|
+|O_acc_8_ce1        |  out|    1|   ap_memory|                                                      O_acc_8|         array|
+|O_acc_8_we1        |  out|    1|   ap_memory|                                                      O_acc_8|         array|
+|O_acc_8_d1         |  out|   32|   ap_memory|                                                      O_acc_8|         array|
+|O_acc_9_address1   |  out|    9|   ap_memory|                                                      O_acc_9|         array|
+|O_acc_9_ce1        |  out|    1|   ap_memory|                                                      O_acc_9|         array|
+|O_acc_9_we1        |  out|    1|   ap_memory|                                                      O_acc_9|         array|
+|O_acc_9_d1         |  out|   32|   ap_memory|                                                      O_acc_9|         array|
+|O_acc_10_address1  |  out|    9|   ap_memory|                                                     O_acc_10|         array|
+|O_acc_10_ce1       |  out|    1|   ap_memory|                                                     O_acc_10|         array|
+|O_acc_10_we1       |  out|    1|   ap_memory|                                                     O_acc_10|         array|
+|O_acc_10_d1        |  out|   32|   ap_memory|                                                     O_acc_10|         array|
+|O_acc_11_address1  |  out|    9|   ap_memory|                                                     O_acc_11|         array|
+|O_acc_11_ce1       |  out|    1|   ap_memory|                                                     O_acc_11|         array|
+|O_acc_11_we1       |  out|    1|   ap_memory|                                                     O_acc_11|         array|
+|O_acc_11_d1        |  out|   32|   ap_memory|                                                     O_acc_11|         array|
+|O_acc_12_address1  |  out|    9|   ap_memory|                                                     O_acc_12|         array|
+|O_acc_12_ce1       |  out|    1|   ap_memory|                                                     O_acc_12|         array|
+|O_acc_12_we1       |  out|    1|   ap_memory|                                                     O_acc_12|         array|
+|O_acc_12_d1        |  out|   32|   ap_memory|                                                     O_acc_12|         array|
+|O_acc_13_address1  |  out|    9|   ap_memory|                                                     O_acc_13|         array|
+|O_acc_13_ce1       |  out|    1|   ap_memory|                                                     O_acc_13|         array|
+|O_acc_13_we1       |  out|    1|   ap_memory|                                                     O_acc_13|         array|
+|O_acc_13_d1        |  out|   32|   ap_memory|                                                     O_acc_13|         array|
+|O_acc_14_address1  |  out|    9|   ap_memory|                                                     O_acc_14|         array|
+|O_acc_14_ce1       |  out|    1|   ap_memory|                                                     O_acc_14|         array|
+|O_acc_14_we1       |  out|    1|   ap_memory|                                                     O_acc_14|         array|
+|O_acc_14_d1        |  out|   32|   ap_memory|                                                     O_acc_14|         array|
+|O_acc_15_address1  |  out|    9|   ap_memory|                                                     O_acc_15|         array|
+|O_acc_15_ce1       |  out|    1|   ap_memory|                                                     O_acc_15|         array|
+|O_acc_15_we1       |  out|    1|   ap_memory|                                                     O_acc_15|         array|
+|O_acc_15_d1        |  out|   32|   ap_memory|                                                     O_acc_15|         array|
++-------------------+-----+-----+------------+-------------------------------------------------------------+--------------+
+

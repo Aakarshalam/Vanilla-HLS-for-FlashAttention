@@ -1,0 +1,351 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_stats_fp32_Pipeline_LOAD_STATS'
+================================================================
+* Date:           Sun Mar 22 18:06:43 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.689 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+-----------+-----------+-----+-----------+------------------------------------------------+
+    |   Latency (cycles)  |   Latency (absolute)  |     Interval    |                    Pipeline                    |
+    |   min   |    max    |    min    |    max    | min |    max    |                      Type                      |
+    +---------+-----------+-----------+-----------+-----+-----------+------------------------------------------------+
+    |        2|  134217729|  20.000 ns|  1.342 sec|    1|  134217728|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+-----------+-----------+-----------+-----+-----------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+-----------+----------+-----------+-----------+---------------+----------+
+        |              |   Latency (cycles)  | Iteration|  Initiation Interval  |      Trip     |          |
+        |   Loop Name  |   min   |    max    |  Latency |  achieved |   target  |     Count     | Pipelined|
+        +--------------+---------+-----------+----------+-----------+-----------+---------------+----------+
+        |- LOAD_STATS  |        0|  134217727|         2|          1|          1|  0 ~ 134217727|       yes|
+        +--------------+---------+-----------+----------+-----------+-----------+---------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM |
++---------------------+---------+------+---------+---------+------+
+|DSP                  |        -|     -|        -|        -|     -|
+|Expression           |        -|     -|        0|      301|     -|
+|FIFO                 |        -|     -|        -|        -|     -|
+|Instance             |        -|     -|        -|        -|     -|
+|Memory               |        -|     -|        -|        -|     -|
+|Multiplexer          |        -|     -|        0|       67|     -|
+|Register             |        -|     -|       73|        -|     -|
++---------------------+---------+------+---------+---------+------+
+|Total                |        0|     0|       73|      368|     0|
++---------------------+---------+------+---------+---------+------+
+|Available SLR        |     2541|  3696|  1753984|   876992|   650|
++---------------------+---------+------+---------+---------+------+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+|Available            |     5082|  7392|  3507968|  1753984|  1301|
++---------------------+---------+------+---------+---------+------+
+|Utilization (%)      |        0|     0|       ~0|       ~0|     0|
++---------------------+---------+------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln237_fu_743_p2             |         +|   0|  0|  27|          27|           1|
+    |ap_block_pp0_stage0_01001_grp1  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln237_fu_753_p2            |      icmp|   0|  0|  14|          29|          29|
+    |icmp_ln247_10_fu_1071_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_11_fu_1101_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_12_fu_1131_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_13_fu_1161_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_14_fu_1191_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_15_fu_1221_p2        |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_1_fu_801_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_2_fu_831_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_3_fu_861_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_4_fu_891_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_5_fu_921_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_6_fu_951_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_7_fu_981_p2          |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_8_fu_1011_p2         |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_9_fu_1041_p2         |      icmp|   0|  0|  16|          32|          32|
+    |icmp_ln247_fu_771_p2            |      icmp|   0|  0|  16|          32|          32|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0| 301|         570|         545|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   1|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   1|          2|    1|          2|
+    |ap_sig_allocacmp_b_2     |  32|          2|   27|         54|
+    |b_fu_256                 |  32|          2|   27|         54|
+    |gmem_l_blk_n_R           |   1|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  67|         10|   57|        114|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |b_2_reg_1516             |  27|   0|   27|          0|
+    |b_fu_256                 |  27|   0|   27|          0|
+    |icmp_ln247_10_reg_1563   |   1|   0|    1|          0|
+    |icmp_ln247_11_reg_1567   |   1|   0|    1|          0|
+    |icmp_ln247_12_reg_1571   |   1|   0|    1|          0|
+    |icmp_ln247_13_reg_1575   |   1|   0|    1|          0|
+    |icmp_ln247_14_reg_1579   |   1|   0|    1|          0|
+    |icmp_ln247_15_reg_1583   |   1|   0|    1|          0|
+    |icmp_ln247_1_reg_1527    |   1|   0|    1|          0|
+    |icmp_ln247_2_reg_1531    |   1|   0|    1|          0|
+    |icmp_ln247_3_reg_1535    |   1|   0|    1|          0|
+    |icmp_ln247_4_reg_1539    |   1|   0|    1|          0|
+    |icmp_ln247_5_reg_1543    |   1|   0|    1|          0|
+    |icmp_ln247_6_reg_1547    |   1|   0|    1|          0|
+    |icmp_ln247_7_reg_1551    |   1|   0|    1|          0|
+    |icmp_ln247_8_reg_1555    |   1|   0|    1|          0|
+    |icmp_ln247_9_reg_1559    |   1|   0|    1|          0|
+    |icmp_ln247_reg_1523      |   1|   0|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  73|   0|   73|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  load_stats_fp32_Pipeline_LOAD_STATS|  return value|
+|m_axi_gmem_l_0_AWVALID   |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWREADY   |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWADDR    |  out|   64|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWID      |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWLEN     |  out|   32|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWSIZE    |  out|    3|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWBURST   |  out|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWLOCK    |  out|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWCACHE   |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWPROT    |  out|    3|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWQOS     |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWREGION  |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_AWUSER    |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WVALID    |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WREADY    |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WDATA     |  out|  512|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WSTRB     |  out|   64|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WLAST     |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WID       |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_WUSER     |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARVALID   |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARREADY   |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARADDR    |  out|   64|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARID      |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARLEN     |  out|   32|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARSIZE    |  out|    3|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARBURST   |  out|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARLOCK    |  out|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARCACHE   |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARPROT    |  out|    3|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARQOS     |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARREGION  |  out|    4|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_ARUSER    |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RVALID    |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RREADY    |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RDATA     |   in|  512|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RLAST     |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RID       |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RFIFONUM  |   in|    9|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RUSER     |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_RRESP     |   in|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_BVALID    |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_BREADY    |  out|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_BRESP     |   in|    2|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_BID       |   in|    1|       m_axi|                               gmem_l|       pointer|
+|m_axi_gmem_l_0_BUSER     |   in|    1|       m_axi|                               gmem_l|       pointer|
+|num_elements             |   in|   32|     ap_none|                         num_elements|        scalar|
+|total_beats              |   in|   29|     ap_none|                          total_beats|        scalar|
+|sext_ln237_1             |   in|   58|     ap_none|                         sext_ln237_1|        scalar|
+|stats_63                 |  out|   32|      ap_vld|                             stats_63|       pointer|
+|stats_63_ap_vld          |  out|    1|      ap_vld|                             stats_63|       pointer|
+|stats_62                 |  out|   32|      ap_vld|                             stats_62|       pointer|
+|stats_62_ap_vld          |  out|    1|      ap_vld|                             stats_62|       pointer|
+|stats_61                 |  out|   32|      ap_vld|                             stats_61|       pointer|
+|stats_61_ap_vld          |  out|    1|      ap_vld|                             stats_61|       pointer|
+|stats_60                 |  out|   32|      ap_vld|                             stats_60|       pointer|
+|stats_60_ap_vld          |  out|    1|      ap_vld|                             stats_60|       pointer|
+|stats_59                 |  out|   32|      ap_vld|                             stats_59|       pointer|
+|stats_59_ap_vld          |  out|    1|      ap_vld|                             stats_59|       pointer|
+|stats_58                 |  out|   32|      ap_vld|                             stats_58|       pointer|
+|stats_58_ap_vld          |  out|    1|      ap_vld|                             stats_58|       pointer|
+|stats_57                 |  out|   32|      ap_vld|                             stats_57|       pointer|
+|stats_57_ap_vld          |  out|    1|      ap_vld|                             stats_57|       pointer|
+|stats_56                 |  out|   32|      ap_vld|                             stats_56|       pointer|
+|stats_56_ap_vld          |  out|    1|      ap_vld|                             stats_56|       pointer|
+|stats_55                 |  out|   32|      ap_vld|                             stats_55|       pointer|
+|stats_55_ap_vld          |  out|    1|      ap_vld|                             stats_55|       pointer|
+|stats_54                 |  out|   32|      ap_vld|                             stats_54|       pointer|
+|stats_54_ap_vld          |  out|    1|      ap_vld|                             stats_54|       pointer|
+|stats_53                 |  out|   32|      ap_vld|                             stats_53|       pointer|
+|stats_53_ap_vld          |  out|    1|      ap_vld|                             stats_53|       pointer|
+|stats_52                 |  out|   32|      ap_vld|                             stats_52|       pointer|
+|stats_52_ap_vld          |  out|    1|      ap_vld|                             stats_52|       pointer|
+|stats_51                 |  out|   32|      ap_vld|                             stats_51|       pointer|
+|stats_51_ap_vld          |  out|    1|      ap_vld|                             stats_51|       pointer|
+|stats_50                 |  out|   32|      ap_vld|                             stats_50|       pointer|
+|stats_50_ap_vld          |  out|    1|      ap_vld|                             stats_50|       pointer|
+|stats_49                 |  out|   32|      ap_vld|                             stats_49|       pointer|
+|stats_49_ap_vld          |  out|    1|      ap_vld|                             stats_49|       pointer|
+|stats_48                 |  out|   32|      ap_vld|                             stats_48|       pointer|
+|stats_48_ap_vld          |  out|    1|      ap_vld|                             stats_48|       pointer|
+|stats_47                 |  out|   32|      ap_vld|                             stats_47|       pointer|
+|stats_47_ap_vld          |  out|    1|      ap_vld|                             stats_47|       pointer|
+|stats_46                 |  out|   32|      ap_vld|                             stats_46|       pointer|
+|stats_46_ap_vld          |  out|    1|      ap_vld|                             stats_46|       pointer|
+|stats_45                 |  out|   32|      ap_vld|                             stats_45|       pointer|
+|stats_45_ap_vld          |  out|    1|      ap_vld|                             stats_45|       pointer|
+|stats_44                 |  out|   32|      ap_vld|                             stats_44|       pointer|
+|stats_44_ap_vld          |  out|    1|      ap_vld|                             stats_44|       pointer|
+|stats_43                 |  out|   32|      ap_vld|                             stats_43|       pointer|
+|stats_43_ap_vld          |  out|    1|      ap_vld|                             stats_43|       pointer|
+|stats_42                 |  out|   32|      ap_vld|                             stats_42|       pointer|
+|stats_42_ap_vld          |  out|    1|      ap_vld|                             stats_42|       pointer|
+|stats_41                 |  out|   32|      ap_vld|                             stats_41|       pointer|
+|stats_41_ap_vld          |  out|    1|      ap_vld|                             stats_41|       pointer|
+|stats_40                 |  out|   32|      ap_vld|                             stats_40|       pointer|
+|stats_40_ap_vld          |  out|    1|      ap_vld|                             stats_40|       pointer|
+|stats_39                 |  out|   32|      ap_vld|                             stats_39|       pointer|
+|stats_39_ap_vld          |  out|    1|      ap_vld|                             stats_39|       pointer|
+|stats_38                 |  out|   32|      ap_vld|                             stats_38|       pointer|
+|stats_38_ap_vld          |  out|    1|      ap_vld|                             stats_38|       pointer|
+|stats_37                 |  out|   32|      ap_vld|                             stats_37|       pointer|
+|stats_37_ap_vld          |  out|    1|      ap_vld|                             stats_37|       pointer|
+|stats_36                 |  out|   32|      ap_vld|                             stats_36|       pointer|
+|stats_36_ap_vld          |  out|    1|      ap_vld|                             stats_36|       pointer|
+|stats_35                 |  out|   32|      ap_vld|                             stats_35|       pointer|
+|stats_35_ap_vld          |  out|    1|      ap_vld|                             stats_35|       pointer|
+|stats_34                 |  out|   32|      ap_vld|                             stats_34|       pointer|
+|stats_34_ap_vld          |  out|    1|      ap_vld|                             stats_34|       pointer|
+|stats_33                 |  out|   32|      ap_vld|                             stats_33|       pointer|
+|stats_33_ap_vld          |  out|    1|      ap_vld|                             stats_33|       pointer|
+|stats_32                 |  out|   32|      ap_vld|                             stats_32|       pointer|
+|stats_32_ap_vld          |  out|    1|      ap_vld|                             stats_32|       pointer|
+|stats_31                 |  out|   32|      ap_vld|                             stats_31|       pointer|
+|stats_31_ap_vld          |  out|    1|      ap_vld|                             stats_31|       pointer|
+|stats_30                 |  out|   32|      ap_vld|                             stats_30|       pointer|
+|stats_30_ap_vld          |  out|    1|      ap_vld|                             stats_30|       pointer|
+|stats_29                 |  out|   32|      ap_vld|                             stats_29|       pointer|
+|stats_29_ap_vld          |  out|    1|      ap_vld|                             stats_29|       pointer|
+|stats_28                 |  out|   32|      ap_vld|                             stats_28|       pointer|
+|stats_28_ap_vld          |  out|    1|      ap_vld|                             stats_28|       pointer|
+|stats_27                 |  out|   32|      ap_vld|                             stats_27|       pointer|
+|stats_27_ap_vld          |  out|    1|      ap_vld|                             stats_27|       pointer|
+|stats_26                 |  out|   32|      ap_vld|                             stats_26|       pointer|
+|stats_26_ap_vld          |  out|    1|      ap_vld|                             stats_26|       pointer|
+|stats_25                 |  out|   32|      ap_vld|                             stats_25|       pointer|
+|stats_25_ap_vld          |  out|    1|      ap_vld|                             stats_25|       pointer|
+|stats_24                 |  out|   32|      ap_vld|                             stats_24|       pointer|
+|stats_24_ap_vld          |  out|    1|      ap_vld|                             stats_24|       pointer|
+|stats_23                 |  out|   32|      ap_vld|                             stats_23|       pointer|
+|stats_23_ap_vld          |  out|    1|      ap_vld|                             stats_23|       pointer|
+|stats_22                 |  out|   32|      ap_vld|                             stats_22|       pointer|
+|stats_22_ap_vld          |  out|    1|      ap_vld|                             stats_22|       pointer|
+|stats_21                 |  out|   32|      ap_vld|                             stats_21|       pointer|
+|stats_21_ap_vld          |  out|    1|      ap_vld|                             stats_21|       pointer|
+|stats_20                 |  out|   32|      ap_vld|                             stats_20|       pointer|
+|stats_20_ap_vld          |  out|    1|      ap_vld|                             stats_20|       pointer|
+|stats_19                 |  out|   32|      ap_vld|                             stats_19|       pointer|
+|stats_19_ap_vld          |  out|    1|      ap_vld|                             stats_19|       pointer|
+|stats_18                 |  out|   32|      ap_vld|                             stats_18|       pointer|
+|stats_18_ap_vld          |  out|    1|      ap_vld|                             stats_18|       pointer|
+|stats_17                 |  out|   32|      ap_vld|                             stats_17|       pointer|
+|stats_17_ap_vld          |  out|    1|      ap_vld|                             stats_17|       pointer|
+|stats_16                 |  out|   32|      ap_vld|                             stats_16|       pointer|
+|stats_16_ap_vld          |  out|    1|      ap_vld|                             stats_16|       pointer|
+|stats_15                 |  out|   32|      ap_vld|                             stats_15|       pointer|
+|stats_15_ap_vld          |  out|    1|      ap_vld|                             stats_15|       pointer|
+|stats_14                 |  out|   32|      ap_vld|                             stats_14|       pointer|
+|stats_14_ap_vld          |  out|    1|      ap_vld|                             stats_14|       pointer|
+|stats_13                 |  out|   32|      ap_vld|                             stats_13|       pointer|
+|stats_13_ap_vld          |  out|    1|      ap_vld|                             stats_13|       pointer|
+|stats_12                 |  out|   32|      ap_vld|                             stats_12|       pointer|
+|stats_12_ap_vld          |  out|    1|      ap_vld|                             stats_12|       pointer|
+|stats_11                 |  out|   32|      ap_vld|                             stats_11|       pointer|
+|stats_11_ap_vld          |  out|    1|      ap_vld|                             stats_11|       pointer|
+|stats_10                 |  out|   32|      ap_vld|                             stats_10|       pointer|
+|stats_10_ap_vld          |  out|    1|      ap_vld|                             stats_10|       pointer|
+|stats_9                  |  out|   32|      ap_vld|                              stats_9|       pointer|
+|stats_9_ap_vld           |  out|    1|      ap_vld|                              stats_9|       pointer|
+|stats_8                  |  out|   32|      ap_vld|                              stats_8|       pointer|
+|stats_8_ap_vld           |  out|    1|      ap_vld|                              stats_8|       pointer|
+|stats_7                  |  out|   32|      ap_vld|                              stats_7|       pointer|
+|stats_7_ap_vld           |  out|    1|      ap_vld|                              stats_7|       pointer|
+|stats_6                  |  out|   32|      ap_vld|                              stats_6|       pointer|
+|stats_6_ap_vld           |  out|    1|      ap_vld|                              stats_6|       pointer|
+|stats_5                  |  out|   32|      ap_vld|                              stats_5|       pointer|
+|stats_5_ap_vld           |  out|    1|      ap_vld|                              stats_5|       pointer|
+|stats_4                  |  out|   32|      ap_vld|                              stats_4|       pointer|
+|stats_4_ap_vld           |  out|    1|      ap_vld|                              stats_4|       pointer|
+|stats_3                  |  out|   32|      ap_vld|                              stats_3|       pointer|
+|stats_3_ap_vld           |  out|    1|      ap_vld|                              stats_3|       pointer|
+|stats_2                  |  out|   32|      ap_vld|                              stats_2|       pointer|
+|stats_2_ap_vld           |  out|    1|      ap_vld|                              stats_2|       pointer|
+|stats_1                  |  out|   32|      ap_vld|                              stats_1|       pointer|
+|stats_1_ap_vld           |  out|    1|      ap_vld|                              stats_1|       pointer|
+|stats_0                  |  out|   32|      ap_vld|                              stats_0|       pointer|
+|stats_0_ap_vld           |  out|    1|      ap_vld|                              stats_0|       pointer|
++-------------------------+-----+-----+------------+-------------------------------------+--------------+
+

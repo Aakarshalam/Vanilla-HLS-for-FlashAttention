@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../flashattentiontb.cpp in debug mode
+   Compiling ../../../../flashattentionkernal.cpp in debug mode
+   Generating csim.exe
+==============================================
+FlashAttention HLS Testbench
+  HEAD_DIM = 128
+  TILE_BR  = 64
+  TILE_BC  = 64
+==============================================
+Test N = 128, d = 128
+Tiles: Tr = 2, Tc = 2
+Computing golden reference (standard attention)...
+Running FlashAttention HLS kernel...
+Kernel complete.
+Comparing DUT output vs golden reference...
+
+Results:
+  Max absolute error: 0.001420
+  Max relative error: 2.3640 (236.40%)
+  Elements exceeding tolerance: 0 / 16384
+
+*** TEST PASSED ***
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

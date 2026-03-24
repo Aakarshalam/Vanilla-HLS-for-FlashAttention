@@ -1,0 +1,71 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             |  2,234       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  9,713       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  6,275       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  4,714       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  4,709       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 25,550       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  8,727       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  8,727       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  8,727       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  8,897       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  8,898       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  8,768       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  8,756       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  8,756       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  8,793       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  8,660       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++------------------------------------+-----------------------------+----------------+-----------------+-----------------+-----------------+-----------------+
+| Function                           | Location                    | Compile/Link   | Unroll/Inline   | Array/Struct    | Performance     | HW Transforms   |
++------------------------------------+-----------------------------+----------------+-----------------+-----------------+-----------------+-----------------+
+| + flash_attention_kernel           | flashattentionkernal.cpp:31 | 2,234          | 4,709           | 8,897           | 8,756           | 8,660           |
+|  + load_tile_fp16_bc               | flashattentionmemory.h:148  |  340 (2 calls) |  584 (2 calls)  |  600 (2 calls)  |  598 (2 calls)  |  614 (2 calls)  |
+|   + unpack_axi_to_fp16             | flashattentionmemory.h:63   |  182 (2 calls) |                 |                 |                 |                 |
+|      raw_to_half                   | flashattentionmemory.h:43   |   48 (2 calls) |                 |                 |                 |                 |
+|  + load_tile_fp16                  | flashattentionmemory.h:102  |  340 (2 calls) | 1,300 (2 calls) | 1,336 (2 calls) | 1,336 (2 calls) | 1,336 (2 calls) |
+|   + unpack_axi_to_fp16             | flashattentionmemory.h:63   |  182 (2 calls) |                 |                 |                 |                 |
+|      raw_to_half                   | flashattentionmemory.h:43   |   48 (2 calls) |                 |                 |                 |                 |
+|  + load_stats_fp32                 | flashattentionmemory.h:224  |  246 (2 calls) |  314 (2 calls)  | 1,050 (2 calls) | 1,048 (2 calls) | 1,062 (2 calls) |
+|     unpack_axi_to_fp32             | flashattentionmemory.h:85   |  128 (2 calls) |                 |                 |                 |                 |
+|    gemm_qkt                        | flashattentiongemm.h:41     |  125           |  422            |  885            |  885            |  708            |
+|  + online_softmax_tile             | flashattentionsoftmax.h:30  |  128           |  198            | 1,114           | 1,111           | 1,127           |
+|   + expf                           | expfloat.cpp:20             |    4           |                 |                 |                 |                 |
+|      exp                           | hls_exp_float.cpp:15        |    2           |                 |                 |                 |                 |
+|    gemm_pv                         | flashattentiongemm.h:125    |  105           |  361            |  474            |  474            |  445            |
+|  + update_statistics_and_output... | flashattentionsoftmax.h:113 |  144           |  316            | 1,470           | 1,214           | 1,226           |
+|   + expf                           | expfloat.cpp:20             |    8 (2 calls) |                 |                 |                 |                 |
+|      exp                           | hls_exp_float.cpp:15        |    4 (2 calls) |                 |                 |                 |                 |
+|    normalize_output                | flashattentionsoftmax.h:184 |   35           |  129            |  210            |  145            |  150            |
+|  + store_tile_fp16                 | flashattentionmemory.h:191  |  186           |  151            |  132            |  131            |  131            |
+|   + pack_fp16_to_axi               | flashattentionmemory.h:52   |  124           |                 |                 |                 |                 |
+|      half_to_raw                   | flashattentionmemory.h:36   |   28           |                 |                 |                 |                 |
+|  + store_stats_fp32                | flashattentionmemory.h:260  |  290 (2 calls) |  294 (2 calls)  |  392 (2 calls)  |  264 (2 calls)  |  280 (2 calls)  |
+|     pack_fp32_to_axi               | flashattentionmemory.h:72   |  184 (2 calls) |                 |                 |                 |                 |
++------------------------------------+-----------------------------+----------------+-----------------+-----------------+-----------------+-----------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

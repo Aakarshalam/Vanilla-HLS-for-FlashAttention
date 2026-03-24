@@ -1,0 +1,363 @@
+
+
+================================================================
+== Vitis HLS Report for 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1'
+================================================================
+* Date:           Sun Mar 22 18:06:00 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        FlashAtt1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcvh1582-lsva4737-2LHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.922 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |               Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- CONVERT_O_TO_FP32_VITIS_LOOP_186_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.46>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%c = alloca i32 1" [flashattentionkernal.cpp:186]   --->   Operation 5 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%r = alloca i32 1" [flashattentionkernal.cpp:185]   --->   Operation 6 'alloca' 'r' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 7 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_3, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_4, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_5, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_6, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_7, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_8, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_9, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 17 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_10, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 18 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_11, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 19 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_12, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 20 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_13, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 21 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_14, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %O_acc_15, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 24 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 25 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_2, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 26 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_3, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 27 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_4, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 28 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_5, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 29 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_6, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 30 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_7, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 31 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_8, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 32 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_9, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 33 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_10, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 34 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_11, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 35 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_12, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 36 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_13, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 37 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_14, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 38 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i16 %O_tile_fp16_15, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 39 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_211_read = read i34 @_ssdm_op_Read.ap_auto.i34, i34 %tmp_211"   --->   Operation 40 'read' 'tmp_211_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.46ns)   --->   "%store_ln0 = store i34 0, i34 %indvar_flatten"   --->   Operation 41 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 42 [1/1] (0.42ns)   --->   "%store_ln185 = store i31 0, i31 %r" [flashattentionkernal.cpp:185]   --->   Operation 42 'store' 'store_ln185' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 43 [1/1] (0.36ns)   --->   "%store_ln186 = store i8 0, i8 %c" [flashattentionkernal.cpp:186]   --->   Operation 43 'store' 'store_ln186' <Predicate = true> <Delay = 0.36>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 44 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.51>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i34 %indvar_flatten" [flashattentionkernal.cpp:185]   --->   Operation 45 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.86ns)   --->   "%add_ln185_1 = add i34 %indvar_flatten_load, i34 1" [flashattentionkernal.cpp:185]   --->   Operation 46 'add' 'add_ln185_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.71ns)   --->   "%icmp_ln185 = icmp_eq  i34 %indvar_flatten_load, i34 %tmp_211_read" [flashattentionkernal.cpp:185]   --->   Operation 47 'icmp' 'icmp_ln185' <Predicate = true> <Delay = 0.71> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln185 = br i1 %icmp_ln185, void %for.inc47, void %if.end.loopexit29.exitStub" [flashattentionkernal.cpp:185]   --->   Operation 48 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%c_load = load i8 %c" [flashattentionkernal.cpp:185]   --->   Operation 49 'load' 'c_load' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%r_load = load i31 %r" [flashattentionkernal.cpp:185]   --->   Operation 50 'load' 'r_load' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln185 = trunc i8 %c_load" [flashattentionkernal.cpp:185]   --->   Operation 51 'trunc' 'trunc_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.85ns)   --->   "%add_ln185 = add i31 %r_load, i31 1" [flashattentionkernal.cpp:185]   --->   Operation 52 'add' 'add_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %c_load, i32 7" [flashattentionkernal.cpp:186]   --->   Operation 53 'bitselect' 'tmp' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.34ns)   --->   "%select_ln185 = select i1 %tmp, i7 0, i7 %trunc_ln185" [flashattentionkernal.cpp:185]   --->   Operation 54 'select' 'select_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln185 = zext i7 %select_ln185" [flashattentionkernal.cpp:185]   --->   Operation 55 'zext' 'zext_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.41ns)   --->   "%select_ln185_1 = select i1 %tmp, i31 %add_ln185, i31 %r_load" [flashattentionkernal.cpp:185]   --->   Operation 56 'select' 'select_ln185_1' <Predicate = (!icmp_ln185)> <Delay = 0.41> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln187 = trunc i31 %select_ln185_1" [flashattentionkernal.cpp:187]   --->   Operation 57 'trunc' 'trunc_ln187' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%lshr_ln4 = partselect i3 @_ssdm_op_PartSelect.i3.i7.i32.i32, i7 %select_ln185, i32 4, i32 6" [flashattentionkernal.cpp:186]   --->   Operation 58 'partselect' 'lshr_ln4' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %trunc_ln187, i3 %lshr_ln4" [flashattentionkernal.cpp:189]   --->   Operation 59 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln189 = zext i9 %tmp_s" [flashattentionkernal.cpp:189]   --->   Operation 60 'zext' 'zext_ln189' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%O_tile_fp16_addr = getelementptr i16 %O_tile_fp16, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 61 'getelementptr' 'O_tile_fp16_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%O_tile_fp16_1_addr = getelementptr i16 %O_tile_fp16_1, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 62 'getelementptr' 'O_tile_fp16_1_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%O_tile_fp16_2_addr = getelementptr i16 %O_tile_fp16_2, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 63 'getelementptr' 'O_tile_fp16_2_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%O_tile_fp16_3_addr = getelementptr i16 %O_tile_fp16_3, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 64 'getelementptr' 'O_tile_fp16_3_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%O_tile_fp16_4_addr = getelementptr i16 %O_tile_fp16_4, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 65 'getelementptr' 'O_tile_fp16_4_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%O_tile_fp16_5_addr = getelementptr i16 %O_tile_fp16_5, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 66 'getelementptr' 'O_tile_fp16_5_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%O_tile_fp16_6_addr = getelementptr i16 %O_tile_fp16_6, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 67 'getelementptr' 'O_tile_fp16_6_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%O_tile_fp16_7_addr = getelementptr i16 %O_tile_fp16_7, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 68 'getelementptr' 'O_tile_fp16_7_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%O_tile_fp16_8_addr = getelementptr i16 %O_tile_fp16_8, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 69 'getelementptr' 'O_tile_fp16_8_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%O_tile_fp16_9_addr = getelementptr i16 %O_tile_fp16_9, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 70 'getelementptr' 'O_tile_fp16_9_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%O_tile_fp16_10_addr = getelementptr i16 %O_tile_fp16_10, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 71 'getelementptr' 'O_tile_fp16_10_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%O_tile_fp16_11_addr = getelementptr i16 %O_tile_fp16_11, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 72 'getelementptr' 'O_tile_fp16_11_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%O_tile_fp16_12_addr = getelementptr i16 %O_tile_fp16_12, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 73 'getelementptr' 'O_tile_fp16_12_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%O_tile_fp16_13_addr = getelementptr i16 %O_tile_fp16_13, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 74 'getelementptr' 'O_tile_fp16_13_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%O_tile_fp16_14_addr = getelementptr i16 %O_tile_fp16_14, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 75 'getelementptr' 'O_tile_fp16_14_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%O_tile_fp16_15_addr = getelementptr i16 %O_tile_fp16_15, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 76 'getelementptr' 'O_tile_fp16_15_addr' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_load = muxlogic i9 %O_tile_fp16_addr"   --->   Operation 77 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 78 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_load = load i9 %O_tile_fp16_addr" [flashattentionkernal.cpp:189]   --->   Operation 78 'load' 'O_tile_fp16_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 79 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_1_load = muxlogic i9 %O_tile_fp16_1_addr"   --->   Operation 79 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_1_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 80 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_1_load = load i9 %O_tile_fp16_1_addr" [flashattentionkernal.cpp:189]   --->   Operation 80 'load' 'O_tile_fp16_1_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 81 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_2_load = muxlogic i9 %O_tile_fp16_2_addr"   --->   Operation 81 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_2_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 82 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_2_load = load i9 %O_tile_fp16_2_addr" [flashattentionkernal.cpp:189]   --->   Operation 82 'load' 'O_tile_fp16_2_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 83 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_3_load = muxlogic i9 %O_tile_fp16_3_addr"   --->   Operation 83 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_3_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 84 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_3_load = load i9 %O_tile_fp16_3_addr" [flashattentionkernal.cpp:189]   --->   Operation 84 'load' 'O_tile_fp16_3_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 85 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_4_load = muxlogic i9 %O_tile_fp16_4_addr"   --->   Operation 85 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_4_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 86 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_4_load = load i9 %O_tile_fp16_4_addr" [flashattentionkernal.cpp:189]   --->   Operation 86 'load' 'O_tile_fp16_4_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 87 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_5_load = muxlogic i9 %O_tile_fp16_5_addr"   --->   Operation 87 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_5_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 88 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_5_load = load i9 %O_tile_fp16_5_addr" [flashattentionkernal.cpp:189]   --->   Operation 88 'load' 'O_tile_fp16_5_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 89 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_6_load = muxlogic i9 %O_tile_fp16_6_addr"   --->   Operation 89 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_6_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 90 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_6_load = load i9 %O_tile_fp16_6_addr" [flashattentionkernal.cpp:189]   --->   Operation 90 'load' 'O_tile_fp16_6_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 91 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_7_load = muxlogic i9 %O_tile_fp16_7_addr"   --->   Operation 91 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_7_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 92 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_7_load = load i9 %O_tile_fp16_7_addr" [flashattentionkernal.cpp:189]   --->   Operation 92 'load' 'O_tile_fp16_7_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 93 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_8_load = muxlogic i9 %O_tile_fp16_8_addr"   --->   Operation 93 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_8_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 94 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_8_load = load i9 %O_tile_fp16_8_addr" [flashattentionkernal.cpp:189]   --->   Operation 94 'load' 'O_tile_fp16_8_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 95 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_9_load = muxlogic i9 %O_tile_fp16_9_addr"   --->   Operation 95 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_9_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 96 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_9_load = load i9 %O_tile_fp16_9_addr" [flashattentionkernal.cpp:189]   --->   Operation 96 'load' 'O_tile_fp16_9_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 97 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_10_load = muxlogic i9 %O_tile_fp16_10_addr"   --->   Operation 97 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_10_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 98 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_10_load = load i9 %O_tile_fp16_10_addr" [flashattentionkernal.cpp:189]   --->   Operation 98 'load' 'O_tile_fp16_10_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 99 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_11_load = muxlogic i9 %O_tile_fp16_11_addr"   --->   Operation 99 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_11_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 100 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_11_load = load i9 %O_tile_fp16_11_addr" [flashattentionkernal.cpp:189]   --->   Operation 100 'load' 'O_tile_fp16_11_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 101 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_12_load = muxlogic i9 %O_tile_fp16_12_addr"   --->   Operation 101 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_12_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 102 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_12_load = load i9 %O_tile_fp16_12_addr" [flashattentionkernal.cpp:189]   --->   Operation 102 'load' 'O_tile_fp16_12_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 103 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_13_load = muxlogic i9 %O_tile_fp16_13_addr"   --->   Operation 103 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_13_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 104 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_13_load = load i9 %O_tile_fp16_13_addr" [flashattentionkernal.cpp:189]   --->   Operation 104 'load' 'O_tile_fp16_13_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 105 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_14_load = muxlogic i9 %O_tile_fp16_14_addr"   --->   Operation 105 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_14_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 106 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_14_load = load i9 %O_tile_fp16_14_addr" [flashattentionkernal.cpp:189]   --->   Operation 106 'load' 'O_tile_fp16_14_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 107 [1/1] (0.69ns) (share mux size 8)   --->   "%muxLogicRAMAddr_to_O_tile_fp16_15_load = muxlogic i9 %O_tile_fp16_15_addr"   --->   Operation 107 'muxlogic' 'muxLogicRAMAddr_to_O_tile_fp16_15_load' <Predicate = (!icmp_ln185)> <Delay = 0.69>
+ST_2 : Operation 108 [2/2] (0.55ns) (share mux size 15)   --->   "%O_tile_fp16_15_load = load i9 %O_tile_fp16_15_addr" [flashattentionkernal.cpp:189]   --->   Operation 108 'load' 'O_tile_fp16_15_load' <Predicate = (!icmp_ln185)> <Delay = 0.55> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_2 : Operation 109 [1/1] (0.66ns)   --->   "%add_ln186 = add i8 %zext_ln185, i8 16" [flashattentionkernal.cpp:186]   --->   Operation 109 'add' 'add_ln186' <Predicate = (!icmp_ln185)> <Delay = 0.66> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 110 [1/1] (0.46ns)   --->   "%store_ln185 = store i34 %add_ln185_1, i34 %indvar_flatten" [flashattentionkernal.cpp:185]   --->   Operation 110 'store' 'store_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.46>
+ST_2 : Operation 111 [1/1] (0.42ns)   --->   "%store_ln185 = store i31 %select_ln185_1, i31 %r" [flashattentionkernal.cpp:185]   --->   Operation 111 'store' 'store_ln185' <Predicate = (!icmp_ln185)> <Delay = 0.42>
+ST_2 : Operation 112 [1/1] (0.36ns)   --->   "%store_ln186 = store i8 %add_ln186, i8 %c" [flashattentionkernal.cpp:186]   --->   Operation 112 'store' 'store_ln186' <Predicate = (!icmp_ln185)> <Delay = 0.36>
+ST_2 : Operation 228 [1/1] (0.28ns)   --->   "%ret_ln0 = ret"   --->   Operation 228 'ret' 'ret_ln0' <Predicate = (icmp_ln185)> <Delay = 0.28>
+
+State 3 <SV = 2> <Delay = 3.92>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @CONVERT_O_TO_FP32_VITIS_LOOP_186_1_str"   --->   Operation 113 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%specpipeline_ln187 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_27" [flashattentionkernal.cpp:187]   --->   Operation 114 'specpipeline' 'specpipeline_ln187' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%O_acc_addr = getelementptr i32 %O_acc, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 115 'getelementptr' 'O_acc_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%O_acc_1_addr = getelementptr i32 %O_acc_1, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 116 'getelementptr' 'O_acc_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%O_acc_2_addr = getelementptr i32 %O_acc_2, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 117 'getelementptr' 'O_acc_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%O_acc_3_addr = getelementptr i32 %O_acc_3, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 118 'getelementptr' 'O_acc_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%O_acc_4_addr = getelementptr i32 %O_acc_4, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 119 'getelementptr' 'O_acc_4_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%O_acc_5_addr = getelementptr i32 %O_acc_5, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 120 'getelementptr' 'O_acc_5_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%O_acc_6_addr = getelementptr i32 %O_acc_6, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 121 'getelementptr' 'O_acc_6_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%O_acc_7_addr = getelementptr i32 %O_acc_7, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 122 'getelementptr' 'O_acc_7_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%O_acc_8_addr = getelementptr i32 %O_acc_8, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 123 'getelementptr' 'O_acc_8_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%O_acc_9_addr = getelementptr i32 %O_acc_9, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 124 'getelementptr' 'O_acc_9_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%O_acc_10_addr = getelementptr i32 %O_acc_10, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 125 'getelementptr' 'O_acc_10_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%O_acc_11_addr = getelementptr i32 %O_acc_11, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 126 'getelementptr' 'O_acc_11_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%O_acc_12_addr = getelementptr i32 %O_acc_12, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 127 'getelementptr' 'O_acc_12_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] (0.00ns)   --->   "%O_acc_13_addr = getelementptr i32 %O_acc_13, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 128 'getelementptr' 'O_acc_13_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%O_acc_14_addr = getelementptr i32 %O_acc_14, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 129 'getelementptr' 'O_acc_14_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%O_acc_15_addr = getelementptr i32 %O_acc_15, i64 0, i64 %zext_ln189" [flashattentionkernal.cpp:189]   --->   Operation 130 'getelementptr' 'O_acc_15_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 131 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_load = load i9 %O_tile_fp16_addr" [flashattentionkernal.cpp:189]   --->   Operation 131 'load' 'O_tile_fp16_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 132 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv = muxlogic i16 %O_tile_fp16_load"   --->   Operation 132 'muxlogic' 'muxLogicI0_to_conv' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 133 [1/1] (0.64ns) (share mux size 65)   --->   "%conv = hptosp i16 %O_tile_fp16_load" [flashattentionkernal.cpp:189]   --->   Operation 133 'hptosp' 'conv' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 134 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_1_load = load i9 %O_tile_fp16_1_addr" [flashattentionkernal.cpp:189]   --->   Operation 134 'load' 'O_tile_fp16_1_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 135 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_1 = muxlogic i16 %O_tile_fp16_1_load"   --->   Operation 135 'muxlogic' 'muxLogicI0_to_conv_1' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 136 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_1 = hptosp i16 %O_tile_fp16_1_load" [flashattentionkernal.cpp:189]   --->   Operation 136 'hptosp' 'conv_1' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 137 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_2_load = load i9 %O_tile_fp16_2_addr" [flashattentionkernal.cpp:189]   --->   Operation 137 'load' 'O_tile_fp16_2_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 138 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_2 = muxlogic i16 %O_tile_fp16_2_load"   --->   Operation 138 'muxlogic' 'muxLogicI0_to_conv_2' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 139 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_2 = hptosp i16 %O_tile_fp16_2_load" [flashattentionkernal.cpp:189]   --->   Operation 139 'hptosp' 'conv_2' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 140 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_3_load = load i9 %O_tile_fp16_3_addr" [flashattentionkernal.cpp:189]   --->   Operation 140 'load' 'O_tile_fp16_3_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 141 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_3 = muxlogic i16 %O_tile_fp16_3_load"   --->   Operation 141 'muxlogic' 'muxLogicI0_to_conv_3' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 142 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_3 = hptosp i16 %O_tile_fp16_3_load" [flashattentionkernal.cpp:189]   --->   Operation 142 'hptosp' 'conv_3' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 143 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_4_load = load i9 %O_tile_fp16_4_addr" [flashattentionkernal.cpp:189]   --->   Operation 143 'load' 'O_tile_fp16_4_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 144 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_4 = muxlogic i16 %O_tile_fp16_4_load"   --->   Operation 144 'muxlogic' 'muxLogicI0_to_conv_4' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 145 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_4 = hptosp i16 %O_tile_fp16_4_load" [flashattentionkernal.cpp:189]   --->   Operation 145 'hptosp' 'conv_4' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 146 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_5_load = load i9 %O_tile_fp16_5_addr" [flashattentionkernal.cpp:189]   --->   Operation 146 'load' 'O_tile_fp16_5_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 147 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_5 = muxlogic i16 %O_tile_fp16_5_load"   --->   Operation 147 'muxlogic' 'muxLogicI0_to_conv_5' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 148 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_5 = hptosp i16 %O_tile_fp16_5_load" [flashattentionkernal.cpp:189]   --->   Operation 148 'hptosp' 'conv_5' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 149 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_6_load = load i9 %O_tile_fp16_6_addr" [flashattentionkernal.cpp:189]   --->   Operation 149 'load' 'O_tile_fp16_6_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 150 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_6 = muxlogic i16 %O_tile_fp16_6_load"   --->   Operation 150 'muxlogic' 'muxLogicI0_to_conv_6' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 151 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_6 = hptosp i16 %O_tile_fp16_6_load" [flashattentionkernal.cpp:189]   --->   Operation 151 'hptosp' 'conv_6' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 152 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_7_load = load i9 %O_tile_fp16_7_addr" [flashattentionkernal.cpp:189]   --->   Operation 152 'load' 'O_tile_fp16_7_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 153 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_7 = muxlogic i16 %O_tile_fp16_7_load"   --->   Operation 153 'muxlogic' 'muxLogicI0_to_conv_7' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 154 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_7 = hptosp i16 %O_tile_fp16_7_load" [flashattentionkernal.cpp:189]   --->   Operation 154 'hptosp' 'conv_7' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 155 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_8_load = load i9 %O_tile_fp16_8_addr" [flashattentionkernal.cpp:189]   --->   Operation 155 'load' 'O_tile_fp16_8_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 156 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_8 = muxlogic i16 %O_tile_fp16_8_load"   --->   Operation 156 'muxlogic' 'muxLogicI0_to_conv_8' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 157 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_8 = hptosp i16 %O_tile_fp16_8_load" [flashattentionkernal.cpp:189]   --->   Operation 157 'hptosp' 'conv_8' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 158 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_9_load = load i9 %O_tile_fp16_9_addr" [flashattentionkernal.cpp:189]   --->   Operation 158 'load' 'O_tile_fp16_9_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 159 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_9 = muxlogic i16 %O_tile_fp16_9_load"   --->   Operation 159 'muxlogic' 'muxLogicI0_to_conv_9' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 160 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_9 = hptosp i16 %O_tile_fp16_9_load" [flashattentionkernal.cpp:189]   --->   Operation 160 'hptosp' 'conv_9' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 161 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_10_load = load i9 %O_tile_fp16_10_addr" [flashattentionkernal.cpp:189]   --->   Operation 161 'load' 'O_tile_fp16_10_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 162 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_10 = muxlogic i16 %O_tile_fp16_10_load"   --->   Operation 162 'muxlogic' 'muxLogicI0_to_conv_10' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 163 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_10 = hptosp i16 %O_tile_fp16_10_load" [flashattentionkernal.cpp:189]   --->   Operation 163 'hptosp' 'conv_10' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 164 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_11_load = load i9 %O_tile_fp16_11_addr" [flashattentionkernal.cpp:189]   --->   Operation 164 'load' 'O_tile_fp16_11_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 165 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_11 = muxlogic i16 %O_tile_fp16_11_load"   --->   Operation 165 'muxlogic' 'muxLogicI0_to_conv_11' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 166 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_11 = hptosp i16 %O_tile_fp16_11_load" [flashattentionkernal.cpp:189]   --->   Operation 166 'hptosp' 'conv_11' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 167 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_12_load = load i9 %O_tile_fp16_12_addr" [flashattentionkernal.cpp:189]   --->   Operation 167 'load' 'O_tile_fp16_12_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 168 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_12 = muxlogic i16 %O_tile_fp16_12_load"   --->   Operation 168 'muxlogic' 'muxLogicI0_to_conv_12' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 169 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_12 = hptosp i16 %O_tile_fp16_12_load" [flashattentionkernal.cpp:189]   --->   Operation 169 'hptosp' 'conv_12' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 170 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_13_load = load i9 %O_tile_fp16_13_addr" [flashattentionkernal.cpp:189]   --->   Operation 170 'load' 'O_tile_fp16_13_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 171 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_13 = muxlogic i16 %O_tile_fp16_13_load"   --->   Operation 171 'muxlogic' 'muxLogicI0_to_conv_13' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 172 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_13 = hptosp i16 %O_tile_fp16_13_load" [flashattentionkernal.cpp:189]   --->   Operation 172 'hptosp' 'conv_13' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 173 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_14_load = load i9 %O_tile_fp16_14_addr" [flashattentionkernal.cpp:189]   --->   Operation 173 'load' 'O_tile_fp16_14_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 174 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_14 = muxlogic i16 %O_tile_fp16_14_load"   --->   Operation 174 'muxlogic' 'muxLogicI0_to_conv_14' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 175 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_14 = hptosp i16 %O_tile_fp16_14_load" [flashattentionkernal.cpp:189]   --->   Operation 175 'hptosp' 'conv_14' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 176 [1/2] ( I:0.86ns O:0.86ns ) (share mux size 15)   --->   "%O_tile_fp16_15_load = load i9 %O_tile_fp16_15_addr" [flashattentionkernal.cpp:189]   --->   Operation 176 'load' 'O_tile_fp16_15_load' <Predicate = true> <Delay = 0.86> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 512> <RAM>
+ST_3 : Operation 177 [1/1] (1.35ns) (share mux size 65)   --->   "%muxLogicI0_to_conv_s = muxlogic i16 %O_tile_fp16_15_load"   --->   Operation 177 'muxlogic' 'muxLogicI0_to_conv_s' <Predicate = true> <Delay = 1.35>
+ST_3 : Operation 178 [1/1] (0.64ns) (share mux size 65)   --->   "%conv_s = hptosp i16 %O_tile_fp16_15_load" [flashattentionkernal.cpp:189]   --->   Operation 178 'hptosp' 'conv_s' <Predicate = true> <Delay = 0.64> <CoreInst = "Half2Float">   --->   Core 72 'Half2Float' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'hptosp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 179 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv"   --->   Operation 179 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 180 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_addr"   --->   Operation 180 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 181 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv, i9 %O_acc_addr" [flashattentionkernal.cpp:189]   --->   Operation 181 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 182 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_1"   --->   Operation 182 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 183 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_1_addr"   --->   Operation 183 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 184 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_1, i9 %O_acc_1_addr" [flashattentionkernal.cpp:189]   --->   Operation 184 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 185 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_2"   --->   Operation 185 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 186 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_2_addr"   --->   Operation 186 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 187 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_2, i9 %O_acc_2_addr" [flashattentionkernal.cpp:189]   --->   Operation 187 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 188 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_3"   --->   Operation 188 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 189 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_3_addr"   --->   Operation 189 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 190 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_3, i9 %O_acc_3_addr" [flashattentionkernal.cpp:189]   --->   Operation 190 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 191 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_4"   --->   Operation 191 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 192 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_4_addr"   --->   Operation 192 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 193 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_4, i9 %O_acc_4_addr" [flashattentionkernal.cpp:189]   --->   Operation 193 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 194 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_5"   --->   Operation 194 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 195 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_5_addr"   --->   Operation 195 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 196 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_5, i9 %O_acc_5_addr" [flashattentionkernal.cpp:189]   --->   Operation 196 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 197 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_6"   --->   Operation 197 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 198 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_6_addr"   --->   Operation 198 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 199 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_6, i9 %O_acc_6_addr" [flashattentionkernal.cpp:189]   --->   Operation 199 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 200 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_7"   --->   Operation 200 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 201 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_7_addr"   --->   Operation 201 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 202 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_7, i9 %O_acc_7_addr" [flashattentionkernal.cpp:189]   --->   Operation 202 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 203 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_8"   --->   Operation 203 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 204 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_8_addr"   --->   Operation 204 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 205 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_8, i9 %O_acc_8_addr" [flashattentionkernal.cpp:189]   --->   Operation 205 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 206 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_9"   --->   Operation 206 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 207 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_9_addr"   --->   Operation 207 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 208 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_9, i9 %O_acc_9_addr" [flashattentionkernal.cpp:189]   --->   Operation 208 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 209 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_10"   --->   Operation 209 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 210 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_10_addr"   --->   Operation 210 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 211 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_10, i9 %O_acc_10_addr" [flashattentionkernal.cpp:189]   --->   Operation 211 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 212 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_11"   --->   Operation 212 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 213 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_11_addr"   --->   Operation 213 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 214 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_11, i9 %O_acc_11_addr" [flashattentionkernal.cpp:189]   --->   Operation 214 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 215 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_12"   --->   Operation 215 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 216 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_12_addr"   --->   Operation 216 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 217 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_12, i9 %O_acc_12_addr" [flashattentionkernal.cpp:189]   --->   Operation 217 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 218 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_13"   --->   Operation 218 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 219 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_13_addr"   --->   Operation 219 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 220 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_13, i9 %O_acc_13_addr" [flashattentionkernal.cpp:189]   --->   Operation 220 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 221 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_14"   --->   Operation 221 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 222 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_14_addr"   --->   Operation 222 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 223 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_14, i9 %O_acc_14_addr" [flashattentionkernal.cpp:189]   --->   Operation 223 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 224 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMData_to_store_ln189 = muxlogic i32 %conv_s"   --->   Operation 224 'muxlogic' 'muxLogicRAMData_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 225 [1/1] (0.43ns) (share mux size 3)   --->   "%muxLogicRAMAddr_to_store_ln189 = muxlogic i9 %O_acc_15_addr"   --->   Operation 225 'muxlogic' 'muxLogicRAMAddr_to_store_ln189' <Predicate = true> <Delay = 0.43>
+ST_3 : Operation 226 [1/1] ( I:0.62ns O:0.62ns ) (share mux size 6)   --->   "%store_ln189 = store i32 %conv_s, i9 %O_acc_15_addr" [flashattentionkernal.cpp:189]   --->   Operation 226 'store' 'store_ln189' <Predicate = true> <Delay = 0.62> <CoreInst = "RAM_2P_BRAM">   --->   Core 97 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 512> <RAM>
+ST_3 : Operation 227 [1/1] (0.00ns)   --->   "%br_ln186 = br void %for.inc" [flashattentionkernal.cpp:186]   --->   Operation 227 'br' 'br_ln186' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.460ns
+The critical path consists of the following:
+	'alloca' operation 34 bit ('indvar_flatten') [36]  (0.000 ns)
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten' [70]  (0.460 ns)
+
+ <State 2>: 2.514ns
+The critical path consists of the following:
+	'load' operation 31 bit ('r_load', flashattentionkernal.cpp:185) on local variable 'r', flashattentionkernal.cpp:185 [81]  (0.000 ns)
+	'add' operation 31 bit ('add_ln185', flashattentionkernal.cpp:185) [83]  (0.851 ns)
+	'select' operation 31 bit ('select_ln185_1', flashattentionkernal.cpp:185) [88]  (0.412 ns)
+	'getelementptr' operation 9 bit ('O_tile_fp16_addr', flashattentionkernal.cpp:189) [94]  (0.000 ns)
+	'muxlogic' operation 16 bit ('muxLogicRAMAddr_to_O_tile_fp16_load') [126]  (0.693 ns)
+	'load' operation 16 bit ('O_tile_fp16_load', flashattentionkernal.cpp:189) on array 'O_tile_fp16' [127]  (0.558 ns)
+
+ <State 3>: 3.922ns
+The critical path consists of the following:
+	'load' operation 16 bit ('O_tile_fp16_load', flashattentionkernal.cpp:189) on array 'O_tile_fp16' [127]  (0.863 ns)
+	'muxlogic' operation 32 bit ('muxLogicI0_to_conv') [128]  (1.350 ns)
+	'hptosp' operation 32 bit ('conv', flashattentionkernal.cpp:189) [129]  (0.644 ns)
+	'muxlogic' operation 0 bit ('muxLogicRAMData_to_store_ln189') [190]  (0.437 ns)
+	'store' operation 0 bit ('store_ln189', flashattentionkernal.cpp:189) of variable 'conv', flashattentionkernal.cpp:189 on array 'O_acc' [192]  (0.628 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,624 @@
+{
+    "1": {
+        "name": "load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "158",
+        "instructions": "118",
+        "total_instructions": "118",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "38",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "38"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "load_tile_fp16_Pipeline_LOAD_TILE_ROWS",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "112",
+        "instructions": "567",
+        "total_instructions": "567",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "134",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "update_statistics_and_output_Pipeline_UPDATE_O_ROWS_UPDATE_O_COLS",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "163",
+        "instructions": "342",
+        "total_instructions": "342",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "54",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "35"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "flash_attention_kernel_Pipeline_CONVERT_O_TO_FP16_VITIS_LOOP_247_3",
+        "file": "flashattentionkernal.cpp",
+        "fileloc": "246",
+        "instructions": "144",
+        "total_instructions": "144",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "38",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "load_stats_fp32_Pipeline_LOAD_STATS",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "237",
+        "instructions": "277",
+        "total_instructions": "277",
+        "calls": "",
+        "basicblocks": "116",
+        "memory_accesses": "67",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "138",
+        "instructions": "118",
+        "total_instructions": "118",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "38",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "38"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "store_tile_fp16",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "192",
+        "instructions": "38",
+        "total_instructions": "188",
+        "calls": "31",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4"
+    },
+    "8": {
+        "name": "online_softmax_tile_Pipeline_SOFTMAX_PAD",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "85",
+        "instructions": "425",
+        "total_instructions": "425",
+        "calls": "",
+        "basicblocks": "134",
+        "memory_accesses": "194",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "66"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "158",
+        "instructions": "181",
+        "total_instructions": "181",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "39",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "38"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "store_stats_fp32_Pipeline_STORE_STATS",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "272",
+        "instructions": "183",
+        "total_instructions": "183",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "online_softmax_tile_Pipeline_ROWMAX_INNER",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "46",
+        "instructions": "72",
+        "total_instructions": "72",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "12",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "normalize_output",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "185",
+        "instructions": "230",
+        "total_instructions": "230",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "38",
+        "control_depth": "1",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "load_stats_fp32_Pipeline_VITIS_LOOP_254_2",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "254",
+        "instructions": "144",
+        "total_instructions": "144",
+        "calls": "",
+        "basicblocks": "69",
+        "memory_accesses": "66",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "gemm_pv_Pipeline_INIT_PV_ACC",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "142",
+        "instructions": "47",
+        "total_instructions": "47",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "18",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "update_statistics_and_output_Pipeline_COMPUTE_SCALES",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "126",
+        "instructions": "1203",
+        "total_instructions": "1203",
+        "calls": "",
+        "basicblocks": "136",
+        "memory_accesses": "516",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "129"
+        },
+        "stores": {
+            "L": "258"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "load_tile_fp16",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "103",
+        "instructions": "42",
+        "total_instructions": "727",
+        "calls": "2 6",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5"
+    },
+    "0": {
+        "name": "flash_attention_kernel",
+        "file": "flashattentionkernal.cpp",
+        "fileloc": "31",
+        "instructions": "1051",
+        "total_instructions": "9773",
+        "calls": "29 29 16 25 18 22 23 28 12 7 17 17 4 16 19 19 20",
+        "basicblocks": "13",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "321"
+        },
+        "stores": {
+            "L": "130"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "17": {
+        "name": "store_stats_fp32",
+        "file": "flashattentionmemory.h",
+        "fileloc": "260",
+        "instructions": "92",
+        "total_instructions": "275",
+        "calls": "10",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "6"
+    },
+    "18": {
+        "name": "gemm_qkt",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "42",
+        "instructions": "188",
+        "total_instructions": "975",
+        "calls": "24 27",
+        "basicblocks": "4",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "65"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "19": {
+        "name": "load_stats_fp32",
+        "file": "flashattentionmemory.h",
+        "fileloc": "224",
+        "instructions": "28",
+        "total_instructions": "449",
+        "calls": "5 13",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "6"
+    },
+    "20": {
+        "name": "flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1",
+        "file": "flashattentionkernal.cpp",
+        "fileloc": "185",
+        "instructions": "144",
+        "total_instructions": "144",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "38",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "19"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "21": {
+        "name": "gemm_pv_Pipeline_STORE_PV_ROW",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "135",
+        "instructions": "117",
+        "total_instructions": "117",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "34",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "22": {
+        "name": "online_softmax_tile",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "31",
+        "instructions": "380",
+        "total_instructions": "970",
+        "calls": "11 26 8",
+        "basicblocks": "137",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "2"
+        }
+    },
+    "23": {
+        "name": "gemm_pv",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "126",
+        "instructions": "76",
+        "total_instructions": "437",
+        "calls": "14 30 21",
+        "basicblocks": "4",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "24": {
+        "name": "gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "54",
+        "instructions": "629",
+        "total_instructions": "629",
+        "calls": "",
+        "basicblocks": "69",
+        "memory_accesses": "166",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "163"
+        },
+        "stores": {
+            "L": "134"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "25": {
+        "name": "flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2",
+        "file": "flashattentionkernal.cpp",
+        "fileloc": "201",
+        "instructions": "80",
+        "total_instructions": "80",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "22",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "26": {
+        "name": "online_softmax_tile_Pipeline_EXP_SUM_INNER",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "63",
+        "instructions": "93",
+        "total_instructions": "93",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "20",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "27": {
+        "name": "gemm_qkt_Pipeline_STORE_S_ROW",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "99",
+        "instructions": "158",
+        "total_instructions": "158",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "10",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "28": {
+        "name": "update_statistics_and_output",
+        "file": ".\/flashattentionsoftmax.h",
+        "fileloc": "114",
+        "instructions": "421",
+        "total_instructions": "1966",
+        "calls": "15 3",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "128"
+        }
+    },
+    "29": {
+        "name": "load_tile_fp16_bc",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "149",
+        "instructions": "44",
+        "total_instructions": "343",
+        "calls": "9 1",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5"
+    },
+    "30": {
+        "name": "gemm_pv_Pipeline_GEMM_PV_RED_GEMM_PV_DCOL",
+        "file": ".\/flashattentiongemm.h",
+        "fileloc": "149",
+        "instructions": "197",
+        "total_instructions": "197",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "62",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "43"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "31": {
+        "name": "store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS",
+        "file": ".\/flashattentionmemory.h",
+        "fileloc": "201",
+        "instructions": "150",
+        "total_instructions": "150",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "39",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "35"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

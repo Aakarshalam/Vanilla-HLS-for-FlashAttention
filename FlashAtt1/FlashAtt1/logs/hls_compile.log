@@ -1,0 +1,1271 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiontypes.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontypes.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentiongemm.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiongemm.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionsoftmax.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionsoftmax.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionmemory.h' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionmemory.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=flashattentionkernal.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentionkernal.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=flashattentiontb.cpp' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/flashattentiontb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=flash_attention_kernel' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcvh1582-lsva4737-2LHP-e-S' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(1)
+WARNING: [HLS 200-655] The device family 'versalhbm-2LHP' is new to HLS - using 'versalaicore-2HP' characterization library
+INFO: [HLS 200-1611] Setting target device to 'xcvh1582-lsva4737-2LHP-e-S'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.442 seconds; current allocated memory: 428.324 MB.
+INFO: [HLS 200-10] Analyzing design file 'flashattentionkernal.cpp' ... 
+WARNING: [HLS 207-1016] unknown warning group '-Wmisleading-indentation', ignored (C:/Xilinx/2025.1/Vitis/common/technology/autopilot/etc/hls_sqrt_apfixed.h:16:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 26.35 seconds; current allocated memory: 436.727 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,234 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 9,713 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 6,275 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,714 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,709 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 25,550 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,727 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,727 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,727 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,897 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,898 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,768 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,756 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,756 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,793 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 8,660 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Users/Nani/workspace/Vanilla_FA/FlashAtt1/FlashAtt1/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'raw_to_half(ap_uint<16>)' into 'unpack_axi_to_fp16(ap_uint<512>, half*)' (./flashattentionmemory.h:67:12)
+INFO: [HLS 214-131] Inlining function 'unpack_axi_to_fp16(ap_uint<512>, half*)' into 'load_tile_fp16_bc(ap_uint<512> const*, half (*) [128], int, int, int)' (./flashattentionmemory.h:167:13)
+INFO: [HLS 214-131] Inlining function 'unpack_axi_to_fp16(ap_uint<512>, half*)' into 'load_tile_fp16(ap_uint<512> const*, half (*) [128], int, int, int)' (./flashattentionmemory.h:123:13)
+INFO: [HLS 214-131] Inlining function 'unpack_axi_to_fp32(ap_uint<512>, float*)' into 'load_stats_fp32(ap_uint<512> const*, float*, int, int)' (./flashattentionmemory.h:242:9)
+INFO: [HLS 214-131] Inlining function 'exp_reduce_::exp(float)' into 'hls::expf(float)' (C:\scratch\2025.1\hls_product\640\2025.1\src\shared\hls\clib\hlsmath\src\c++\expfloat.cpp:22:9)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'online_softmax_tile(float const (*) [64], half (*) [64], float*, float*, int, int)' (./flashattentionsoftmax.h:72:25)
+INFO: [HLS 214-131] Inlining function 'hls::expf(float)' into 'update_statistics_and_output(float (*) [128], float const (*) [128], float*, float*, float const*, float const*, int, bool)' (./flashattentionsoftmax.h:145:45)
+INFO: [HLS 214-131] Inlining function 'half_to_raw(half)' into 'pack_fp16_to_axi(half const*)' (./flashattentionmemory.h:57:36)
+INFO: [HLS 214-131] Inlining function 'pack_fp16_to_axi(half const*)' into 'store_tile_fp16(ap_uint<512>*, half const (*) [128], int, int, int)' (./flashattentionmemory.h:215:40)
+INFO: [HLS 214-131] Inlining function 'pack_fp32_to_axi(float const*)' into 'store_stats_fp32(ap_uint<512>*, float const*, int, int)' (./flashattentionmemory.h:282:37)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_276_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:276:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_75_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:75:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_209_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:209:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_55_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:55:22)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:39:5)
+INFO: [HLS 214-291] Loop 'MAC_VEC' is marked as complete unroll implied by the pipeline pragma (./flashattentiongemm.h:163:17)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_89_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionsoftmax.h:89:26)
+INFO: [HLS 214-291] Loop 'DOT_VEC' is marked as complete unroll implied by the pipeline pragma (./flashattentiongemm.h:87:17)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_87_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:87:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_244_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:244:27)
+INFO: [HLS 214-291] Loop 'LOAD_TILE_BEATS' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:118:9)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_65_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:65:19)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:47:5)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_126_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:126:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_169_1' is marked as complete unroll implied by the pipeline pragma (./flashattentionmemory.h:169:31)
+INFO: [HLS 214-186] Unrolling loop 'INIT_STATS' (flashattentionkernal.cpp:195:17) in function 'flash_attention_kernel' completely with a factor of 64 (flashattentionkernal.cpp:44:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_202_2' (flashattentionkernal.cpp:202:39) in function 'flash_attention_kernel' partially with a factor of 16 (flashattentionkernal.cpp:44:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_186_1' (flashattentionkernal.cpp:186:39) in function 'flash_attention_kernel' partially with a factor of 16 (flashattentionkernal.cpp:44:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_247_3' (flashattentionkernal.cpp:247:39) in function 'flash_attention_kernel' partially with a factor of 16 (flashattentionkernal.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_276_1' (./flashattentionmemory.h:276:27) in function 'store_stats_fp32' completely with a factor of 16 (./flashattentionmemory.h:265:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_75_1' (./flashattentionmemory.h:75:22) in function 'store_stats_fp32' completely with a factor of 16 (./flashattentionmemory.h:265:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_209_1' (./flashattentionmemory.h:209:31) in function 'store_tile_fp16' completely with a factor of 32 (./flashattentionmemory.h:197:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_55_1' (./flashattentionmemory.h:55:22) in function 'store_tile_fp16' completely with a factor of 32 (./flashattentionmemory.h:197:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (./flashattentionmemory.h:39:5) in function 'store_tile_fp16' completely with a factor of 1 (./flashattentionmemory.h:197:0)
+INFO: [HLS 214-188] Unrolling loop 'NORM_COLS' (./flashattentionsoftmax.h:197:9) in function 'normalize_output' partially with a factor of 16 (./flashattentionsoftmax.h:189:0)
+INFO: [HLS 214-188] Unrolling loop 'UPDATE_O_COLS' (./flashattentionsoftmax.h:168:9) in function 'update_statistics_and_output' partially with a factor of 16 (./flashattentionsoftmax.h:122:0)
+INFO: [HLS 214-188] Unrolling loop 'INIT_PV_ACC' (./flashattentiongemm.h:142:9) in function 'gemm_pv' partially with a factor of 16 (./flashattentiongemm.h:131:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_VEC' (./flashattentiongemm.h:163:17) in function 'gemm_pv' completely with a factor of 16 (./flashattentiongemm.h:131:0)
+INFO: [HLS 214-188] Unrolling loop 'STORE_PV_ROW' (./flashattentiongemm.h:173:9) in function 'gemm_pv' partially with a factor of 16 (./flashattentiongemm.h:131:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_89_1' (./flashattentionsoftmax.h:89:26) in function 'online_softmax_tile' completely with a factor of 64 (./flashattentionsoftmax.h:37:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_ACC' (./flashattentiongemm.h:58:9) in function 'gemm_qkt' completely with a factor of 64 (./flashattentiongemm.h:47:0)
+INFO: [HLS 214-186] Unrolling loop 'LOAD_Q_VEC' (./flashattentiongemm.h:71:13) in function 'gemm_qkt' completely with a factor of 16 (./flashattentiongemm.h:47:0)
+INFO: [HLS 214-186] Unrolling loop 'DOT_VEC' (./flashattentiongemm.h:87:17) in function 'gemm_qkt' completely with a factor of 16 (./flashattentiongemm.h:47:0)
+INFO: [HLS 214-188] Unrolling loop 'STORE_S_ROW' (./flashattentiongemm.h:99:9) in function 'gemm_qkt' partially with a factor of 8 (./flashattentiongemm.h:47:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_87_1' (./flashattentionmemory.h:87:19) in function 'load_stats_fp32' completely with a factor of 16 (./flashattentionmemory.h:229:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_244_1' (./flashattentionmemory.h:244:27) in function 'load_stats_fp32' completely with a factor of 16 (./flashattentionmemory.h:229:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_139_2' (./flashattentionmemory.h:139:27) in function 'load_tile_fp16' partially with a factor of 32 (./flashattentionmemory.h:108:0)
+INFO: [HLS 214-186] Unrolling loop 'LOAD_TILE_BEATS' (./flashattentionmemory.h:118:9) in function 'load_tile_fp16' completely with a factor of 4 (./flashattentionmemory.h:108:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'LOAD_TILE_BEATS' (./flashattentionmemory.h:118:9) in function 'load_tile_fp16' has been removed because the loop is unrolled completely (./flashattentionmemory.h:108:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_126_1' (./flashattentionmemory.h:126:31) in function 'load_tile_fp16' completely with a factor of 32 (./flashattentionmemory.h:108:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_1' (./flashattentionmemory.h:65:19) in function 'load_tile_fp16' completely with a factor of 32 (./flashattentionmemory.h:108:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (./flashattentionmemory.h:47:5) in function 'load_tile_fp16' completely with a factor of 1 (./flashattentionmemory.h:108:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_181_2' (./flashattentionmemory.h:181:27) in function 'load_tile_fp16_bc' partially with a factor of 32 (./flashattentionmemory.h:154:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_1' (./flashattentionmemory.h:65:19) in function 'load_tile_fp16_bc' completely with a factor of 32 (./flashattentionmemory.h:154:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (./flashattentionmemory.h:47:5) in function 'load_tile_fp16_bc' completely with a factor of 1 (./flashattentionmemory.h:154:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_169_1' (./flashattentionmemory.h:169:31) in function 'load_tile_fp16_bc' completely with a factor of 32 (./flashattentionmemory.h:154:0)
+INFO: [HLS 214-248] Applying array_partition to 'acc_row': Complete partitioning on dimension 1. (./flashattentiongemm.h:54:16)
+INFO: [HLS 214-248] Applying array_partition to 'acc_d': Cyclic partitioning with factor 16 on dimension 1. (./flashattentiongemm.h:138:16)
+INFO: [HLS 214-248] Applying array_partition to 'exp_old_arr': Complete partitioning on dimension 1. (./flashattentionsoftmax.h:126:9)
+INFO: [HLS 214-248] Applying array_partition to 'exp_new_arr': Complete partitioning on dimension 1. (./flashattentionsoftmax.h:127:12)
+INFO: [HLS 214-248] Applying array_partition to 'K_tile': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:92:12)
+INFO: [HLS 214-248] Applying array_partition to 'V_tile': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:93:12)
+INFO: [HLS 214-248] Applying array_partition to 'Q_tile': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:103:9)
+INFO: [HLS 214-248] Applying array_partition to 'O_tile_fp16': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:104:12)
+INFO: [HLS 214-248] Applying array_partition to 'S_tile': Cyclic partitioning with factor 8 on dimension 2. (flashattentionkernal.cpp:112:9)
+INFO: [HLS 214-248] Applying array_partition to 'P_tile': Cyclic partitioning with factor 8 on dimension 2. (flashattentionkernal.cpp:117:9)
+INFO: [HLS 214-248] Applying array_partition to 'PV_tile': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:122:9)
+INFO: [HLS 214-248] Applying array_partition to 'O_acc': Cyclic partitioning with factor 16 on dimension 2. (flashattentionkernal.cpp:127:9)
+INFO: [HLS 214-248] Applying array_partition to 'm_i': Complete partitioning on dimension 1. (flashattentionkernal.cpp:132:9)
+INFO: [HLS 214-248] Applying array_partition to 'l_i': Complete partitioning on dimension 1. (flashattentionkernal.cpp:133:12)
+INFO: [HLS 214-248] Applying array_partition to 'm_tilde': Complete partitioning on dimension 1. (flashattentionkernal.cpp:134:12)
+INFO: [HLS 214-248] Applying array_partition to 'l_tilde': Complete partitioning on dimension 1. (flashattentionkernal.cpp:135:12)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< INIT_PV_ACC> at ./flashattentiongemm.h:142:9 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_254_2> at ./flashattentionmemory.h:254:23 
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 has been inferred on bundle 'gmem_K'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (./flashattentionmemory.h:158:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 has been inferred on bundle 'gmem_Q'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (./flashattentionmemory.h:112:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'LOAD_STATS'(./flashattentionmemory.h:237:5) has been inferred on bundle 'gmem_l'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (./flashattentionmemory.h:237:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 has been inferred on bundle 'gmem_O'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (./flashattentionmemory.h:201:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'STORE_STATS'(./flashattentionmemory.h:272:5) has been inferred on bundle 'gmem_l'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (./flashattentionmemory.h:272:5)
+WARNING: [HLS 214-187] Cannot unroll loop 'VITIS_LOOP_254_2' (./flashattentionmemory.h:254:23) in function 'load_stats_fp32' as it has a variable trip count (./flashattentionmemory.h:254:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 19.137 seconds; current allocated memory: 441.699 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 441.699 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.945 seconds; current allocated memory: 457.422 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.186 seconds; current allocated memory: 469.539 MB.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'INNER_TR_LOOP' (flashattentionkernal.cpp:168:18) in function 'flash_attention_kernel'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentionsoftmax.h:136:28) to (./flashattentionsoftmax.h:148:28) in function 'update_statistics_and_output'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentionsoftmax.h:169:9) to (./flashattentionsoftmax.h:168:9) in function 'update_statistics_and_output'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentionmemory.h:273:9) to (./flashattentionmemory.h:272:5) in function 'store_stats_fp32'... converting 33 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentionsoftmax.h:51:9) to (./flashattentionsoftmax.h:50:9) in function 'online_softmax_tile'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentionsoftmax.h:68:9) to (./flashattentionsoftmax.h:78:26) in function 'online_softmax_tile'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentiongemm.h:100:9) to (./flashattentiongemm.h:99:9) in function 'gemm_qkt'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentiongemm.h:149:18) to (./flashattentiongemm.h:157:13) in function 'gemm_pv'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./flashattentiongemm.h:174:9) to (./flashattentiongemm.h:173:9) in function 'gemm_pv'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.952 seconds; current allocated memory: 500.562 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'UPDATE_O_ROWS'(./flashattentionsoftmax.h:163:5) and 'UPDATE_O_COLS'(./flashattentionsoftmax.h:168:9) in function 'update_statistics_and_output' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'STORE_TILE_ROWS'(./flashattentionmemory.h:201:5) and 'STORE_TILE_BEATS'(./flashattentionmemory.h:205:9) in function 'store_tile_fp16' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'NORM_ROWS'(./flashattentionsoftmax.h:193:5) and 'NORM_COLS'(./flashattentionsoftmax.h:197:9) in function 'normalize_output' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'LOAD_KV_ROWS'(./flashattentionmemory.h:158:5) and 'LOAD_KV_BEATS'(./flashattentionmemory.h:162:9) in function 'load_tile_fp16_bc' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'GEMM_QKT_KK'(./flashattentiongemm.h:65:9) and 'GEMM_QKT_COL'(./flashattentiongemm.h:78:13) in function 'gemm_qkt' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'GEMM_PV_RED'(./flashattentiongemm.h:149:9) and 'GEMM_PV_DCOL'(./flashattentiongemm.h:157:13) in function 'gemm_pv' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'CONVERT_O_TO_FP32'(flashattentionkernal.cpp:185:17) and 'VITIS_LOOP_186_1'(flashattentionkernal.cpp:186:39) in function 'flash_attention_kernel' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'INIT_O_ACC'(flashattentionkernal.cpp:201:17) and 'VITIS_LOOP_202_2'(flashattentionkernal.cpp:202:39) in function 'flash_attention_kernel' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'CONVERT_O_TO_FP16'(flashattentionkernal.cpp:246:17) and 'VITIS_LOOP_247_3'(flashattentionkernal.cpp:247:39) in function 'flash_attention_kernel' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'UPDATE_O_ROWS' (./flashattentionsoftmax.h:163:5) in function 'update_statistics_and_output'.
+INFO: [XFORM 203-541] Flattening a loop nest 'STORE_TILE_ROWS' (./flashattentionmemory.h:201:5) in function 'store_tile_fp16'.
+WARNING: [HLS 200-960] Cannot flatten loop 'SOFTMAX_ROWMAX' (./flashattentionsoftmax.h:44:5) in function 'online_softmax_tile' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'SOFTMAX_EXP_SUM' (./flashattentionsoftmax.h:61:5) in function 'online_softmax_tile' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'NORM_ROWS' (./flashattentionsoftmax.h:193:5) in function 'normalize_output'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_KV_ROWS' (./flashattentionmemory.h:158:5) in function 'load_tile_fp16_bc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_KV_PAD' (./flashattentionmemory.h:180:5) in function 'load_tile_fp16_bc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'LOAD_TILE_PAD' (./flashattentionmemory.h:138:5) in function 'load_tile_fp16'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GEMM_QKT_KK' (./flashattentiongemm.h:65:9) in function 'gemm_qkt'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:82:9) in loop 'GEMM_QKT_COL' may become invalid because the loop was flattened with the outer loop 'GEMM_QKT_KK'.
+INFO: [XFORM 203-541] Flattening a loop nest 'GEMM_PV_RED' (./flashattentiongemm.h:149:9) in function 'gemm_pv'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+WARNING: [HLS 200-1946] Dependence pragma (./flashattentiongemm.h:160:9) in loop 'GEMM_PV_DCOL' may become invalid because the loop was flattened with the outer loop 'GEMM_PV_RED'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CONVERT_O_TO_FP32' (flashattentionkernal.cpp:185:17) in function 'flash_attention_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'INIT_O_ACC' (flashattentionkernal.cpp:201:17) in function 'flash_attention_kernel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CONVERT_O_TO_FP16' (flashattentionkernal.cpp:246:17) in function 'flash_attention_kernel'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.63' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.62' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.61' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.60' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.59' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.58' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.57' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.56' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.55' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.54' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.53' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.52' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.51' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.50' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.49' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.48' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.47' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.46' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.45' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.44' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.43' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.42' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.41' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.40' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.39' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.38' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.37' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.36' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.35' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.34' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.33' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.32' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.31' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.30' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.29' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.28' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.27' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.26' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.25' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.24' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.23' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.22' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.21' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.20' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.19' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.18' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.17' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.16' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.15' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.14' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.13' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.12' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.11' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.10' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.9' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.8' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.7' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.6' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.5' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.4' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.3' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.2' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.1' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.15' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.14' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.13' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.12' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.11' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.10' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.9' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.8' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.7' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.6' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.5' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.4' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.3' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.2' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.1' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d' (./flashattentiongemm.h:138).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.63' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.62' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.61' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.60' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.59' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.58' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.57' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.56' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.55' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.54' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.53' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.52' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.51' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.50' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.49' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.48' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.47' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.46' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.45' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.44' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.43' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.42' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.41' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.40' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.39' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.38' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.37' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.36' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.35' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.34' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.33' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.32' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.31' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.30' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.29' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.28' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.27' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.26' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.25' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.24' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.23' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.22' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.21' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.20' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.19' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.18' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.17' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.16' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.15' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.14' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.13' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.12' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.11' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.10' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.9' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.8' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.7' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.6' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.5' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.4' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.3' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.2' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row.1' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_row' (./flashattentiongemm.h:54).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.15'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.14'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.13'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.12'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.11'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.10'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.9'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.8'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.7'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.6'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.5'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.4'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.3'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.2'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d.1'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_d'.
+INFO: [HLS 200-1856] Using 'standard' precision for all 'facc' and 'dacc' operations
+Resolution: For help on HLS 200-1856 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1856.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.805 seconds; current allocated memory: 809.551 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'flash_attention_kernel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_KV_ROWS_LOAD_KV_BEATS'.
+WARNING: [HLS 200-885] The II Violation in module 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS' (loop 'LOAD_KV_ROWS_LOAD_KV_BEATS'): Unable to schedule 'store' operation 0 bit ('tile_0_addr_write_ln173', ./flashattentionmemory.h:173) of variable 'vals', ./flashattentionmemory.h:67->./flashattentionmemory.h:167 on array 'tile_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 4, loop 'LOAD_KV_ROWS_LOAD_KV_BEATS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.1 seconds; current allocated memory: 818.188 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.321 seconds; current allocated memory: 819.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_KV_PAD_VITIS_LOOP_181_2'.
+WARNING: [HLS 200-885] The II Violation in module 'load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2' (loop 'LOAD_KV_PAD_VITIS_LOOP_181_2'): Unable to schedule 'store' operation 0 bit ('tile_0_addr_write_ln184', ./flashattentionmemory.h:184) of constant 0 on array 'tile_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'LOAD_KV_PAD_VITIS_LOOP_181_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.287 seconds; current allocated memory: 820.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 820.348 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16_bc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.385 seconds; current allocated memory: 820.590 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.803 seconds; current allocated memory: 820.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_TILE_ROWS'.
+WARNING: [HLS 200-880] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' (loop 'LOAD_TILE_ROWS'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112) and bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' (loop 'LOAD_TILE_ROWS'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112) and bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' (loop 'LOAD_TILE_ROWS'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112) and bus read operation ('word', ./flashattentionmemory.h:112) on port 'gmem_Q' (./flashattentionmemory.h:112).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' (loop 'LOAD_TILE_ROWS'): Unable to schedule 'store' operation 0 bit ('tile_0_addr_6_write_ln130', ./flashattentionmemory.h:130) of variable 'vals', ./flashattentionmemory.h:67->./flashattentionmemory.h:123 on array 'tile_0' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' (loop 'LOAD_TILE_ROWS'): Unable to schedule 'store' operation 0 bit ('tile_0_addr_9_write_ln130', ./flashattentionmemory.h:130) of variable 'vals', ./flashattentionmemory.h:67->./flashattentionmemory.h:123 on array 'tile_0' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 9, loop 'LOAD_TILE_ROWS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.833 seconds; current allocated memory: 828.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.568 seconds; current allocated memory: 828.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_TILE_PAD_VITIS_LOOP_139_2'.
+WARNING: [HLS 200-885] The II Violation in module 'load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2' (loop 'LOAD_TILE_PAD_VITIS_LOOP_139_2'): Unable to schedule 'store' operation 0 bit ('tile_0_addr_write_ln142', ./flashattentionmemory.h:142) of constant 0 on array 'tile_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'LOAD_TILE_PAD_VITIS_LOOP_139_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.632 seconds; current allocated memory: 828.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 828.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_tile_fp16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.348 seconds; current allocated memory: 828.340 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.544 seconds; current allocated memory: 828.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_stats_fp32_Pipeline_LOAD_STATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_STATS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOAD_STATS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.135 seconds; current allocated memory: 831.066 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 831.336 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_stats_fp32_Pipeline_VITIS_LOOP_254_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_254_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_254_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.244 seconds; current allocated memory: 831.801 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 832.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_stats_fp32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.377 seconds; current allocated memory: 832.535 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.769 seconds; current allocated memory: 832.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CONVERT_O_TO_FP32_VITIS_LOOP_186_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'CONVERT_O_TO_FP32_VITIS_LOOP_186_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.798 seconds; current allocated memory: 834.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.054 seconds; current allocated memory: 834.543 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INIT_O_ACC_VITIS_LOOP_202_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'INIT_O_ACC_VITIS_LOOP_202_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.496 seconds; current allocated memory: 834.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 834.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'GEMM_QKT_KK_GEMM_QKT_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 18, loop 'GEMM_QKT_KK_GEMM_QKT_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.886 seconds; current allocated memory: 844.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 844.812 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_qkt_Pipeline_STORE_S_ROW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_S_ROW'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'STORE_S_ROW'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.535 seconds; current allocated memory: 844.848 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 844.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_qkt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.506 seconds; current allocated memory: 844.910 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 844.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'online_softmax_tile_Pipeline_ROWMAX_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ROWMAX_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'ROWMAX_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 844.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 845.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'online_softmax_tile_Pipeline_EXP_SUM_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXP_SUM_INNER'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'EXP_SUM_INNER'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.652 seconds; current allocated memory: 845.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 845.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'SOFTMAX_PAD'.
+WARNING: [HLS 200-885] The II Violation in module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' (loop 'SOFTMAX_PAD'): Unable to schedule 'store' operation 0 bit ('P_tile_0_addr_write_ln90', ./flashattentionsoftmax.h:90) of constant 0 on array 'P_tile_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'P_tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' (loop 'SOFTMAX_PAD'): Unable to schedule 'store' operation 0 bit ('P_tile_0_addr_1_write_ln90', ./flashattentionsoftmax.h:90) of constant 0 on array 'P_tile_0' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'P_tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' (loop 'SOFTMAX_PAD'): Unable to schedule 'store' operation 0 bit ('P_tile_0_addr_2_write_ln90', ./flashattentionsoftmax.h:90) of constant 0 on array 'P_tile_0' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'P_tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' (loop 'SOFTMAX_PAD'): Unable to schedule 'store' operation 0 bit ('P_tile_0_addr_3_write_ln90', ./flashattentionsoftmax.h:90) of constant 0 on array 'P_tile_0' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'P_tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' (loop 'SOFTMAX_PAD'): Unable to schedule 'store' operation 0 bit ('P_tile_0_addr_6_write_ln90', ./flashattentionsoftmax.h:90) of constant 0 on array 'P_tile_0' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'P_tile_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 8, loop 'SOFTMAX_PAD'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.936 seconds; current allocated memory: 851.625 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.233 seconds; current allocated memory: 867.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'online_softmax_tile' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.493 seconds; current allocated memory: 867.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.236 seconds; current allocated memory: 867.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_pv_Pipeline_INIT_PV_ACC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INIT_PV_ACC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'INIT_PV_ACC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 867.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 867.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_pv_Pipeline_GEMM_PV_RED_GEMM_PV_DCOL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'GEMM_PV_RED_GEMM_PV_DCOL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'GEMM_PV_RED_GEMM_PV_DCOL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.111 seconds; current allocated memory: 867.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 867.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_pv_Pipeline_STORE_PV_ROW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_PV_ROW'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'STORE_PV_ROW'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.748 seconds; current allocated memory: 867.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.525 seconds; current allocated memory: 867.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_pv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.445 seconds; current allocated memory: 867.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 867.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_statistics_and_output_Pipeline_COMPUTE_SCALES' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'COMPUTE_SCALES'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'COMPUTE_SCALES'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.608 seconds; current allocated memory: 882.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.326 seconds; current allocated memory: 882.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_statistics_and_output_Pipeline_UPDATE_O_ROWS_UPDATE_O_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'UPDATE_O_ROWS_UPDATE_O_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'UPDATE_O_ROWS_UPDATE_O_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.384 seconds; current allocated memory: 884.457 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 884.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_statistics_and_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.635 seconds; current allocated memory: 884.492 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 884.578 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP16_VITIS_LOOP_247_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CONVERT_O_TO_FP16_VITIS_LOOP_247_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'CONVERT_O_TO_FP16_VITIS_LOOP_247_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.8 seconds; current allocated memory: 885.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 885.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'normalize_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'NORM_ROWS_NORM_COLS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'NORM_ROWS_NORM_COLS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.839 seconds; current allocated memory: 888.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 888.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_TILE_ROWS_STORE_TILE_BEATS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'STORE_TILE_ROWS_STORE_TILE_BEATS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.773 seconds; current allocated memory: 889.629 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 889.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_tile_fp16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.758 seconds; current allocated memory: 890.117 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.671 seconds; current allocated memory: 890.258 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_stats_fp32_Pipeline_STORE_STATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'STORE_STATS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'STORE_STATS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.108 seconds; current allocated memory: 891.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 891.520 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_stats_fp32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.641 seconds; current allocated memory: 892.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.808 seconds; current allocated memory: 892.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'flash_attention_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.582 seconds; current allocated memory: 901.531 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.532 seconds; current allocated memory: 901.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS' pipeline 'LOAD_KV_ROWS_LOAD_KV_BEATS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS/m_axi_gmem_K_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16_bc_Pipeline_LOAD_KV_ROWS_LOAD_KV_BEATS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.464 seconds; current allocated memory: 903.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2' pipeline 'LOAD_KV_PAD_VITIS_LOOP_181_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16_bc_Pipeline_LOAD_KV_PAD_VITIS_LOOP_181_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.7 seconds; current allocated memory: 908.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16_bc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16_bc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 911.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS' pipeline 'LOAD_TILE_ROWS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS/m_axi_gmem_Q_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16_Pipeline_LOAD_TILE_ROWS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.331 seconds; current allocated memory: 914.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2' pipeline 'LOAD_TILE_PAD_VITIS_LOOP_139_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16_Pipeline_LOAD_TILE_PAD_VITIS_LOOP_139_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.547 seconds; current allocated memory: 928.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_fp16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_fp16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.339 seconds; current allocated memory: 929.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_stats_fp32_Pipeline_LOAD_STATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_stats_fp32_Pipeline_LOAD_STATS' pipeline 'LOAD_STATS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'load_stats_fp32_Pipeline_LOAD_STATS/m_axi_gmem_l_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_stats_fp32_Pipeline_LOAD_STATS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.743 seconds; current allocated memory: 931.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_stats_fp32_Pipeline_VITIS_LOOP_254_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'load_stats_fp32_Pipeline_VITIS_LOOP_254_2' pipeline 'VITIS_LOOP_254_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_stats_fp32_Pipeline_VITIS_LOOP_254_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.692 seconds; current allocated memory: 939.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_stats_fp32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_stats_fp32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.447 seconds; current allocated memory: 942.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1' pipeline 'CONVERT_O_TO_FP32_VITIS_LOOP_186_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'hptosp_16ns_32_1_no_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP32_VITIS_LOOP_186_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.071 seconds; current allocated memory: 946.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flash_attention_kernel_Pipeline_INIT_O_ACC_VITIS_LOOP_202_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.369 seconds; current allocated memory: 949.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL' pipeline 'GEMM_QKT_KK_GEMM_QKT_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hptosp_16ns_32_1_no_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_qkt_Pipeline_GEMM_QKT_KK_GEMM_QKT_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.809 seconds; current allocated memory: 957.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_qkt_Pipeline_STORE_S_ROW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_6_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_qkt_Pipeline_STORE_S_ROW'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.524 seconds; current allocated memory: 972.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_qkt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_qkt'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.353 seconds; current allocated memory: 973.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'online_softmax_tile_Pipeline_ROWMAX_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'online_softmax_tile_Pipeline_ROWMAX_INNER' pipeline 'ROWMAX_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'online_softmax_tile_Pipeline_ROWMAX_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 977.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'online_softmax_tile_Pipeline_EXP_SUM_INNER' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'online_softmax_tile_Pipeline_EXP_SUM_INNER' pipeline 'EXP_SUM_INNER' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_3_med_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sptohp_32ns_16_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'online_softmax_tile_Pipeline_EXP_SUM_INNER'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 979.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'online_softmax_tile_Pipeline_SOFTMAX_PAD' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'online_softmax_tile_Pipeline_SOFTMAX_PAD'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.86 seconds; current allocated memory: 983.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'online_softmax_tile' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_3_med_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'online_softmax_tile'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.008 seconds; current allocated memory: 996.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_pv_Pipeline_INIT_PV_ACC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_pv_Pipeline_INIT_PV_ACC'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.981 seconds; current allocated memory: 1010.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_pv_Pipeline_GEMM_PV_RED_GEMM_PV_DCOL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemm_pv_Pipeline_GEMM_PV_RED_GEMM_PV_DCOL' pipeline 'GEMM_PV_RED_GEMM_PV_DCOL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'hptosp_16ns_32_1_no_dsp_1': 17 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_pv_Pipeline_GEMM_PV_RED_GEMM_PV_DCOL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 1010.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_pv_Pipeline_STORE_PV_ROW' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemm_pv_Pipeline_STORE_PV_ROW' pipeline 'STORE_PV_ROW' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_pv_Pipeline_STORE_PV_ROW'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.546 seconds; current allocated memory: 1016.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_pv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_pv'.
+INFO: [RTMG 210-278] Implementing memory 'flash_attention_kernel_gemm_pv_acc_d_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.452 seconds; current allocated memory: 1019.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_statistics_and_output_Pipeline_COMPUTE_SCALES' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_statistics_and_output_Pipeline_COMPUTE_SCALES' pipeline 'COMPUTE_SCALES' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_1_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_3_med_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_1_primitive_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_statistics_and_output_Pipeline_COMPUTE_SCALES'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.484 seconds; current allocated memory: 1.008 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_statistics_and_output_Pipeline_UPDATE_O_ROWS_UPDATE_O_COLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'update_statistics_and_output_Pipeline_UPDATE_O_ROWS_UPDATE_O_COLS' pipeline 'UPDATE_O_ROWS_UPDATE_O_COLS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_1_primitive_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_statistics_and_output_Pipeline_UPDATE_O_ROWS_UPDATE_O_COLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.128 seconds; current allocated memory: 1.036 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_statistics_and_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_3_med_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_statistics_and_output'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.857 seconds; current allocated memory: 1.043 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP16_VITIS_LOOP_247_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP16_VITIS_LOOP_247_3' pipeline 'CONVERT_O_TO_FP16_VITIS_LOOP_247_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sptohp_32ns_16_1_no_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flash_attention_kernel_Pipeline_CONVERT_O_TO_FP16_VITIS_LOOP_247_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.673 seconds; current allocated memory: 1.055 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'normalize_output' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'normalize_output' pipeline 'NORM_ROWS_NORM_COLS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_1_primitive_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sptohp_32ns_16_1_no_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'normalize_output'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.501 seconds; current allocated memory: 1.057 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS' pipeline 'STORE_TILE_ROWS_STORE_TILE_BEATS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS/m_axi_gmem_O_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_tile_fp16_Pipeline_STORE_TILE_ROWS_STORE_TILE_BEATS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.745 seconds; current allocated memory: 1.064 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_tile_fp16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_tile_fp16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.432 seconds; current allocated memory: 1.068 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_stats_fp32_Pipeline_STORE_STATS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'store_stats_fp32_Pipeline_STORE_STATS' pipeline 'STORE_STATS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'store_stats_fp32_Pipeline_STORE_STATS/m_axi_gmem_l_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_stats_fp32_Pipeline_STORE_STATS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.066 seconds; current allocated memory: 1.071 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_stats_fp32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_stats_fp32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.472 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'flash_attention_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_Q' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_K' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_V' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_O' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_l' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/gmem_m' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_Q' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_K' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_O' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_l' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/hbm_m' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/N' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'flash_attention_kernel/num_heads' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'flash_attention_kernel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'hbm_Q', 'hbm_K', 'hbm_V', 'hbm_O', 'hbm_l', 'hbm_m', 'N', 'num_heads' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_3_med_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'flash_attention_kernel'.
+INFO: [RTMG 210-278] Implementing memory 'flash_attention_kernel_K_tile_RAM_2P_URAM_1R1W' using ultra RAMs.
+INFO: [RTMG 210-278] Implementing memory 'flash_attention_kernel_Q_tile_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'flash_attention_kernel_O_tile_fp16_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'flash_attention_kernel_S_tile_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.983 seconds; current allocated memory: 1.098 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 11.811 seconds; current allocated memory: 1.128 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.438 seconds; current allocated memory: 1.154 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for flash_attention_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for flash_attention_kernel.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-112] Total CPU user time: 27 seconds. Total CPU system time: 2 seconds. Total elapsed time: 176.458 seconds; peak allocated memory: 1.155 GB.
+INFO: [v++ 60-791] Total elapsed time: 0h 3m 1s
